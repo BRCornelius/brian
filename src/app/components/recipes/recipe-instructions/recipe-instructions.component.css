@@ -1,0 +1,11 @@
+.row {
+    height: 3rem;
+    text-overflow: ellipsis;
+}
+.content {
+    height: 100%;
+}
+#text {
+    padding: 1rem;
+    justify-content: flex-start;
+}

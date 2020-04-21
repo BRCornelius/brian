@@ -1,0 +1,11 @@
+<mat-grid-list class="row" cols="8" *ngFor="let instruction of recipe; index as i">
+  <mat-grid-tile class="content" id="number" [colspan]="1" [rowspan]="1">
+    {{i + 1}}
+  </mat-grid-tile>
+  <mat-grid-tile class="content" id="text" [colspan]="5" [rowspan]="1">
+    {{instruction.text}}
+  </mat-grid-tile>
+  <mat-grid-tile class="content" id="photo" [colspan]="2">
+    {{instruction.photo}}
+  </mat-grid-tile>
+</mat-grid-list>
