@@ -1,8 +1,7 @@
-<mat-card class="recipe-card">
-  <img mat-card-image src={{image}} alt="Photo of baked salmon">
-  <mat-card-content>
-    <app-recipe-instructions></app-recipe-instructions>
-  </mat-card-content>
+<mat-card class="container">
+  <img class="image" mat-card-image src={{photo}} alt="Photo of dish">
+  <app-recipe-ingredients [ingredients]="ingredients"></app-recipe-ingredients>
+  <app-recipe-instructions [instructions]="instructions"></app-recipe-instructions>
   <mat-card-actions>
     <button mat-button>LIKE</button>
     <button mat-button>SHARE</button>

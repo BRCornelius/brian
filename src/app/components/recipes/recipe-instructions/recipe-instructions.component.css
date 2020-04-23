@@ -1,11 +1,9 @@
-.row {
-    height: 3rem;
-    text-overflow: ellipsis;
+.container {
+    background-color: violet;
 }
-.content {
-    height: 100%;
-}
-#text {
-    padding: 1rem;
-    justify-content: flex-start;
+
+.text {
+    font-size: 1rem;
+    border-bottom: 1px solid black;
+    margin: 0.5rem;
 }

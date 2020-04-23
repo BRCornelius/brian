@@ -1,4 +1,9 @@
-<button class="recipe-button" (click)="show = !show">Baked Salmon</button>
+<button class="recipe-button" (click)="show = !show">{{title}}</button>
 <div *ngIf="show">
-  <app-recipe-card></app-recipe-card>
+  <app-recipe-card
+    [instructions]="instructions"
+    [ingredients]="ingredients"
+    [photo]="photo"
+    [time]="time"
+  ></app-recipe-card>
 </div>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IInstruction, IIngredient } from 'src/app/utilities/types';
 
 @Component({
   selector: 'app-recipe-toggle',
@@ -13,4 +14,8 @@ export class RecipeToggleComponent implements OnInit {
   }
 
   show: boolean = false;
+  @Input() photo: string;
+  @Input() instructions: IInstruction[];
+  @Input() ingredients: IIngredient[];
+  @Input() title: string;
 }
