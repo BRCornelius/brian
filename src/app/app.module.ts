@@ -13,6 +13,7 @@ import { RecipeToggleComponent } from './components/recipes/recipe-toggle/recipe
 import { RecipeInstructionsComponent } from './components/recipes/recipe-instructions/recipe-instructions.component';
 import { RecipeIngredientsComponent } from './components/recipes/recipe-ingredients/recipe-ingredients.component';
 import { RecipeListComponent } from './components/recipes/recipe-list/recipe-list.component';
+import { SplashpageComponent } from './pages/splashpage/splashpage.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { RecipeListComponent } from './components/recipes/recipe-list/recipe-lis
     RecipeInstructionsComponent,
     RecipeIngredientsComponent,
     RecipeListComponent,
+    SplashpageComponent,
   ],
   imports: [
     BrowserModule,
