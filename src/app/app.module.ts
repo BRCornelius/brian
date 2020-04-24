@@ -18,6 +18,7 @@ import {
   RecipeIngredientsComponent,
   RecipeInstructionsComponent,
   RecipeListComponent,
+  RecipeRequestComponent,
 } from './components';
 import { SplashPage, RecipesPage } from './pages';
 import { FooterComponent } from './components/common/footer/footer.component';
@@ -35,6 +36,7 @@ import { FooterComponent } from './components/common/footer/footer.component';
     RecipeListComponent,
     RecipeToggleComponent,
     FooterComponent,
+    RecipeRequestComponent,
   ],
   imports: [
     AppRoutingModule,
