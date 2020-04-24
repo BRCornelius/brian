@@ -21,3 +21,8 @@ export interface IRecipe {
     time: IRecipeTime;
     title: string;
 }
+
+export interface INavLink {
+    path: string;
+    label: string;
+}
