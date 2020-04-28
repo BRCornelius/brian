@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   ContentToggleComponent,
+  FooterComponent,
   NavigationComponent,
   RecipeCardComponent,
   RecipeToggleComponent,
@@ -20,7 +21,7 @@ import {
   RecipeListComponent,
 } from './components';
 import { SplashPage, RecipesPage } from './pages';
-import { FooterComponent } from './components/common/footer/footer.component';
+import { RecipeRequestComponent } from './components/recipes/recipe-request/recipe-request.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { FooterComponent } from './components/common/footer/footer.component';
     RecipeListComponent,
     RecipeToggleComponent,
     FooterComponent,
+    RecipeRequestComponent,
   ],
   imports: [
     AppRoutingModule,
