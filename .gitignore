@@ -46,3 +46,7 @@ Thumbs.db
 # GCloud Setup
 credentials.json
 index.js
+.env
+
+# AWS Setup
+config.ts

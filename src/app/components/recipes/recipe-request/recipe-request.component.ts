@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmailService } from 'src/app/services';
 
 @Component({
   selector: 'app-recipe-request',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipeRequestComponent implements OnInit {
 
-  constructor() { }
+  constructor(private email: EmailService) { }
 
   ngOnInit() {
   }
-
+  sendEmail: Function = this.email.sendEmail;
 }

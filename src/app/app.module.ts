@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
@@ -42,6 +44,7 @@ import { RecipeRequestComponent } from './components/recipes/recipe-request/reci
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
+    HttpClientModule,
     MatCardModule,
     MatGridListModule,
     MatListModule,
