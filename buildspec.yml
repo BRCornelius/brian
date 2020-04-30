@@ -8,7 +8,7 @@ phases:
     build:
         commands:
             - echo Build started on `date`
-            - ng build --prod
+            - ng build
     post_build:
          commands:
             - aws s3 cp dist s3://brcornelius --recursive

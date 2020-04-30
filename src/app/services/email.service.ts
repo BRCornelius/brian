@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 import * as AWS from 'aws-sdk';
-import { AWS_ACCESS_KEY_ID, AWS_SECRET_KEY } from '../../../config';
+// import { AWS_ACCESS_KEY_ID, AWS_SECRET_KEY } from '../../../config';
 
 @Injectable({
   providedIn: 'root'
@@ -28,8 +28,8 @@ export class EmailService {
     decodedBinarySecret;
 
     const config = {
-      accessKeyId: AWS_ACCESS_KEY_ID,
-      secretAccessKey: AWS_SECRET_KEY,
+      accessKeyId: 'AWS_ACCESS_KEY_ID',
+      secretAccessKey: 'AWS_SECRET_KEY',
       region: 'us-east-1'
     }
     AWS.config.update(config);
