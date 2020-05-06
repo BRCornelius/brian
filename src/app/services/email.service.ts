@@ -33,7 +33,6 @@ export class EmailService {
       secretAccessKey: AWS_SECRET_KEY,
     });
     client.getSecretValue({SecretId: secretName}, (err, data) => {
-      console.log(err, data)
       if (err) {
           if (err.code === 'DecryptionFailureException')
               throw err;
