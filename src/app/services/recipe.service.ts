@@ -1,12 +1,29 @@
 import { Injectable } from '@angular/core';
 import { IRecipe } from '../utilities/types';
 
+import * as AWS from 'aws-sdk';
+
+const params = {
+  TableName: 'RECIPES_BRIAN',
+};
+const ddb = new AWS.DynamoDB();
 @Injectable({
   providedIn: 'root'
 })
 export class RecipeService {
 
   constructor() { }
+
+  getRecipes = () => {
+    ddb.scan(params, (err, data) => {
+      if(err){
+        console.log("Error", err)
+        return err
+      } else {
+        return data.Items
+      }
+    })
+  };
 
   recipes: IRecipe[] = [{
     ingredients: [{
