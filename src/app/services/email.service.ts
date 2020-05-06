@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 import * as AWS from 'aws-sdk';
-import { AWS_ACCESS_KEY_ID, AWS_SECRET_KEY } from '../../../config';
 
 @Injectable({
   providedIn: 'root'
@@ -27,11 +26,7 @@ export class EmailService {
     secret,
     decodedBinarySecret;
 
-    const client = new AWS.SecretsManager({
-      region: 'us-east-1',
-      accessKeyId: AWS_ACCESS_KEY_ID,
-      secretAccessKey: AWS_SECRET_KEY,
-    });
+    const client = new AWS.SecretsManager();
     client.getSecretValue({SecretId: secretName}, (err, data) => {
       console.log(err, data)
       if (err) {
