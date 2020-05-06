@@ -53,7 +53,7 @@ export class RecipeService {
       text: 'Cover the salmon with the sauteed spinach.  Top with diced tomatoes and feta cheese.'
     },
     {
-      text: 'Bake for 21-minutes',
+      text: 'Bake for 21-minutes.',
     },
     {
       text: 'Let stand for 2 minutes before cutting and serving.'
