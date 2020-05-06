@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 import * as AWS from 'aws-sdk';
-// import { AWS_ACCESS_KEY_ID, AWS_SECRET_KEY } from '../../../config';
+import { AWS_ACCESS_KEY_ID, AWS_SECRET_KEY } from '../../../config';
 
 @Injectable({
   providedIn: 'root'
@@ -27,15 +27,13 @@ export class EmailService {
     secret,
     decodedBinarySecret;
 
-    const config = {
-      accessKeyId: 'AWS_ACCESS_KEY_ID',
-      secretAccessKey: 'AWS_SECRET_KEY',
-      region: 'us-east-1'
-    }
-    AWS.config.update(config);
-
-    const client = new AWS.SecretsManager({ region: 'us-east-1'});
+    const client = new AWS.SecretsManager({
+      region: 'us-east-1',
+      accessKeyId: AWS_ACCESS_KEY_ID,
+      secretAccessKey: AWS_SECRET_KEY,
+    });
     client.getSecretValue({SecretId: secretName}, (err, data) => {
+      console.log(err, data)
       if (err) {
           if (err.code === 'DecryptionFailureException')
               throw err;
@@ -62,7 +60,6 @@ export class EmailService {
       headers: new HttpHeaders({'X-Api-Key': accessSecret})
     };
     this.http.post('https://services.corneliuses.com/sendEmail', {httpOptions}).subscribe(value => null);
-    // });
   })
 }
 }

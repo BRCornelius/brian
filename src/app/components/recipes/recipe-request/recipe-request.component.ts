@@ -13,4 +13,5 @@ export class RecipeRequestComponent implements OnInit {
   ngOnInit() {
   }
   sendEmail: Function = this.email.sendEmail;
+  show: boolean = false;
 }
