@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AwsService } from './aws.service';
+import { ISecretResponse } from '../utilities'
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class EmailService {
 
   sendEmail: Function = () => {
     let secret;
-    this.aws.secret$.subscribe(res => secret = JSON.parse(res.SecretString)['x-api-key']);
+    this.aws.secret$.subscribe((res: ISecretResponse) => secret = JSON.parse(res.SecretString)['x-api-key']);
     const httpOptions = {
       headers: new HttpHeaders({'X-Api-Key': secret})
     };

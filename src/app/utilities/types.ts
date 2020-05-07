@@ -21,3 +21,6 @@ export interface INavLink {
     path: string;
     label: string;
 }
+ export interface ISecretResponse {
+     SecretString: string;
+ }
