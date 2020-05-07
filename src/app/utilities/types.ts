@@ -1,8 +1,3 @@
-export interface IInstruction {
-    text: string;
-    photo?: string;
-}
-
 export interface IIngredient {
     quantity: string;
     item: string;
@@ -15,11 +10,11 @@ export interface IRecipeTime {
 }
 
 export interface IRecipe {
-    ingredients: IIngredient[];
-    instructions: IInstruction[];
-    photo: string;
-    time: IRecipeTime;
-    title: string;
+    INGREDIENTS: IIngredient[];
+    INSTRUCTIONS: string[];
+    PHOTO: string;
+    TIME: IRecipeTime;
+    NAME: string;
 }
 
 export interface INavLink {

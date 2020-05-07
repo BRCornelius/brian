@@ -1,7 +1,7 @@
 <app-recipe-toggle
   *ngFor="let recipe of recipes"
-  [photo]="recipe.photo"
-  [title]="recipe.title"
-  [instructions]="recipe.instructions"
-  [ingredients]="recipe.ingredients"
+  [photo]="recipe.PHOTO.S"
+  [title]="recipe.NAME.S"
+  [instructions]="recipe.INSTRUCTIONS.SS"
+  [ingredients]="recipe.INGREDIENTS.L"
 ></app-recipe-toggle>

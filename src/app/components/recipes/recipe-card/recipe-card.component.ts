@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { RecipeService } from 'src/app/services/recipe.service';
-import { IInstruction, IIngredient, IRecipeTime } from 'src/app/utilities/types';
+import { IIngredient, IRecipeTime } from 'src/app/utilities/types';
 
 @Component({
   selector: 'app-recipe-card',
@@ -15,7 +15,7 @@ export class RecipeCardComponent implements OnInit {
   }
 
   @Input() photo: string;
-  @Input() instructions: IInstruction[];
+  @Input() instructions: string[];
   @Input() ingredients: IIngredient[];
   @Input() time: IRecipeTime;
 }

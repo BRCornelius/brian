@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IInstruction } from '../../../utilities/types';
 
 @Component({
   selector: 'app-recipe-instructions',
@@ -13,5 +12,5 @@ export class RecipeInstructionsComponent implements OnInit {
   ngOnInit() {
   }
 
-  @Input() instructions: Array<IInstruction>;
+  @Input() instructions: string[];
 }
