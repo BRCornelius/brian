@@ -22,7 +22,7 @@ import {
   RecipeInstructionsComponent,
   RecipeListComponent,
 } from './components';
-import { SplashPage, RecipesPage } from './pages';
+import { KidsPage, SplashPage, RecipesPage } from './pages';
 import { RecipeRequestComponent } from './components/recipes/recipe-request/recipe-request.component';
 
 @NgModule({
@@ -39,6 +39,7 @@ import { RecipeRequestComponent } from './components/recipes/recipe-request/reci
     RecipeToggleComponent,
     FooterComponent,
     RecipeRequestComponent,
+    KidsPage,
   ],
   imports: [
     AppRoutingModule,

@@ -14,7 +14,11 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit() {
   }
-  navLinks: INavLink[] = [{ label: 'Home', path: ''}, { label: 'Recipes', path: 'recipes'}];
+  navLinks: INavLink[] = [
+    { label: 'Home', path: ''},
+    { label: 'Recipes', path: 'recipes'},
+    { label: 'Kids', path: 'kids'}
+  ];
   activeNavLink: string = 'Home';
   updateActiveNavLink(new_label): void {
     this.activeNavLink = new_label;
