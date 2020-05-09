@@ -1,0 +1,26 @@
+version: 0.0
+os: linux 
+files:
+  - source: /
+    destination: /var/www/html/
+permissions:
+  - object: /
+hooks:
+# During the ApplicationStart deployment lifecycle event, run the commands 
+#   in the script specified in "location".
+  ApplicationStart:
+    - location:     
+      timeout: 
+      runas:
+    - location: 
+      timeout:
+      runas:
+# During the ValidateService deployment lifecycle event, run the commands 
+#   in the script specified in "location".
+  ValidateService:
+    - location:     
+      timeout: 
+      runas:
+    - location: 
+      timeout:
+      runas:
