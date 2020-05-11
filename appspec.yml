@@ -6,21 +6,15 @@ files:
 permissions:
   - object: /
 hooks:
-# During the ApplicationStart deployment lifecycle event, run the commands 
-#   in the script specified in "location".
-  ApplicationStart:
-    - location:     
-      timeout: 
-      runas:
-    - location: 
-      timeout:
-      runas:
-# During the ValidateService deployment lifecycle event, run the commands 
-#   in the script specified in "location".
-  ValidateService:
-    - location:     
-      timeout: 
-      runas:
-    - location: 
-      timeout:
-      runas:
+  ApplicationStop:
+    - location: scripts/StopApache
+      timeout: 180
+      runas: root
+  BeforeInstall:
+    - location: scripts/InstallApache.sh
+      timeout: 180
+      runas: root
+  AfterInstall:
+    - location: scripts/StartApache.sh
+      timeout: 180
+      runas: root
