@@ -1,5 +1,5 @@
 version: 0.0
-os: linux 
+os: linux
 files:
   - source: /
     destination: /var/www/html/
@@ -16,5 +16,9 @@ hooks:
       runas: root
   AfterInstall:
     - location: scripts/StartApache.sh
+      timeout: 180
+      runas: root
+  ValidateService:
+    - location: scripts/RestartAgent.sh
       timeout: 180
       runas: root
