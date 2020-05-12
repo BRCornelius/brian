@@ -6,10 +6,6 @@ files:
 permissions:
   - object: /
 hooks:
-  ApplicationStop:
-    - location: scripts/StopApache.sh
-      timeout: 180
-      runas: root
   BeforeInstall:
     - location: scripts/InstallApache.sh
       timeout: 180
