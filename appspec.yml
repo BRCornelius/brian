@@ -14,9 +14,6 @@ hooks:
     - location: scripts/InstallApache.sh
       timeout: 180
       runas: root
-    - location: scripts/ClearServer.sh
-      timeout: 180
-      runas: root
   AfterInstall:
     - location: scripts/StartApache.sh
       timeout: 180
