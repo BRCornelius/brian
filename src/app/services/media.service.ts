@@ -5,9 +5,9 @@ import { ajax } from 'rxjs/ajax';
 @Injectable({
   providedIn: 'root'
 })
-export class RecipeService {
+export class MediaService {
 
   constructor() { }
 
-  recipes = ajax('https://services.corneliuses.com/getrecipes-brian');
+  videos = ajax('https://services.corneliuses.com/get-kids-videos');
 }

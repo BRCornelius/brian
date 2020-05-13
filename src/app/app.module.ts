@@ -15,15 +15,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   ContentToggleComponent,
   FooterComponent,
+  MediaGridComponent,
   NavigationComponent,
   RecipeCardComponent,
+  RecipeRequestComponent,
   RecipeToggleComponent,
   RecipeIngredientsComponent,
   RecipeInstructionsComponent,
   RecipeListComponent,
+  VideoDisplayComponent,
 } from './components';
 import { KidsPage, SplashPage, RecipesPage } from './pages';
-import { RecipeRequestComponent } from './components/recipes/recipe-request/recipe-request.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { RecipeRequestComponent } from './components/recipes/recipe-request/reci
     FooterComponent,
     RecipeRequestComponent,
     KidsPage,
+    MediaGridComponent,
+    VideoDisplayComponent,
   ],
   imports: [
     AppRoutingModule,

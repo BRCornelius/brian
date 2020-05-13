@@ -24,3 +24,8 @@ export interface INavLink {
  export interface ISecretResponse {
      SecretString: string;
  }
+
+ export interface IVideo {
+     title: string;
+     url: string;
+ }

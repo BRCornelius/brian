@@ -1,0 +1,5 @@
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let item of media" class="media-item" [colspan]="1">
+    <video class="thumbnail" src={{item.URL.S}} title={{item.TITLE.S}} (click)="setActive($event)" ></video>
+  </mat-grid-tile>
+</mat-grid-list>
