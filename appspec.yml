@@ -15,6 +15,9 @@ hooks:
       timeout: 180
       runas: root
   AfterInstall:
+    - location: scripts/LoadApp.sh
+      timeout: 180
+      runas: root
     - location: scripts/StartApache.sh
       timeout: 180
       runas: root

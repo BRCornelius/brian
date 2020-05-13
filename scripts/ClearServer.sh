@@ -1,3 +1,3 @@
 #!/bin/sh
 
-rm /var/www/html/* -rf
+sudo rm /var/www/html/* -rf
