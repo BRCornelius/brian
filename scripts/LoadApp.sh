@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sudo mv /var/www/html/dist/brian/* /var/www/html/
+sudo mv -f /var/www/html/dist/brian/* /var/www/html/
