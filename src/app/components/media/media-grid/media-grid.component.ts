@@ -9,8 +9,7 @@ export class MediaGridComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   @Input() media;
   @Input() setActiveMedia;

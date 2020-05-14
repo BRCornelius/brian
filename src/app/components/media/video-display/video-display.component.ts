@@ -20,7 +20,7 @@ export class VideoDisplayComponent implements OnInit {
   activeVideoTitle;
   activeVideoUrl;
   setActiveVideo = event => {
-    this.activeVideoUrl = event.target.src;
+    this.activeVideoUrl = event.target.id;
     this.activeVideoTitle = event.target.title;
   };
   videos;

@@ -26,6 +26,7 @@ import {
   VideoDisplayComponent,
 } from './components';
 import { KidsPage, SplashPage, RecipesPage } from './pages';
+import { MediaCardComponent } from './components/media/media-card/media-card.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { KidsPage, SplashPage, RecipesPage } from './pages';
     KidsPage,
     MediaGridComponent,
     VideoDisplayComponent,
+    MediaCardComponent,
   ],
   imports: [
     AppRoutingModule,
