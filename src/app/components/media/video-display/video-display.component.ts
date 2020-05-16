@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { MediaService } from 'src/app/services/media.service';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-video-display',
@@ -8,20 +7,16 @@ import { MediaService } from 'src/app/services/media.service';
 })
 export class VideoDisplayComponent implements OnInit {
 
-  constructor(private media: MediaService) { }
+  constructor() { }
 
-  ngOnInit() {
-    this.media.videos.subscribe(res => {
-      this.videos = res.response.data.Items;
-      this.activeVideoTitle = this.videos[0].TITLE.S;
-      this.activeVideoUrl = this.videos[0].URL.S;
-    });
-  }
-  activeVideoTitle;
-  activeVideoUrl;
+  ngOnInit() {}
+
+  @Input() videos;
+  @Input() activeVideoTitle;
+  @Input() activeVideoUrl;
+  
   setActiveVideo = event => {
     this.activeVideoUrl = event.target.id;
     this.activeVideoTitle = event.target.title;
   };
-  videos;
 }

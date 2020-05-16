@@ -17,7 +17,8 @@ export class NavigationComponent implements OnInit {
   navLinks: INavLink[] = [
     { label: 'Home', path: ''},
     { label: 'Recipes', path: 'recipes'},
-    { label: 'Kids', path: 'kids'}
+    { label: 'Kids', path: 'kids'},
+    { label: 'Workouts', path: 'workouts'}
   ];
   activeNavLink: string = 'Home';
   updateActiveNavLink(new_label): void {

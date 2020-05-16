@@ -9,5 +9,5 @@ export class MediaService {
 
   constructor() { }
 
-  videos = ajax('https://services.corneliuses.com/get-kids-videos');
+  kidsVideos = ajax('https://services.corneliuses.com/get-kids-videos');
 }

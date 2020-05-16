@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   ContentToggleComponent,
   FooterComponent,
+  MediaCardComponent,
   MediaGridComponent,
   NavigationComponent,
   RecipeCardComponent,
@@ -25,13 +26,14 @@ import {
   RecipeListComponent,
   VideoDisplayComponent,
 } from './components';
-import { KidsPage, SplashPage, RecipesPage } from './pages';
-import { MediaCardComponent } from './components/media/media-card/media-card.component';
+import { KidsPage, SplashPage, RecipesPage, WorkoutsPage } from './pages';
 
 @NgModule({
   declarations: [
+    KidsPage,
     RecipesPage,
     SplashPage,
+    WorkoutsPage,
     AppComponent,
     ContentToggleComponent,
     NavigationComponent,
@@ -42,7 +44,6 @@ import { MediaCardComponent } from './components/media/media-card/media-card.com
     RecipeToggleComponent,
     FooterComponent,
     RecipeRequestComponent,
-    KidsPage,
     MediaGridComponent,
     VideoDisplayComponent,
     MediaCardComponent,
