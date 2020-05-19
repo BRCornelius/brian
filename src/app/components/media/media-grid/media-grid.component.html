@@ -1,5 +1,19 @@
 <mat-grid-list cols="2" rowHeight="2:1">
   <mat-grid-tile *ngFor="let item of media" class="media-item" [colspan]="1">
-    <app-media-card *ngIf="checkRoute('kids')" class="media-card" [source]="item.URL.S" [thumbnail]="item.THUMBNAIL.S" [header]="item.TITLE.S" (click)="setActive($event)"></app-media-card>
+    <app-media-card
+      *ngIf="checkRoute('kids')"
+      class="media-card"
+      [source]="item.URL.S" 
+      [thumbnail]="item.THUMBNAIL.S"
+      [header]="item.TITLE.S"
+      (click)="setActive($event)"
+    ></app-media-card>
+    <app-workout-card
+      *ngIf="checkRoute('workouts')"
+      class="media-card"
+      [title]="item.TITLE.S"
+      [grp]="item.GRP.S"
+      [cat]="item.CAT.S"
+    ></app-workout-card>
   </mat-grid-tile>
 </mat-grid-list>

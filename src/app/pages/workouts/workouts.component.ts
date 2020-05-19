@@ -18,6 +18,7 @@ export class WorkoutsPage implements OnInit {
       this.videos = res.response.data.Items;
       this.activeVideoTitle = this.videos[0].TITLE.S;
       this.activeVideoUrl = this.otf.toUri(this.activeVideoTitle);
+      console.log(this.videos)
     });
   }
 
