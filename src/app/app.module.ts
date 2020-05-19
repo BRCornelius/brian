@@ -24,6 +24,7 @@ import {
   RecipeIngredientsComponent,
   RecipeInstructionsComponent,
   RecipeListComponent,
+  WorkoutCardComponent,
   VideoDisplayComponent,
 } from './components';
 import {
@@ -32,7 +33,6 @@ import {
   RecipesPage,
   WorkoutsPage
 } from './pages';
-import { WorkoutCardComponent } from './components/workouts/workout-card/workout-card.component';
 
 @NgModule({
   declarations: [

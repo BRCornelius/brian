@@ -14,6 +14,7 @@
       [title]="item.TITLE.S"
       [grp]="item.GRP.S"
       [cat]="item.CAT.S"
+      (click)="setActive($event)"
     ></app-workout-card>
   </mat-grid-tile>
 </mat-grid-list>

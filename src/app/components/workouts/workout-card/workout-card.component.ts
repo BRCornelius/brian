@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { OtfService } from 'src/app/services';
 
 @Component({
   selector: 'app-workout-card',
@@ -7,12 +8,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class WorkoutCardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private otf: OtfService) { }
 
-  ngOnInit() { console.log(this.title, this.grp, this.cat)}
+  ngOnInit() {
+    this.id = this.otf.toUri(this.title);
+  }
 
   @Input() title: string;
   @Input() grp: string;
   @Input() cat: string;
+
+  id: string;
 
 }
