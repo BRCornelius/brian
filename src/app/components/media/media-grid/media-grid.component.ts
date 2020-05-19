@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { IMedia } from '../../../utilities';
+import { IKidsVideo, IOTFVideo } from '../../../utilities';
 
 @Component({
   selector: 'app-media-grid',
@@ -14,7 +14,7 @@ export class MediaGridComponent implements OnInit {
 
   ngOnInit() {}
 
-  @Input() media: IMedia[];
+  @Input() media: IKidsVideo[] | IOTFVideo[];
   @Input() setActiveMedia: Function;
 
   currentRoute: string = this.router.url.replace('/', '');
