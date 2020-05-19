@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { IMedia } from '../../../utilities';
 
 @Component({
   selector: 'app-media-grid',
@@ -7,11 +10,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MediaGridComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {}
 
-  @Input() media;
-  @Input() setActiveMedia;
-  setActive = $event => this.setActiveMedia($event);
+  @Input() media: IMedia[];
+  @Input() setActiveMedia: Function;
+
+  currentRoute: string = this.router.url.replace('/', '');
+
+  checkRoute: Function = (route: string): boolean => {
+    return route === this.currentRoute;
+  }
+  setActive: Function = ($event): void => this.setActiveMedia($event);
 }

@@ -21,11 +21,17 @@ export interface INavLink {
     path: string;
     label: string;
 }
- export interface ISecretResponse {
+export interface ISecretResponse {
      SecretString: string;
- }
+}
 
- export interface IVideo {
+export interface IKidsVideo {
      title: string;
      url: string;
- }
+}
+
+export interface IOTFVideo {
+    TITLE: string;
+    CAT: string;
+    GRP: string;
+}

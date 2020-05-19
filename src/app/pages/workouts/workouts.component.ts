@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MediaService } from 'src/app/services';
+import { MediaService, OtfService } from 'src/app/services';
 
 @Component({
   selector: 'app-workouts',
@@ -8,14 +8,16 @@ import { MediaService } from 'src/app/services';
 })
 export class WorkoutsPage implements OnInit {
 
-  constructor(private media: MediaService) { }
+  constructor(
+    private media: MediaService,
+    private otf: OtfService
+  ) { }
 
   ngOnInit() {
     this.media.otfVideos.subscribe(res => {
       this.videos = res.response.data.Items;
       this.activeVideoTitle = this.videos[0].TITLE.S;
-      const uri = this.activeVideoTitle.replace(/\//g, '.');
-      this.activeVideoUrl = `https://s3.amazonaws.com/otf.corneliuses.com/videos/${uri}.mp4`;
+      this.activeVideoUrl = this.otf.toUri(this.activeVideoTitle);
     });
   }
 

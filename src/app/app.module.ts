@@ -32,6 +32,7 @@ import {
   RecipesPage,
   WorkoutsPage
 } from './pages';
+import { WorkoutCardComponent } from './components/workouts/workout-card/workout-card.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import {
     MediaGridComponent,
     VideoDisplayComponent,
     MediaCardComponent,
+    WorkoutCardComponent,
   ],
   imports: [
     AppRoutingModule,
