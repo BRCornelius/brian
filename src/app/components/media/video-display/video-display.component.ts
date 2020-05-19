@@ -14,7 +14,7 @@ export class VideoDisplayComponent implements OnInit {
   @Input() videos;
   @Input() activeVideoTitle;
   @Input() activeVideoUrl;
-  
+
   setActiveVideo = event => {
     this.activeVideoUrl = event.target.id;
     this.activeVideoTitle = event.target.title;

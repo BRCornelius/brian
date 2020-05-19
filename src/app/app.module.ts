@@ -26,7 +26,12 @@ import {
   RecipeListComponent,
   VideoDisplayComponent,
 } from './components';
-import { KidsPage, SplashPage, RecipesPage, WorkoutsPage } from './pages';
+import {
+  KidsPage,
+  SplashPage,
+  RecipesPage,
+  WorkoutsPage
+} from './pages';
 
 @NgModule({
   declarations: [

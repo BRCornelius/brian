@@ -14,7 +14,8 @@ export class WorkoutsPage implements OnInit {
     this.media.otfVideos.subscribe(res => {
       this.videos = res.response.data.Items;
       this.activeVideoTitle = this.videos[0].TITLE.S;
-      this.activeVideoUrl = this.videos[0].URL.S;
+      const uri = this.activeVideoTitle.replace(/\//g, '.');
+      this.activeVideoUrl = `https://s3.amazonaws.com/otf.corneliuses.com/videos/${uri}.mp4`;
     });
   }
 
