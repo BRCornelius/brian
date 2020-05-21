@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 
 import {MatCardModule} from '@angular/material/card';
+import {MatDialogModule} from '@angular/material/dialog';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
 import {MatTabsModule} from '@angular/material/tabs';
@@ -13,6 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
+  AuthComponent,
+  AuthButtonComponent,
   ContentToggleComponent,
   FooterComponent,
   MediaCardComponent,
@@ -54,11 +58,15 @@ import {
     VideoDisplayComponent,
     MediaCardComponent,
     WorkoutCardComponent,
+    AuthComponent,
+    AuthButtonComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
+    MatDialogModule,
+    FormsModule,
     HttpClientModule,
     MatCardModule,
     MatGridListModule,
@@ -67,6 +75,7 @@ import {
     MatToolbarModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AuthComponent]
 })
 export class AppModule { }
