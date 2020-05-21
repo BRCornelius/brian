@@ -4,3 +4,4 @@ export * from './email.service';
 export * from './aws.service';
 export * from './media.service';
 export * from './otf.service';
+export * from './auth.service';

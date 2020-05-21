@@ -35,3 +35,8 @@ export interface IOTFVideo {
     CAT: string;
     GRP: string;
 }
+
+export interface ICredential {
+    name: string;
+    password: string;
+}
