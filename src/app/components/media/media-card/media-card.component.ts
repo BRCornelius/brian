@@ -12,7 +12,7 @@ export class MediaCardComponent implements OnInit {
   ngOnInit() {
   }
 
-  @Input() thumbnail;
-  @Input() source;
-  @Input() header;
+  @Input() thumbnail: string;
+  @Input() source: string;
+  @Input() header: string;
 }

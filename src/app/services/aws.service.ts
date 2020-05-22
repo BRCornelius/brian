@@ -10,7 +10,7 @@ export class AwsService {
 
   constructor() { }
 
-  getSecret() {
+  getSecret: Function = (): Promise<{}> => {
     return new Promise((resolve, reject) => {
       secretsConnection.getSecretValue({SecretId: "corneliuses-api-key"}, (err, data) => {
         if(err){

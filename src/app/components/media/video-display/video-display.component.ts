@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { OtfService } from 'src/app/services';
+import { IOTFVideo, IKidsVideo } from 'src/app/utilities';
 
 @Component({
   selector: 'app-video-display',
@@ -12,12 +13,11 @@ export class VideoDisplayComponent implements OnInit {
 
   ngOnInit() {}
 
-  @Input() videos;
-  @Input() activeVideoTitle;
-  @Input() activeVideoUrl;
+  @Input() videos: IOTFVideo[] | IKidsVideo[];
+  @Input() activeVideoTitle: string;
+  @Input() activeVideoUrl: string;
 
-  setActiveVideo = event => {
-    console.log(event.target)
+  setActiveVideo: Function = (event): void => {
     this.activeVideoTitle = event.target.title;
     this.activeVideoUrl = event.target.id;
   };

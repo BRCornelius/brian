@@ -21,7 +21,8 @@ export class WorkoutsPage implements OnInit {
     });
     this.media.otfVideos.subscribe(res => {
       this.videos = res.response.data.Items;
-      this.activeVideoTitle = this.videos[0].TITLE.S;
+      const limit = Math.floor(Math.random() * (this.videos.length - 1))
+      this.activeVideoTitle = this.videos[limit].TITLE.S;
       this.activeVideoUrl = this.otf.toUri(this.activeVideoTitle);
     });
   }

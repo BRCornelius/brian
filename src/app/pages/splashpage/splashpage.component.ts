@@ -11,5 +11,5 @@ export class SplashPage implements OnInit {
 
   ngOnInit() {
   }
-  title = `Brian's Page`;
+  title: string = `Brian's Page`;
 }

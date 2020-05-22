@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipeService } from 'src/app/services';
+import { IRecipe } from 'src/app/utilities';
 
 @Component({
   selector: 'app-recipe-list',
@@ -14,5 +15,5 @@ export class RecipeListComponent implements OnInit {
     this.recipe.recipes.subscribe(res => this.recipes = res.response.data.Items);
   }
 
-  recipes = [];
+  recipes: IRecipe[];
 }

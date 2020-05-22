@@ -32,8 +32,8 @@ export interface ISecretResponse {
 }
 
 export interface IKidsVideo {
-     title: IDynamoDBEntry;
-     url: IDynamoDBEntry;
+     TITLE: IDynamoDBEntry;
+     URL: IDynamoDBEntry;
 }
 
 export interface IOTFVideo {

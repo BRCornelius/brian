@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MediaService } from 'src/app/services';
+import { IKidsVideo } from 'src/app/utilities';
 
 @Component({
   selector: 'app-kids',
@@ -18,7 +19,7 @@ export class KidsPage implements OnInit {
     });
   }
 
-  activeVideoTitle;
-  activeVideoUrl;
-  videos;
+  activeVideoTitle: string;
+  activeVideoUrl: string;
+  videos: IKidsVideo[];
 }
