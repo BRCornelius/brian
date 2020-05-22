@@ -26,6 +26,7 @@ export class AuthComponent implements OnInit {
     this.auth.authenticate().subscribe(res => {
       if(res.body) {
         document.cookie=res.body
+        this.dialog.closeAll();
       } else {
         this.hasErrors = true;
       }
