@@ -28,6 +28,7 @@ export class WorkoutsPage implements OnInit {
 
   activeVideoTitle: string;
   activeVideoUrl: string;
+  errorText: string = 'You are not authorized to view this page.  Please email brian@corneliuses.com to request access.'
   isAuthorized: boolean;
   videos: IOTFVideo[];
 }

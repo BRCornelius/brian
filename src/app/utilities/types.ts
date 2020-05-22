@@ -1,20 +1,26 @@
+interface IDynamoDBEntry {
+    S?: string;
+    SS?: string[];
+    L?: any[];
+}
+
 export interface IIngredient {
-    quantity: string;
-    item: string;
+    quantity: IDynamoDBEntry;
+    item: IDynamoDBEntry;
 }
 
 export interface IRecipeTime {
-    cook: string;
-    prep: string;
-    total: string;
+    cook: IDynamoDBEntry;
+    prep: IDynamoDBEntry;
+    total: IDynamoDBEntry;
 }
 
 export interface IRecipe {
     INGREDIENTS: IIngredient[];
-    INSTRUCTIONS: string[];
-    PHOTO: string;
+    INSTRUCTIONS: IDynamoDBEntry;
+    PHOTO: IDynamoDBEntry;
     TIME: IRecipeTime;
-    NAME: string;
+    NAME: IDynamoDBEntry;
 }
 
 export interface INavLink {
@@ -26,14 +32,14 @@ export interface ISecretResponse {
 }
 
 export interface IKidsVideo {
-     title: string;
-     url: string;
+     title: IDynamoDBEntry;
+     url: IDynamoDBEntry;
 }
 
 export interface IOTFVideo {
-    TITLE: string;
-    CAT: string;
-    GRP: string;
+    TITLE: IDynamoDBEntry;
+    CAT: IDynamoDBEntry;
+    GRP: IDynamoDBEntry;
 }
 
 export interface ICredential {

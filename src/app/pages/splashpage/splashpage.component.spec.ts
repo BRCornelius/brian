@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SplashpageComponent } from './splashpage.component';
+import { SplashPage } from './splashpage.component';
 
-describe('SplashpageComponent', () => {
-  let component: SplashpageComponent;
-  let fixture: ComponentFixture<SplashpageComponent>;
+describe('SplashPage', () => {
+  let component: SplashPage;
+  let fixture: ComponentFixture<SplashPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SplashpageComponent ]
+      declarations: [ SplashPage ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SplashpageComponent);
+    fixture = TestBed.createComponent(SplashPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

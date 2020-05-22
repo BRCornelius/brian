@@ -4,7 +4,4 @@
     [activeVideoUrl]="activeVideoUrl"
     [activeVideoTitle]="activeVideoTitle"
 ></app-video-display>
-<div *ngIf="!isAuthorized" class="no-auth">
-    <h1>You are not authorized to view this page.  Please email brian@corneliuses.com to request access.</h1>
-    <img src="https://thumbs.gfycat.com/WeeEagerAlaskankleekai-small.gif">
-</div>
+<app-error [text]="errorText"></app-error>

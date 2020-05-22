@@ -37,6 +37,7 @@ import {
   RecipesPage,
   WorkoutsPage
 } from './pages';
+import { ErrorComponent } from './components/common/error/error.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import {
     MediaCardComponent,
     WorkoutCardComponent,
     AuthComponent,
-    AuthButtonComponent
+    AuthButtonComponent,
+    ErrorComponent
   ],
   imports: [
     AppRoutingModule,

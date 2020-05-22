@@ -10,18 +10,30 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class AuthComponent implements OnInit {
 
-  constructor(private auth: AuthService) { }
+  constructor(
+    private auth: AuthService,
+    private dialog: MatDialog
+  ) { }
 
   ngOnInit() {}
 
+  hasErrors: boolean = false;
   name: string = "";
   password: string = "";
 
-  onSubmit: Function = () => {
+  onSubmit: Function = (): void => {
     this.auth.credentials = { name: this.name, password: this.password};
-    this.auth.authenticate().subscribe(res => document.cookie=res.body);
-    console.log(document.cookie);
+    this.auth.authenticate().subscribe(res => {
+      if(res.body) {
+        document.cookie=res.body
+      } else {
+        this.hasErrors = true;
+      }
+    });
   };
+  onCancel: Function = (): void => {
+    this.dialog.closeAll();
+  }
 }
 
 @Component({

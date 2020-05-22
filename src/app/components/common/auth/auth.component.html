@@ -1,5 +1,18 @@
-<div>
-  Name: <input [(ngModel)]="name" (ngModelChange)="name=$event"><br>
-  Password: <input type="password" [(ngModel)]="password" (ngModelChange)="password=$event">
-  <button (click)="onSubmit()">Submit</button>
+<div class="container">
+  <h1 class="header">Log in<br>
+    <small class="subheader">Using your Corneliuses credentials</small>
+  </h1>
+  <div class="forms">
+    Name: <input [(ngModel)]="name" (ngModelChange)="name=$event"><br>
+    Password: <input type="password" [(ngModel)]="password" (ngModelChange)="password=$event"><br>
+  </div>
+  <div class="buttons">
+    <button class="submit-button" (click)="onSubmit()">Submit</button>
+    <button class="cancel-button" (click)="onCancel()">Cancel</button>
+  </div>
+  <h4 class="error" *ngIf="hasErrors">
+    Username/password combination is not found in the members database.
+    Please check your spelling and retry your request or email
+    brian@corneliuses.com to request access.
+  </h4>
 </div>
