@@ -4,4 +4,4 @@
     [activeVideoUrl]="activeVideoUrl"
     [activeVideoTitle]="activeVideoTitle"
 ></app-video-display>
-<app-error [text]="errorText"></app-error>
+<app-error *ngIf="!isAuthorized" [text]="errorText"></app-error>
