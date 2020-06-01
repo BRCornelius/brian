@@ -20,7 +20,7 @@ export class WorkoutsPage implements OnInit {
       this.isAuthorized = res.body
     });
     this.media.otfVideos.subscribe(res => {
-      this.videos = this.otf.formatOTFVideos(res.response.data.Items);
+      this.videos = this.otf.formatVideos(res.response.data.Items);
       const limit = Math.floor(Math.random() * (this.videos.length - 1));
       this.activeVideoTitle = this.videos[limit].title;
       this.activeVideoUrl = this.otf.toUri(this.activeVideoTitle);

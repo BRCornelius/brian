@@ -8,7 +8,7 @@ export class OtfService {
 
   constructor() { }
 
-  formatOTFVideos: Function = (RawOTFVideos: IOTFVideo[]): IFormattedOTFVideo[] => {
+  formatVideos: Function = (RawOTFVideos: IOTFVideo[]): IFormattedOTFVideo[] => {
     return RawOTFVideos.map((video: IOTFVideo): IFormattedOTFVideo => ({
       title: video.TITLE.S,
       category: video.CAT.S,
