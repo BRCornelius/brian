@@ -51,3 +51,7 @@ export interface ICredential {
      group: string;
      title: string;
  }
+
+ export interface IFacet {
+     [key: string]: string;
+ }
