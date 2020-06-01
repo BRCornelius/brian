@@ -46,3 +46,8 @@ export interface ICredential {
     name: string;
     password: string;
 }
+ export interface IFormattedOTFVideo {
+     category: string;
+     group: string;
+     title: string;
+ }
