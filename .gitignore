@@ -50,7 +50,4 @@ index.js
 
 # AWS Setup
 config.ts
-ddb_createTable.js
-ddb_addRecipe.js
-ddb_getRecipes.js
-ddb_addOTF.js
+ddb_*.js

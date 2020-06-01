@@ -16,13 +16,8 @@ export class NavigationComponent implements OnInit {
   ngOnInit() {
   }
 
-  navLinks: INavLink[] = [
-    { label: 'Home', path: ''},
-    { label: 'Recipes', path: 'recipes'},
-    { label: 'Kids', path: 'kids'},
-    { label: 'Workouts', path: 'workouts'}
-  ];
   activeNavLink: string;
+  navLinks: INavLink[] = this.nav.navLinks;
 
   updateActiveNavLink: Function = (new_label): void => {
     this.activeNavLink = new_label;
