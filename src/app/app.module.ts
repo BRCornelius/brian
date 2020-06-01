@@ -18,6 +18,7 @@ import {
   AuthComponent,
   AuthButtonComponent,
   ContentToggleComponent,
+  ErrorComponent,
   FooterComponent,
   MediaCardComponent,
   MediaGridComponent,
@@ -28,6 +29,7 @@ import {
   RecipeIngredientsComponent,
   RecipeInstructionsComponent,
   RecipeListComponent,
+  SortComponent,
   WorkoutCardComponent,
   VideoDisplayComponent,
 } from './components';
@@ -37,7 +39,6 @@ import {
   RecipesPage,
   WorkoutsPage
 } from './pages';
-import { ErrorComponent } from './components/common/error/error.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { ErrorComponent } from './components/common/error/error.component';
     WorkoutCardComponent,
     AuthComponent,
     AuthButtonComponent,
-    ErrorComponent
+    ErrorComponent,
+    SortComponent
   ],
   imports: [
     AppRoutingModule,

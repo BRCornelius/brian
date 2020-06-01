@@ -16,6 +16,7 @@ export class MediaGridComponent implements OnInit {
 
   @Input() media: IKidsVideo[] | IOTFVideo[];
   @Input() setActiveMedia: Function;
+  @Input() displaySort: boolean;
 
   currentRoute: string = this.router.url.replace('/', '');
 

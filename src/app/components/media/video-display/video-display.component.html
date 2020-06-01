@@ -2,5 +2,9 @@
 <h2>{{activeVideoTitle}}</h2>
 <hr>
 <div class="grid-list">
-    <app-media-grid [media]="videos" [setActiveMedia]="setActiveVideo"></app-media-grid>
+    <app-media-grid
+        [media]="videos"
+        [setActiveMedia]="setActiveVideo"
+        [displaySort]="displaySort"
+    ></app-media-grid>
 </div>

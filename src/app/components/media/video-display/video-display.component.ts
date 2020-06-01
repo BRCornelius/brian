@@ -16,6 +16,7 @@ export class VideoDisplayComponent implements OnInit {
   @Input() videos: IOTFVideo[] | IKidsVideo[];
   @Input() activeVideoTitle: string;
   @Input() activeVideoUrl: string;
+  @Input() displaySort: boolean;
 
   setActiveVideo: Function = (event): void => {
     this.activeVideoTitle = event.target.title;
