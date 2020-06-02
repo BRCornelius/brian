@@ -11,9 +11,7 @@ export class VideoDisplayComponent implements OnInit {
 
   constructor(private otf: OtfService) { }
 
-  ngOnInit() {
-    console.log(this.$options);
-  }
+  ngOnInit() {}
 
   @Input() videos: IOTFVideo[] | IKidsVideo[];
   @Input() activeVideoTitle: string;

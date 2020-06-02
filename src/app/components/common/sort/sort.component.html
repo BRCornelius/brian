@@ -1,5 +1,5 @@
 <div class="border">
     <div class="container">
-        <app-radio *ngFor="let $option of $options" id={{$option.title}} [$option]="$option"></app-radio>
+        <app-radio *ngFor="let $option of $options" id={{$option.title}} [$option]="$option" [filterFunction]="updateFacets"></app-radio>
     </div>
 </div>

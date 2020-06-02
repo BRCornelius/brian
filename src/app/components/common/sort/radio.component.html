@@ -1,7 +1,7 @@
 <div class="container">
   <h3 class="title">{{$option.title}}</h3>
   <div *ngFor="let facet of $option.options">
-    <input type="radio" id={{facet}} name={{$option.title}} value={{facet}}>
+    <input type="radio" id={{facet}} name={{$option.title}} value={{facet}} (click)="setFacet($event)">
     <label for={{facet}}>{{facet}}</label>
   </div>
 </div>

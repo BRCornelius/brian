@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { IOptions } from 'src/app/utilities';
 
 @Component({
   selector: 'app-radio',
@@ -9,8 +10,10 @@ export class RadioComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() { console.log(this.$option) };
+  ngOnInit() {};
 
-  @Input() $option;
+  @Input() $option: IOptions;
+  @Input() filterFunction: Function;
 
+  setFacet: Function = ($event): void => this.filterFunction($event);
 }
