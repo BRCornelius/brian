@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IFacet } from '../utilities';
+import { IFacet, IOTFVideo, IKidsVideo } from '../utilities';
 
 @Injectable({
   providedIn: 'root'
@@ -29,7 +29,7 @@ export class SortService {
       return facet;
     });
   };
-  filterContent = (content, facets) => facets.reduce((agg, curr) => {
+  filterContent: Function = (content, facets): IOTFVideo[] | IKidsVideo[] => facets.reduce((agg, curr) => {
     const facetKey = Object.keys(curr)[0];
     const facetValue = curr[facetKey];
     return agg.filter(item => item[facetKey.toLowerCase()] === facetValue);
