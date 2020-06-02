@@ -31,7 +31,7 @@ import {
   RecipeIngredientsComponent,
   RecipeInstructionsComponent,
   RecipeListComponent,
-  SortComponent,
+  FilterComponent,
   WorkoutCardComponent,
   VideoDisplayComponent,
 } from './components';
@@ -65,7 +65,7 @@ import {
     AuthComponent,
     AuthButtonComponent,
     ErrorComponent,
-    SortComponent,
+    FilterComponent,
     RadioComponent
   ],
   imports: [

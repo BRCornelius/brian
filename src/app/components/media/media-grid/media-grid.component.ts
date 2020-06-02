@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { IKidsVideo, IOTFVideo, IOptions, IFacet } from '../../../utilities';
-import { SortService } from 'src/app/services/sort.service';
+import { FilterService } from 'src/app/services/filter.service';
 
 @Component({
   selector: 'app-media-grid',
@@ -13,8 +13,8 @@ export class MediaGridComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private sort: SortService
-    ) { }
+    private filter: FilterService
+  ) { }
 
   ngOnInit() {
     this.displayedMedia = this.media
@@ -22,7 +22,7 @@ export class MediaGridComponent implements OnInit {
 
   @Input() media: IKidsVideo[] | IOTFVideo[];
   @Input() setActiveMedia: Function;
-  @Input() displaySort: boolean;
+  @Input() displayFilter: boolean;
   @Input() $options: IOptions[];
 
   currentRoute: string = this.router.url.replace('/', '');
@@ -32,7 +32,7 @@ export class MediaGridComponent implements OnInit {
     return route === this.currentRoute;
   }
   updateDisplayedMedia: Function = (): void => {
-    const newMedia = this.sort.filterContent(this.media, this.sort.facets);
+    const newMedia = this.filter.filterContent(this.media, this.filter.facets);
     this.displayedMedia = newMedia;
   };
   setActive: Function = ($event): void => this.setActiveMedia($event);

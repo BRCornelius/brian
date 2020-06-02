@@ -16,7 +16,7 @@ export class VideoDisplayComponent implements OnInit {
   @Input() videos: IOTFVideo[] | IKidsVideo[];
   @Input() activeVideoTitle: string;
   @Input() activeVideoUrl: string;
-  @Input() displaySort: boolean;
+  @Input() displayFilter: boolean;
   @Input() $options: IOptions[] = [];
 
   setActiveVideo: Function = (event): void => {

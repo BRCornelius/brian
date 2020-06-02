@@ -1,10 +1,10 @@
 <mat-grid-list cols="2" rowHeight="2:1">
-  <app-sort
-    *ngIf="displaySort"
-    class="sort-component"
+  <app-filter
+    *ngIf="displayFilter"
+    class="filter-component"
     [$options]="$options"
-    [filter]="updateDisplayedMedia"
-  ></app-sort>
+    [filterFunction]="updateDisplayedMedia"
+  ></app-filter>
   <mat-grid-tile *ngFor="let item of displayedMedia" class="media-item" [colspan]="1">
     <app-media-card
       *ngIf="checkRoute('kids')"

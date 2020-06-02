@@ -4,7 +4,7 @@ import { IFacet, IOTFVideo, IKidsVideo } from '../utilities';
 @Injectable({
   providedIn: 'root'
 })
-export class SortService {
+export class FilterService {
 
   constructor() { }
 
