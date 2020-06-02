@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MediaService, OtfService, AuthService } from 'src/app/services';
 import { IOTFVideo, IFormattedOTFVideo, IOptions } from '../../utilities';
 
