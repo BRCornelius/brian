@@ -3,12 +3,13 @@
     *ngIf="displaySort"
     class="sort-component"
     [$options]="$options"
+    [filter]="updateDisplayedMedia"
   ></app-sort>
-  <mat-grid-tile *ngFor="let item of media" class="media-item" [colspan]="1">
+  <mat-grid-tile *ngFor="let item of displayedMedia" class="media-item" [colspan]="1">
     <app-media-card
       *ngIf="checkRoute('kids')"
       class="media-card"
-      [source]="item.URL.S" 
+      [source]="item.URL.S"
       [thumbnail]="item.THUMBNAIL.S"
       [header]="item.TITLE.S"
       (click)="setActive($event)"
