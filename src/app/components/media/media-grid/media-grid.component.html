@@ -1,5 +1,9 @@
 <mat-grid-list cols="2" rowHeight="2:1">
-  <app-sort *ngIf="displaySort"></app-sort>
+  <app-sort
+    *ngIf="displaySort"
+    class="sort-component"
+    [$options]="$options"
+  ></app-sort>
   <mat-grid-tile *ngFor="let item of media" class="media-item" [colspan]="1">
     <app-media-card
       *ngIf="checkRoute('kids')"

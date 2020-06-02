@@ -1,0 +1,5 @@
+<h3>{{$option.title}}</h3>
+<div *ngFor="let facet of $option.options">
+  <input type="radio" id={{facet}} name={{$option.title}} value={{facet}}>
+  <label for={{facet}}>{{facet}}</label>
+</div>

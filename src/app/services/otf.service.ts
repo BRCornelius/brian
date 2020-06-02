@@ -1,5 +1,5 @@
 import { Injectable, OnInit } from '@angular/core';
-import { IFormattedOTFVideo, IOTFVideo } from '../utilities';
+import { IFormattedOTFVideo, IOTFVideo, IOptions } from '../utilities';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +7,16 @@ import { IFormattedOTFVideo, IOTFVideo } from '../utilities';
 export class OtfService {
 
   constructor() { }
+
+  categories: string[] = ['Endurance', 'Mayhem', 'Power', 'Strength'];
+  groups: string[] = ['Back', 'Chest', 'Legs'];
+  options: IOptions[] = [{
+    title: 'Categories',
+    options: this.categories,
+  }, {
+    title: 'Groups',
+    options: this.groups,
+  }]
 
   formatVideos: Function = (RawOTFVideos: IOTFVideo[]): IFormattedOTFVideo[] => {
     return RawOTFVideos.map((video: IOTFVideo): IFormattedOTFVideo => ({

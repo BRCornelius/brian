@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sort',
@@ -11,5 +11,6 @@ export class SortComponent implements OnInit {
 
   ngOnInit() {
   }
+  @Input() $options;
 
 }

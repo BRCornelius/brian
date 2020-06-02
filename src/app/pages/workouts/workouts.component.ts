@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MediaService, OtfService, AuthService } from 'src/app/services';
-import { IOTFVideo, IFormattedOTFVideo } from '../../utilities';
+import { IOTFVideo, IFormattedOTFVideo, IOptions } from '../../utilities';
 
 @Component({
   selector: 'app-workouts',
@@ -30,6 +30,7 @@ export class WorkoutsPage implements OnInit {
   activeVideoTitle: string;
   activeVideoUrl: string;
   errorText: string = 'You are not authorized to view this page.  Please email brian@corneliuses.com to request access.'
+  options: IOptions[] = this.otf.options;
   isAuthorized: boolean;
   videos: IFormattedOTFVideo[];
 }

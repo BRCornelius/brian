@@ -8,6 +8,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
+import {MatRadioModule} from '@angular/material/radio';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
@@ -23,6 +24,7 @@ import {
   MediaCardComponent,
   MediaGridComponent,
   NavigationComponent,
+  RadioComponent,
   RecipeCardComponent,
   RecipeRequestComponent,
   RecipeToggleComponent,
@@ -63,7 +65,8 @@ import {
     AuthComponent,
     AuthButtonComponent,
     ErrorComponent,
-    SortComponent
+    SortComponent,
+    RadioComponent
   ],
   imports: [
     AppRoutingModule,
@@ -75,6 +78,7 @@ import {
     MatCardModule,
     MatGridListModule,
     MatListModule,
+    MatRadioModule,
     MatTabsModule,
     MatToolbarModule,
   ],
