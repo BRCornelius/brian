@@ -29,17 +29,11 @@ export class SortService {
       return facet;
     });
   };
-  filterContent = (content, facets) => {
-    const newContent = facets.reduce((agg, curr) => {
-      const facetKey = Object.keys(curr)[0];
-      const facetValue = curr[facetKey];
-      const filtered = agg.filter(item => {
-        return item[facetKey.toLowerCase()] === facetValue
-      });
-      return filtered;
-    }, content);
-    return newContent;
-  };
+  filterContent = (content, facets) => facets.reduce((agg, curr) => {
+    const facetKey = Object.keys(curr)[0];
+    const facetValue = curr[facetKey];
+    return agg.filter(item => item[facetKey.toLowerCase()] === facetValue);
+  }, content);
   updateFacets: Function = (event): void => {
     const key = event.target.name;
     const value = event.target.value;
