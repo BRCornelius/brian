@@ -5,7 +5,7 @@
     [$options]="$options"
     [filterFunction]="updateDisplayedMedia"
   ></app-filter>
-  <mat-grid-tile *ngFor="let item of displayedMedia" class="media-item" [colspan]="1">
+  <mat-grid-tile *ngFor="let item of media" class="media-item" [colspan]="1">
     <app-media-card
       *ngIf="checkRoute('kids')"
       class="media-card"

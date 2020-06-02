@@ -16,9 +16,7 @@ export class MediaGridComponent implements OnInit {
     private filter: FilterService
   ) { }
 
-  ngOnInit() {
-    this.displayedMedia = this.media
-  }
+  ngOnInit() {}
 
   @Input() media: IKidsVideo[] | IOTFVideo[];
   @Input() setActiveMedia: Function;
@@ -26,14 +24,13 @@ export class MediaGridComponent implements OnInit {
   @Input() $options: IOptions[];
 
   currentRoute: string = this.router.url.replace('/', '');
-  displayedMedia: IKidsVideo[] | IOTFVideo[];
 
   checkRoute: Function = (route: string): boolean => {
     return route === this.currentRoute;
   }
   updateDisplayedMedia: Function = (): void => {
     const newMedia = this.filter.filterContent(this.media, this.filter.facets);
-    this.displayedMedia = newMedia;
+    this.media = newMedia;
   };
   setActive: Function = ($event): void => this.setActiveMedia($event);
 }
