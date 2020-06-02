@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IOptions } from 'src/app/utilities';
-import { FilterService } from 'src/app/services/filter.service';
+import { IOptions } from '../../../utilities';
+import { FilterService } from '../../../services';
 
 @Component({
   selector: 'app-filter',

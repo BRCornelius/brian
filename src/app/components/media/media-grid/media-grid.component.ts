@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { IKidsVideo, IOTFVideo, IOptions, IFacet } from '../../../utilities';
-import { FilterService } from 'src/app/services/filter.service';
+import { FilterService } from '../../../services';
 
 @Component({
   selector: 'app-media-grid',
