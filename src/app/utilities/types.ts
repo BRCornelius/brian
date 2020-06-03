@@ -47,8 +47,12 @@ export interface ICredential {
  export interface IFacet {
      [key: string]: string;
  }
-
  export interface IOptions {
      title: string;
      options: string[];
+ }
+ export interface ILegoSet {
+     title: string;
+     setID: number;
+     image: string;
  }
