@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LegoService } from '../../services';
-import { ILegoSet } from 'src/app/utilities';
+import { IDropdownOption } from 'src/app/utilities';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-lego',
@@ -9,19 +10,31 @@ import { ILegoSet } from 'src/app/utilities';
 })
 export class LegoPage implements OnInit {
 
-  constructor(private lego: LegoService) { }
+  constructor(
+    private sanitizer: DomSanitizer,
+    private lego: LegoService
+  ) { }
 
   ngOnInit() {
     this.lego.getSets().subscribe(response => {
       const rawSets = JSON.parse(response.body).sets;
       const sets = rawSets.map(set => ({
         title: set.name,
-        setID: set.setID,
+        value: set.setID,
         image: set.image.thumbnailURL
       }));
       this.sets = sets;
     });
   }
 
-  sets: ILegoSet[];
+  instructions: string[];
+  sets: IDropdownOption[];
+
+  updateActiveSet: Function = (selectedOption: number): void => {
+    this.lego.getInstructions(selectedOption).subscribe(response => {
+      const body = JSON.parse(response.body);
+      this.instructions = body.instructions.map(instruction => this.sanitizer.bypassSecurityTrustResourceUrl(instruction.URL));
+      console.log(this.instructions);
+    })
+  };
 }

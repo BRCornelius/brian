@@ -1,0 +1,13 @@
+<mat-form-field>
+  <mat-label>Lego Sets</mat-label>
+  <mat-select
+    [(ngModel)]="selectedOption"
+    (selectionChange)="selectOption(selectedOption)"
+    name="set"
+  >
+    <mat-option
+      *ngFor="let option of dropdownOptions"
+      [value]="option.value"
+    >{{option.title}}</mat-option>
+  </mat-select>
+</mat-form-field>

@@ -51,8 +51,8 @@ export interface ICredential {
      title: string;
      options: string[];
  }
- export interface ILegoSet {
+ export interface IDropdownOption {
      title: string;
-     setID: number;
-     image: string;
+     value: number;
+     image?: string;
  }
