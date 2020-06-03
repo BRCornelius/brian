@@ -37,6 +37,7 @@ import {
 } from './components';
 import {
   KidsPage,
+  LegoPage,
   SplashPage,
   RecipesPage,
   WorkoutsPage
@@ -45,6 +46,7 @@ import {
 @NgModule({
   declarations: [
     KidsPage,
+    LegoPage,
     RecipesPage,
     SplashPage,
     WorkoutsPage,
@@ -66,7 +68,7 @@ import {
     AuthButtonComponent,
     ErrorComponent,
     FilterComponent,
-    RadioComponent
+    RadioComponent,
   ],
   imports: [
     AppRoutingModule,
