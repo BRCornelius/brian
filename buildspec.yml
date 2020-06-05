@@ -11,7 +11,7 @@ phases:
             - ng build --prod
     post_build:
          commands:
-            - aws deploy push --application-name brian --description "Revision file for brian" --ignore-hidden-files --s3-location s3://brcornelius-artifacts/artifact.zip --source .
+            - aws s3 cp /dist/brian/ s3://brian.corneliuses.com --recursive
             - echo Build completed
 artifacts:
     files:
