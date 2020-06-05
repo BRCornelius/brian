@@ -1,0 +1,20 @@
+version: 0.2
+phases:
+    install:
+        commands:
+            - echo Installing source NPM dependencies...
+            - npm install
+            - npm install -g @angular/cli
+    build:
+        commands:
+            - echo Build started on `date`
+            - ng build --prod
+    post_build:
+         commands:
+            - aws deploy push --application-name brian --description "Revision file for brian" --ignore-hidden-files --s3-location s3://brcornelius-artifacts/artifact.zip --source .
+            - echo Build completed
+artifacts:
+    files:
+        - '**/*'
+    base-directory: 'dist*'
+    discard-paths: yes
