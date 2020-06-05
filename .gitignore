@@ -51,3 +51,4 @@ index.js
 # AWS Setup
 config.ts
 ddb_*.js
+pdf_*.js
