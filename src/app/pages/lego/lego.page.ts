@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { LegoService } from '../../services';
 import { IDropdownOption } from 'src/app/utilities';
-import { DomSanitizer } from '@angular/platform-browser';
+import { SafePipe } from 'src/app/pipes/safe.pipe';
 
 @Component({
   selector: 'app-lego',
   templateUrl: './lego.page.html',
-  styleUrls: ['./lego.page.css']
+  styleUrls: ['./lego.page.css'],
+  providers: [SafePipe]
 })
 export class LegoPage implements OnInit {
 
   constructor(
-    private sanitizer: DomSanitizer,
+    private safe: SafePipe,
     private lego: LegoService
   ) { }
 
@@ -25,6 +26,12 @@ export class LegoPage implements OnInit {
       }));
       this.sets = sets;
     });
+    this.lego.getInstructions(29794).subscribe(response => {
+      const body = JSON.parse(response.body);
+      console.log(body)
+      this.instructions = body.instructions.map(instruction => this.safe.transform(instruction.URL, 'resourceUrl'));
+      console.log(this.instructions);
+    })
   }
 
   instructions: string[];
@@ -33,7 +40,7 @@ export class LegoPage implements OnInit {
   updateActiveSet: Function = (selectedOption: number): void => {
     this.lego.getInstructions(selectedOption).subscribe(response => {
       const body = JSON.parse(response.body);
-      this.instructions = body.instructions.map(instruction => this.sanitizer.bypassSecurityTrustResourceUrl(instruction.URL));
+      this.instructions = body.instructions.map(instruction => instruction.URL);
       console.log(this.instructions);
     })
   };
