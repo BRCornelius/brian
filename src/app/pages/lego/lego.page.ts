@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LegoService } from '../../services';
-import { IDropdownOption } from 'src/app/utilities';
+import { IDropdownOption, IInstruction } from 'src/app/utilities';
 import { SafePipe } from 'src/app/pipes/safe.pipe';
 
 @Component({
@@ -35,7 +35,7 @@ export class LegoPage implements OnInit {
     this.lego.getInstructions(selectedOption).subscribe(response => {
       const body = JSON.parse(response.body);
       console.log(body.instructions);
-      this.instructions = body.instructions.reduce((agg, curr, index) => {
+      this.instructions = body.instructions.reduce((agg: string[], curr: IInstruction, index: number) => {
         if(index % 2 === 0) {
           agg.push(this.safe.transform(curr.URL, 'resourceUrl'));
           return agg;

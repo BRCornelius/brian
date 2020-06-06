@@ -56,3 +56,6 @@ export interface ICredential {
      value: number;
      image?: string;
  }
+export interface IInstruction {
+    URL: string;
+}
