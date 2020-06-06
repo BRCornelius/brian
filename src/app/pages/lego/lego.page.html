@@ -5,11 +5,12 @@
   ></app-dropdown>
 </div>
 <div class="container" id="instructions">
-  <div *ngFor="let instruction of instructions">
-    <embed
-      class="link"
-      src={{instruction}}
-      type="application/pdf"
-    />
-  </div>
+  <iframe
+    *ngFor="let instruction of instructions"
+    class="link"
+    [src]="instruction"
+    type="application/pdf"
+    height="350"
+    width="90%"
+  ></iframe>
 </div>

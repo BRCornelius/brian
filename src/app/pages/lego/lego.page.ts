@@ -26,12 +26,6 @@ export class LegoPage implements OnInit {
       }));
       this.sets = sets;
     });
-    this.lego.getInstructions(29794).subscribe(response => {
-      const body = JSON.parse(response.body);
-      console.log(body)
-      this.instructions = body.instructions.map(instruction => this.safe.transform('https://s3.amazonaws.com/photos.corneliuses.com/lego/SCIPAB+Pocket+Prompt+FINAL.pdf', 'resourceUrl'));
-      console.log(this.instructions);
-    })
   }
 
   instructions: string[];
@@ -40,8 +34,15 @@ export class LegoPage implements OnInit {
   updateActiveSet: Function = (selectedOption: number): void => {
     this.lego.getInstructions(selectedOption).subscribe(response => {
       const body = JSON.parse(response.body);
-      this.instructions = body.instructions.map(instruction => 'https://s3.amazonaws.com/photos.corneliuses.com/lego/SCIPAB+Pocket+Prompt+FINAL.pdf');
-      console.log(this.instructions);
+      console.log(body.instructions);
+      this.instructions = body.instructions.reduce((agg, curr, index) => {
+        if(index % 2 === 0) {
+          agg.push(this.safe.transform(curr.URL, 'resourceUrl'));
+          return agg;
+        } else {
+          return agg;
+        }
+      }, []);
     })
   };
 }
