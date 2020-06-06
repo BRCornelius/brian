@@ -47,8 +47,15 @@ export interface ICredential {
  export interface IFacet {
      [key: string]: string;
  }
-
  export interface IOptions {
      title: string;
      options: string[];
  }
+ export interface IDropdownOption {
+     title: string;
+     value: number;
+     image?: string;
+ }
+export interface IInstruction {
+    URL: string;
+}

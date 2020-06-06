@@ -6,3 +6,4 @@ export * from './media.service';
 export * from './otf.service';
 export * from './auth.service';
 export * from './filter.service';
+export * from './lego.service';

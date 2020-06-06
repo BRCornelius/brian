@@ -4,3 +4,4 @@ export * from './footer/footer.component';
 export * from './auth/auth.component';
 export * from './filter';
 export * from './error/error.component';
+export * from './dropdown/dropdown.component';

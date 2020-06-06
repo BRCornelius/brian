@@ -9,6 +9,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
@@ -31,20 +32,24 @@ import {
   RecipeIngredientsComponent,
   RecipeInstructionsComponent,
   RecipeListComponent,
+  DropdownComponent,
   FilterComponent,
   WorkoutCardComponent,
   VideoDisplayComponent,
 } from './components';
 import {
   KidsPage,
+  LegoPage,
   SplashPage,
   RecipesPage,
   WorkoutsPage
 } from './pages';
+import { SafePipe } from './pipes';
 
 @NgModule({
   declarations: [
     KidsPage,
+    LegoPage,
     RecipesPage,
     SplashPage,
     WorkoutsPage,
@@ -66,7 +71,9 @@ import {
     AuthButtonComponent,
     ErrorComponent,
     FilterComponent,
-    RadioComponent
+    RadioComponent,
+    DropdownComponent,
+    SafePipe,
   ],
   imports: [
     AppRoutingModule,
@@ -79,6 +86,7 @@ import {
     MatGridListModule,
     MatListModule,
     MatRadioModule,
+    MatSelectModule,
     MatTabsModule,
     MatToolbarModule,
   ],
