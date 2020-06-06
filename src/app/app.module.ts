@@ -44,7 +44,7 @@ import {
   RecipesPage,
   WorkoutsPage
 } from './pages';
-import { SafePipe } from './pipes/safe.pipe';
+import { SafePipe } from './pipes';
 
 @NgModule({
   declarations: [
