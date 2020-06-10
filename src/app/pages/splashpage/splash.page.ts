@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-splashpage',
-  templateUrl: './splashpage.component.html',
-  styleUrls: ['./splashpage.component.css']
+  selector: 'splash-page',
+  templateUrl: './splash.page.html',
+  styleUrls: ['./splash.page.css']
 })
 export class SplashPage implements OnInit {
 

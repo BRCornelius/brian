@@ -4,7 +4,7 @@ import { IDropdownOption, IInstruction } from 'src/app/utilities';
 import { SafePipe } from 'src/app/pipes/safe.pipe';
 
 @Component({
-  selector: 'app-lego',
+  selector: 'lego-page',
   templateUrl: './lego.page.html',
   styleUrls: ['./lego.page.css'],
   providers: [SafePipe]

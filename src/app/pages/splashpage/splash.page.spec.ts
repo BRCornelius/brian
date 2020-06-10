@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SplashPage } from './splashpage.component';
+import { SplashPage } from './splash.page';
 
 describe('SplashPage', () => {
   let component: SplashPage;

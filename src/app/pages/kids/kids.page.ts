@@ -3,9 +3,9 @@ import { MediaService } from 'src/app/services';
 import { IKidsVideo } from 'src/app/utilities';
 
 @Component({
-  selector: 'app-kids',
-  templateUrl: './kids.component.html',
-  styleUrls: ['./kids.component.css']
+  selector: 'kids-page',
+  templateUrl: './kids.page.html',
+  styleUrls: ['./kids.page.css']
 })
 export class KidsPage implements OnInit {
 

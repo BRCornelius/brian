@@ -3,9 +3,9 @@ import { MediaService, OtfService, AuthService } from 'src/app/services';
 import { IOTFVideo, IFormattedOTFVideo, IOptions } from '../../utilities';
 
 @Component({
-  selector: 'app-workouts',
-  templateUrl: './workouts.component.html',
-  styleUrls: ['./workouts.component.css']
+  selector: 'workouts-page',
+  templateUrl: './workouts.page.html',
+  styleUrls: ['./workouts.page.css']
 })
 export class WorkoutsPage implements OnInit {
 
