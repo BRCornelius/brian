@@ -44,7 +44,8 @@ import {
   RecipesPage,
   WorkoutsPage
 } from './pages';
-import { SafePipe } from './pipes';
+import { LegoSetPipe, SafePipe, OtfUrlPipe, OtfVideoPipe } from './pipes';
+
 
 @NgModule({
   declarations: [
@@ -74,6 +75,9 @@ import { SafePipe } from './pipes';
     RadioComponent,
     DropdownComponent,
     SafePipe,
+    LegoSetPipe,
+    OtfVideoPipe,
+    OtfUrlPipe,
   ],
   imports: [
     AppRoutingModule,

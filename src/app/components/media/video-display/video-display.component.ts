@@ -5,11 +5,11 @@ import { IOTFVideo, IKidsVideo, IOptions } from 'src/app/utilities';
 @Component({
   selector: 'video-display',
   templateUrl: './video-display.component.html',
-  styleUrls: ['./video-display.component.css']
+  styleUrls: ['./video-display.component.css'],
 })
 export class VideoDisplayComponent implements OnInit {
 
-  constructor(private otf: OtfService) { }
+  constructor() { }
 
   ngOnInit() {}
 

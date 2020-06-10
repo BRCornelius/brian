@@ -1,30 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { LegoService } from '../../services';
-import { IDropdownOption, IInstruction } from 'src/app/utilities';
-import { SafePipe } from 'src/app/pipes/safe.pipe';
+import { IDropdownOption, IURL } from 'src/app/utilities';
+import { LegoSetPipe, SafePipe } from 'src/app/pipes';
 
 @Component({
   selector: 'lego-page',
   templateUrl: './lego.page.html',
   styleUrls: ['./lego.page.css'],
-  providers: [SafePipe]
+  providers: [LegoSetPipe, SafePipe]
 })
 export class LegoPage implements OnInit {
 
   constructor(
-    private safe: SafePipe,
     private lego: LegoService
   ) { }
 
   ngOnInit() {
     this.lego.getSets().subscribe(response => {
-      const rawSets = JSON.parse(response.body).sets;
-      const sets = rawSets.map(set => ({
-        title: set.name,
-        value: set.setID,
-        image: set.image.thumbnailURL
-      }));
-      this.sets = sets;
+      this.sets = JSON.parse(response.body).sets;
     });
   }
 
@@ -34,9 +27,9 @@ export class LegoPage implements OnInit {
   updateActiveSet: Function = (selectedOption: number): void => {
     this.lego.getInstructions(selectedOption).subscribe(response => {
       const body = JSON.parse(response.body);
-      this.instructions = body.instructions.reduce((agg: string[], curr: IInstruction, index: number) => {
+      this.instructions = body.instructions.reduce((agg: string[], curr: IURL, index: number) => {
         if(index % 2 === 0) {
-          agg.push(this.safe.transform(curr.URL, 'resourceUrl'));
+          agg.push(curr.URL);
           return agg;
         } else {
           return agg;

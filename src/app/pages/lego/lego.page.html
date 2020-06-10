@@ -1,6 +1,6 @@
 <div class="container" id="dropdown">
   <common-dropdown
-    [dropdownOptions]="sets"
+    [dropdownOptions]="sets | legoSet"
     [selectOption]="updateActiveSet"
   ></common-dropdown>
 </div>
@@ -8,7 +8,7 @@
   <iframe
     *ngFor="let instruction of instructions"
     class="link"
-    [src]="instruction"
+    [src]="instruction | safe: 'resourceUrl'"
     type="application/pdf"
     height="350"
     width="90%"

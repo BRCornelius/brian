@@ -1,11 +1,13 @@
 import { Component, OnInit, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MediaService, OtfService, AuthService } from 'src/app/services';
-import { IOTFVideo, IFormattedOTFVideo, IOptions } from '../../utilities';
+import { IFormattedOTFVideo, IOptions, IOTFVideo } from '../../utilities';
+import { OtfUrlPipe, OtfVideoPipe } from 'src/app/pipes';
 
 @Component({
   selector: 'workouts-page',
   templateUrl: './workouts.page.html',
-  styleUrls: ['./workouts.page.css']
+  styleUrls: ['./workouts.page.css'],
+  providers: [OtfUrlPipe, OtfVideoPipe]
 })
 export class WorkoutsPage implements OnInit {
 
@@ -20,10 +22,10 @@ export class WorkoutsPage implements OnInit {
       this.isAuthorized = res.body
     });
     this.media.otfVideos.subscribe(res => {
-      this.videos = this.otf.formatVideos(res.response.data.Items);
+      this.videos = res.response.data.Items;
       const limit = Math.floor(Math.random() * (this.videos.length - 1));
-      this.activeVideoTitle = this.videos[limit].title;
-      this.activeVideoUrl = this.otf.toUri(this.activeVideoTitle);
+      this.activeVideoTitle = this.videos[limit].TITLE.S;
+      this.activeVideoUrl = this.activeVideoTitle;
     });
   }
 
@@ -32,5 +34,5 @@ export class WorkoutsPage implements OnInit {
   errorText: string = 'You are not authorized to view this page.  Please email brian@corneliuses.com to request access.'
   options: IOptions[] = this.otf.options;
   isAuthorized: boolean;
-  videos: IFormattedOTFVideo[];
+  videos: IOTFVideo[];
 }

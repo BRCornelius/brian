@@ -56,6 +56,12 @@ export interface ICredential {
      value: number;
      image?: string;
  }
-export interface IInstruction {
-    URL: string;
+export interface IURL {
+    URL?: string;
+    thumbnailURL?: string;
+}
+export interface ILegoSet {
+    name: string;
+    setID: number;
+    image: IURL;
 }

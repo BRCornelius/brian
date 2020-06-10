@@ -1,5 +1,5 @@
-<div class="otf-image" id={{id}}>
-  <h3 class="grp" id={{id}}>{{grp}}</h3>
-  <h3 class="title" id={{id}}>{{title}}</h3>
-  <h3 class="cat" id={{id}}>{{cat}}</h3>
+<div class="otf-image" [id]="title | otfUrl">
+  <h3 class="grp" [id]="title | otfUrl">{{grp}}</h3>
+  <h3 class="title" [id]="title | otfUrl">{{title}}</h3>
+  <h3 class="cat" [id]="title | otfUrl">{{cat}}</h3>
 </div>
