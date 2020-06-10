@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { AwsService } from './aws.service';
-import { ISecretResponse } from '../utilities'
+import { AwsService } from '../site/aws.service';
+import { ISecretResponse } from '../../utilities'
 
 @Injectable({
   providedIn: 'root'

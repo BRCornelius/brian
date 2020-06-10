@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
-import { ICredential } from '../utilities/types';
+import { ICredential } from '../../utilities/types';
 
 @Injectable({
   providedIn: 'root'

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { secretsConnection } from '../utilities';
+import { secretsConnection } from '../../utilities';
 import { from } from 'rxjs';
 
 @Injectable({

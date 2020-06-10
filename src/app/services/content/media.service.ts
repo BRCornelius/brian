@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { ajax } from 'rxjs/ajax';
 import { Observable } from 'rxjs';
-import { IFacet } from '../utilities';
+import { IFacet } from '../../utilities';
 
 @Injectable({
   providedIn: 'root'
