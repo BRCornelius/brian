@@ -27,6 +27,6 @@ export class OtfService {
   };
   toUri: Function = (filename: string): string => {
     const formattedFilename = filename.replace(/\//g, '.');
-    return `https://s3.amazonaws.com/otf.corneliuses.com/videos/${formattedFilename}.mp4`
+    return `https://assets.corneliuses.com/videos/OTF/${formattedFilename}.mp4`
   }
 }
