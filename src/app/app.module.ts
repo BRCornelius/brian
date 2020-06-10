@@ -44,8 +44,7 @@ import {
   RecipesPage,
   WorkoutsPage
 } from './pages';
-import { LegoSetPipe, SafePipe, OtfUrlPipe, OtfVideoPipe } from './pipes';
-import { KidsVideoPipe } from './pipes/kids-video.pipe';
+import { KidsVideoPipe, LegoSetPipe, SafePipe, OtfUrlPipe, OtfVideoPipe } from './pipes';
 
 
 @NgModule({

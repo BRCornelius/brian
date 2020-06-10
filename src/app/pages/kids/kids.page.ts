@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MediaService } from 'src/app/services';
 import { IKidsVideo } from 'src/app/utilities';
-import { KidsVideoPipe } from 'src/app/pipes/kids-video.pipe';
+import { KidsVideoPipe } from 'src/app/pipes/';
 
 @Component({
   selector: 'kids-page',

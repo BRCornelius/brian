@@ -9,10 +9,9 @@ import { FilterService } from '../../../services';
 })
 export class FilterComponent implements OnInit {
 
-  constructor(private filter: FilterService) { }
+  constructor(private filter: FilterService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   @Input() $options: IOptions[];
   @Input() filterFunction: Function;

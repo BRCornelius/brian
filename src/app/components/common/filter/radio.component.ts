@@ -8,7 +8,7 @@ import { IOptions } from 'src/app/utilities';
 })
 export class RadioComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {};
 

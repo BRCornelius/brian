@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { IKidsVideo, IOTFVideo, IOptions, IFacet } from '../../../utilities';
+import { IKidsVideo, IOTFVideo, IOptions } from '../../../utilities';
 import { FilterService } from '../../../services';
 
 @Component({

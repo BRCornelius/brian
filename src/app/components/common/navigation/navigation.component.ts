@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationService } from 'src/app/services';
 import { INavLink } from 'src/app/utilities/types';
-import { Observable } from 'rxjs';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'common-navigation',
@@ -13,8 +11,7 @@ export class NavigationComponent implements OnInit {
 
   constructor(private nav: NavigationService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   activeNavLink: string;
   navLinks: INavLink[] = this.nav.navLinks;

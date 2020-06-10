@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Attribute } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'media-card',

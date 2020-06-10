@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { OtfService } from 'src/app/services';
 import { IOTFVideo, IKidsVideo, IOptions } from 'src/app/utilities';
 
 @Component({
@@ -9,7 +8,7 @@ import { IOTFVideo, IKidsVideo, IOptions } from 'src/app/utilities';
 })
 export class VideoDisplayComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {}
 
