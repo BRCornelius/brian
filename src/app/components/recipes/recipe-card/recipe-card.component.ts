@@ -3,7 +3,7 @@ import { RecipeService } from 'src/app/services/recipe.service';
 import { IIngredient, IRecipeTime } from 'src/app/utilities/types';
 
 @Component({
-  selector: 'app-recipe-card',
+  selector: 'recipe-card',
   templateUrl: './recipe-card.component.html',
   styleUrls: ['./recipe-card.component.css']
 })

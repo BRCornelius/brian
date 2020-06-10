@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-content-toggle',
+  selector: 'common-content-toggle',
   templateUrl: './content-toggle.component.html',
   styleUrls: ['./content-toggle.component.css']
 })

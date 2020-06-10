@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Attribute } from '@angular/core';
 
 @Component({
-  selector: 'app-media-card',
+  selector: 'media-card',
   templateUrl: './media-card.component.html',
   styleUrls: ['./media-card.component.css']
 })

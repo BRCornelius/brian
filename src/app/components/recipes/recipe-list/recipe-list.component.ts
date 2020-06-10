@@ -3,7 +3,7 @@ import { RecipeService } from 'src/app/services';
 import { IRecipe } from 'src/app/utilities';
 
 @Component({
-  selector: 'app-recipe-list',
+  selector: 'recipe-list',
   templateUrl: './recipe-list.component.html',
   styleUrls: ['./recipe-list.component.css']
 })

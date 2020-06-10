@@ -1,26 +1,26 @@
 <mat-grid-list cols="2" rowHeight="2:1">
-  <app-filter
+  <common-filter
     *ngIf="displayFilter"
     class="filter-component"
     [$options]="$options"
     [filterFunction]="updateDisplayedMedia"
-  ></app-filter>
+  ></common-filter>
   <mat-grid-tile *ngFor="let item of media" class="media-item" [colspan]="1">
-    <app-media-card
+    <media-card
       *ngIf="checkRoute('kids')"
       class="media-card"
       [source]="item.URL.S"
       [thumbnail]="item.THUMBNAIL.S"
       [header]="item.TITLE.S"
       (click)="setActive($event)"
-    ></app-media-card>
-    <app-workout-card
+    ></media-card>
+    <workout-card
       *ngIf="checkRoute('workouts')"
       class="media-card"
       [title]="item.title"
       [grp]="item.group"
       [cat]="item.category"
       (click)="setActive($event)"
-    ></app-workout-card>
+    ></workout-card>
   </mat-grid-tile>
 </mat-grid-list>

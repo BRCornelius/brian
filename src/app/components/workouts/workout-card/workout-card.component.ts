@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { OtfService } from 'src/app/services';
 
 @Component({
-  selector: 'app-workout-card',
+  selector: 'workout-card',
   templateUrl: './workout-card.component.html',
   styleUrls: ['./workout-card.component.css']
 })

@@ -5,7 +5,7 @@ import { IKidsVideo, IOTFVideo, IOptions, IFacet } from '../../../utilities';
 import { FilterService } from '../../../services';
 
 @Component({
-  selector: 'app-media-grid',
+  selector: 'media-grid',
   templateUrl: './media-grid.component.html',
   styleUrls: ['./media-grid.component.css']
 })

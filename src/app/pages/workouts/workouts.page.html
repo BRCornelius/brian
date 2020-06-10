@@ -1,9 +1,9 @@
-<app-video-display
+<video-display
     *ngIf="isAuthorized"
     [videos]="videos"
     [activeVideoUrl]="activeVideoUrl"
     [activeVideoTitle]="activeVideoTitle"
     [displayFilter]="true"
     [$options]="options"
-></app-video-display>
-<app-error *ngIf="!isAuthorized" [text]="errorText"></app-error>
+></video-display>
+<common-error *ngIf="!isAuthorized" [text]="errorText"></common-error>

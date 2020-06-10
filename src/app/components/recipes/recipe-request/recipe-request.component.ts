@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EmailService } from 'src/app/services';
 
 @Component({
-  selector: 'app-recipe-request',
+  selector: 'recipe-request',
   templateUrl: './recipe-request.component.html',
   styleUrls: ['./recipe-request.component.css']
 })

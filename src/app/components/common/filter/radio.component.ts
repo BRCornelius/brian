@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { IOptions } from 'src/app/utilities';
 
 @Component({
-  selector: 'app-radio',
+  selector: 'common-radio',
   templateUrl: './radio.component.html',
   styleUrls: ['./radio.component.css']
 })

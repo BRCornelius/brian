@@ -3,7 +3,7 @@ import { OtfService } from 'src/app/services';
 import { IOTFVideo, IKidsVideo, IOptions } from 'src/app/utilities';
 
 @Component({
-  selector: 'app-video-display',
+  selector: 'video-display',
   templateUrl: './video-display.component.html',
   styleUrls: ['./video-display.component.css']
 })

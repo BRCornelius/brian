@@ -3,7 +3,7 @@ import { IOptions } from '../../../utilities';
 import { FilterService } from '../../../services';
 
 @Component({
-  selector: 'app-filter',
+  selector: 'common-filter',
   templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.css']
 })

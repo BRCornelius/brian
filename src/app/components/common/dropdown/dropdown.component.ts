@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { IDropdownOption } from 'src/app/utilities';
 
 @Component({
-  selector: 'app-dropdown',
+  selector: 'common-dropdown',
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.css']
 })

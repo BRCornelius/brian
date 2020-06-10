@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { IIngredient } from '../../../utilities/types';
 
 @Component({
-  selector: 'app-recipe-ingredients',
+  selector: 'recipe-ingredients',
   templateUrl: './recipe-ingredients.component.html',
   styleUrls: ['./recipe-ingredients.component.css']
 })
