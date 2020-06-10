@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { MediaService } from 'src/app/services';
 import { IKidsVideo } from 'src/app/utilities';
+import { KidsVideoPipe } from 'src/app/pipes/kids-video.pipe';
 
 @Component({
   selector: 'kids-page',
   templateUrl: './kids.page.html',
-  styleUrls: ['./kids.page.css']
+  styleUrls: ['./kids.page.css'],
+  providers: [KidsVideoPipe]
 })
 export class KidsPage implements OnInit {
 

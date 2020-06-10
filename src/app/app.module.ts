@@ -45,6 +45,7 @@ import {
   WorkoutsPage
 } from './pages';
 import { LegoSetPipe, SafePipe, OtfUrlPipe, OtfVideoPipe } from './pipes';
+import { KidsVideoPipe } from './pipes/kids-video.pipe';
 
 
 @NgModule({
@@ -78,6 +79,7 @@ import { LegoSetPipe, SafePipe, OtfUrlPipe, OtfVideoPipe } from './pipes';
     LegoSetPipe,
     OtfVideoPipe,
     OtfUrlPipe,
+    KidsVideoPipe,
   ],
   imports: [
     AppRoutingModule,

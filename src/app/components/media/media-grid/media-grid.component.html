@@ -9,9 +9,9 @@
     <media-card
       *ngIf="checkRoute('kids')"
       class="media-card"
-      [source]="item.URL.S"
-      [thumbnail]="item.THUMBNAIL.S"
-      [header]="item.TITLE.S"
+      [source]="item.url"
+      [thumbnail]="item.thumbnail"
+      [header]="item.title"
       (click)="setActive($event)"
     ></media-card>
     <workout-card

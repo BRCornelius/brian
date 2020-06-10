@@ -28,7 +28,13 @@ export interface ISecretResponse {
 }
 export interface IKidsVideo {
      TITLE: IDynamoDBEntry;
+     THUMBNAIL: IDynamoDBEntry;
      URL: IDynamoDBEntry;
+}
+export interface IFormattedKidsVideo {
+    title: string;
+    thumbnail: string;
+    url: string;
 }
 export interface IOTFVideo {
     TITLE: IDynamoDBEntry;

@@ -17,9 +17,4 @@ export class OtfService {
     title: 'Group',
     options: this.groups,
   }]
-
-  toUri: Function = (filename: string): string => {
-    const formattedFilename = filename.replace(/\//g, '.');
-    return `https://assets.corneliuses.com/videos/OTF/${formattedFilename}.mp4`
-  }
 }
