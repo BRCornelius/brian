@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -9,9 +9,11 @@ import { HttpClient } from '@angular/common/http';
 export class MediaService {
 
   constructor(private http: HttpClient) { }
-
+  httpOptions = {
+    headers: new HttpHeaders({'X-Api-Key': process.env.apiKey})
+  };
   kidsVideos: Observable<any> = this.http.get('https://services.corneliuses.com/get-kids-videos');
-  otfVideos: Observable<any> = this.http.get('https://services.corneliuses.com/get-otf');
+  otfVideos: Observable<any> = this.http.get('https://services.corneliuses.com/get-otf', this.httpOptions);
 
   sortVideos: Function = (videos: any[], option: string): any[] =>
     videos.sort((a,b) => {
