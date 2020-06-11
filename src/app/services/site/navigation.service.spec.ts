@@ -4,8 +4,10 @@ import { NavigationService } from './navigation.service';
 
 describe('NavigationService', () => {
   let service: NavigationService;
-  beforeEach(() => TestBed.configureTestingModule({}));
-  service = TestBed.get(NavigationService);
+  beforeEach(() => {
+    TestBed.configureTestingModule({})
+    service = TestBed.get(NavigationService);
+  });
 
   it('should be created', () => {
     expect(service).toBeTruthy();
