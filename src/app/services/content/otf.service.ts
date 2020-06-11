@@ -10,11 +10,13 @@ export class OtfService {
 
   categories: string[] = ['Endurance', 'Mayhem', 'Power', 'Strength'];
   groups: string[] = ['Back', 'Chest', 'Legs', '??'];
-  options: IOptions[] = [{
-    title: 'Category',
-    options: this.categories,
-  }, {
-    title: 'Group',
-    options: this.groups,
-  }]
+  options: IOptions[] = [
+    {
+      title: 'Category',
+      options: this.categories,
+    }, {
+      title: 'Group',
+      options: this.groups,
+    }
+  ]
 }

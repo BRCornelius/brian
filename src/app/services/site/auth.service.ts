@@ -14,9 +14,7 @@ export class AuthService {
   authorized: boolean = false;
   credentials: ICredential;
 
-  authenticate: Function = (): Observable<{}> => {
-    return this.http.post('https://services.corneliuses.com/authenticate', this.credentials)
-  }
+  authenticate: Observable<{}> = this.http.post('https://services.corneliuses.com/authenticate', this.credentials);
   isAuthorized: Function = (): Observable<{}> => {
     if(document.cookie){
       const params = { token: document.cookie };

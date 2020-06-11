@@ -4,12 +4,23 @@ import { EmailService } from './email.service';
 import { HttpClientModule } from '@angular/common/http';
 
 describe('EmailService', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    imports: [ HttpClientModule ]
-  }));
+  let service: EmailService;
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [ HttpClientModule ],
+      providers: [EmailService]
+    });
+    service = TestBed.get(EmailService);
+  });
 
   it('should be created', () => {
-    const service: EmailService = TestBed.get(EmailService);
     expect(service).toBeTruthy();
   });
+
+  // it('should send an email', (done: DoneFn) => {
+  //   service.sendEmail().subscribe(response => {
+  //     expect(response).toBeTruthy();
+  //     done();
+  //   });
+  // })
 });

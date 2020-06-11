@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RecipeCardComponent } from './recipe-card.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('RescipeCardComponent', () => {
   let component: RecipeCardComponent;
@@ -10,6 +11,7 @@ describe('RescipeCardComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ RecipeCardComponent ],
+      imports: [ HttpClientModule ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();

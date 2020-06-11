@@ -22,7 +22,7 @@ export class AuthComponent implements OnInit {
 
   onSubmit: Function = (): void => {
     this.auth.credentials = { name: this.name, password: this.password};
-    this.auth.authenticate().subscribe(res => {
+    this.auth.authenticate.subscribe((res: any) => {
       if(res.body) {
         document.cookie=res.body
         this.dialog.closeAll();

@@ -15,7 +15,7 @@ export class KidsPage implements OnInit {
 
   ngOnInit() {
     this.media.kidsVideos.subscribe(res => {
-      this.videos = res.response.data.Items;
+      this.videos = res.data.Items;
       this.activeVideoTitle = this.videos[0].TITLE.S;
       this.activeVideoUrl = this.videos[0].URL.S;
     });
