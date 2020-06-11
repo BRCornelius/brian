@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RecipeIngredientsComponent } from './recipe-ingredients.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 describe('RecipeIngredientsComponent', () => {
   let component: RecipeIngredientsComponent;
@@ -8,7 +9,8 @@ describe('RecipeIngredientsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RecipeIngredientsComponent ]
+      declarations: [ RecipeIngredientsComponent ],
+      imports: [ MatGridListModule ]
     })
     .compileComponents();
   }));

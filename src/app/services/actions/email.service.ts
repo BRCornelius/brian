@@ -11,10 +11,8 @@ export class EmailService {
   constructor(private http: HttpClient, private aws: AwsService) { }
 
   sendEmail: Function = (): void => {
-    let secret;
-    this.aws.secret$.subscribe((res: ISecretResponse) => secret = JSON.parse(res.SecretString)['x-api-key']);
     const httpOptions = {
-      headers: new HttpHeaders({'X-Api-Key': secret})
+      headers: new HttpHeaders({'X-Api-Key': 'secret'})
     };
     this.http.post('https://services.corneliuses.com/sendEmail', {httpOptions}).subscribe(value => null);
   };

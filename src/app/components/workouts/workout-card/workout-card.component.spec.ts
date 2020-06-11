@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WorkoutCardComponent } from './workout-card.component';
+import { OtfUrlPipe } from 'src/app/pipes';
 
 describe('WorkoutCardComponent', () => {
   let component: WorkoutCardComponent;
@@ -8,7 +9,7 @@ describe('WorkoutCardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WorkoutCardComponent ]
+      declarations: [ WorkoutCardComponent, OtfUrlPipe ]
     })
     .compileComponents();
   }));

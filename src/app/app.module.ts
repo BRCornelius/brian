@@ -98,6 +98,6 @@ import { KidsVideoPipe, LegoSetPipe, SafePipe, OtfUrlPipe, OtfVideoPipe } from '
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [AuthComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }

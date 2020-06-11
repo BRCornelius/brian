@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RecipeRequestComponent } from './recipe-request.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('RecipeRequestComponent', () => {
   let component: RecipeRequestComponent;
@@ -8,7 +10,8 @@ describe('RecipeRequestComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RecipeRequestComponent ]
+      declarations: [ RecipeRequestComponent ],
+      imports: [ HttpClientModule, MatGridListModule ]
     })
     .compileComponents();
   }));

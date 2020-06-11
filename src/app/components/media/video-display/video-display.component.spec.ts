@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VideoDisplayComponent } from './video-display.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('VideoDisplayComponent', () => {
   let component: VideoDisplayComponent;
@@ -8,7 +9,8 @@ describe('VideoDisplayComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VideoDisplayComponent ]
+      declarations: [ VideoDisplayComponent ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));
