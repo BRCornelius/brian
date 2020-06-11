@@ -6,7 +6,7 @@ import { IKidsVideo, IFormattedKidsVideo } from '../utilities';
 })
 export class KidsVideoPipe implements PipeTransform {
 
-  transform(kidsVideos: any): any {
+  transform(kidsVideos: IKidsVideo[]): IFormattedKidsVideo[] {
     if(kidsVideos){
       return kidsVideos.map((video: IKidsVideo): IFormattedKidsVideo => ({
         title: video.TITLE.S,

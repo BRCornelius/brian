@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class OtfUrlPipe implements PipeTransform {
 
-  transform(filename: string): any {
+  transform(filename: string): string {
     if(filename){
       const formattedFilename = filename.replace(/\//g, '.');
       return `https://assets.corneliuses.com/videos/OTF/${formattedFilename}.mp4`

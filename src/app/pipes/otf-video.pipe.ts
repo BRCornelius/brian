@@ -6,7 +6,7 @@ import { IOTFVideo, IFormattedOTFVideo } from '../utilities';
 })
 export class OtfVideoPipe implements PipeTransform {
 
-  transform(otfVideos: IOTFVideo[]): any {
+  transform(otfVideos: IOTFVideo[]): IFormattedOTFVideo[] {
     if(otfVideos){
       return otfVideos.map((video: IOTFVideo): IFormattedOTFVideo => ({
         title: video.TITLE.S,
