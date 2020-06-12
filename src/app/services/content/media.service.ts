@@ -14,7 +14,7 @@ export class MediaService {
     headers: new HttpHeaders({'X-Api-Key': environment.apiKey})
   };
   kidsVideos: Observable<any> = this.http.get('https://services.corneliuses.com/get-kids-videos');
-  otfVideos: Observable<any> = this.http.get('https://services.corneliuses.com/get-otf', this.httpOptions);
+  otfVideos: Observable<any> = this.http.get('https://services.corneliuses.com/get-otf');
 
   sortVideos: Function = (videos: any[], option: string): any[] =>
     videos.sort((a,b) => {
