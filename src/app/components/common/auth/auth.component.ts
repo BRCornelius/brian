@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { Component, OnInit, Input, Inject } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AuthService } from 'src/app/services/site/auth.service';
 
 @Component({
@@ -11,8 +11,9 @@ export class AuthComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
-    private dialog: MatDialog
-  ) { }
+    private dialog: MatDialog,
+    @Inject(MAT_DIALOG_DATA) public data: any
+  ) {}
 
   ngOnInit() {}
 
@@ -22,9 +23,10 @@ export class AuthComponent implements OnInit {
 
   onSubmit: Function = (): void => {
     this.auth.credentials = { name: this.name, password: this.password};
-    this.auth.authenticate.subscribe((res: any) => {
+    this.auth.authenticate().subscribe((res: any) => {
       if(res.body) {
         document.cookie=res.body
+        this.data.successFn();
         this.dialog.closeAll();
       } else {
         this.hasErrors = true;
@@ -45,6 +47,12 @@ export class AuthButtonComponent {
 
   constructor(private dialog: MatDialog) {}
 
+  @Input() successFn: Function;
+
   toggleOpen: Function = (): MatDialogRef<AuthComponent> =>
-    this.dialog.open(AuthComponent);
+    this.dialog.open(AuthComponent, {
+      data: {
+        successFn: this.successFn
+      }
+    });
 }

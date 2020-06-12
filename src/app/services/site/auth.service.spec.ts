@@ -20,7 +20,7 @@ describe('AuthService', () => {
 
   it('should deny bad credentials', (done: DoneFn) => {
     service.credentials = testCredentials;
-    service.authenticate.subscribe((response: any) => {
+    service.authenticate().subscribe((response: any) => {
       expect(response.body).toBeFalsy();
       done();
     })

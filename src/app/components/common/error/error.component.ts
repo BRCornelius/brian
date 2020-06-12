@@ -12,5 +12,6 @@ export class ErrorComponent implements OnInit {
   ngOnInit() {
   }
 
+  @Input() allowLogin: boolean;
   @Input() text: string;
 }
