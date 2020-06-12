@@ -26,9 +26,10 @@ describe('AuthService', () => {
     })
   });
 
-  it('should permit good authorization', (done: DoneFn) => {
+  it('should deny bad authorization', (done: DoneFn) => {
+    document.cookie = "";
     service.isAuthorized().subscribe((response: any) => {
-      expect(response.body).toBeTruthy();
+      expect(response.body).toBeFalsy();
       done();
     })
   });
