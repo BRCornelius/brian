@@ -6,4 +6,4 @@
     [displayFilter]="true"
     [$options]="options"
 ></video-display>
-<common-error *ngIf="!isAuthorized" [text]="errorText"></common-error>
+<common-error *ngIf="!isAuthorized" [text]="errorText" [allowLogin]=false></common-error>

@@ -18,9 +18,7 @@ export class WorkoutsPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.auth.isAuthorized().subscribe(res => {
-      this.isAuthorized = res.body
-    });
+    this.auth.isAuthorized();
     this.media.otfVideos.subscribe(res => {
       this.videos = res.data.Items;
       const limit = Math.floor(Math.random() * (this.videos.length - 1));
@@ -33,6 +31,6 @@ export class WorkoutsPage implements OnInit {
   activeVideoUrl: string;
   errorText: string = 'You are not authorized to view this page.  Please email brian@corneliuses.com to request access.'
   options: IOptions[] = this.otf.options;
-  isAuthorized: boolean;
+  isAuthorized: boolean = this.auth.authorized;
   videos: IOTFVideo[];
 }

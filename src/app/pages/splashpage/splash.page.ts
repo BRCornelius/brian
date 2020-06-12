@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services';
 
 @Component({
   selector: 'splash-page',
@@ -7,8 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SplashPage implements OnInit {
 
-  constructor() {}
+  constructor(private auth: AuthService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.auth.isAuthorized();
+  }
+
+  isAuthorized: boolean = this.auth.authorized;
   title: string = `Brian's Page`;
+
+  updateAuthorized: Function = () => {
+    this.isAuthorized = true;
+  }
 }
