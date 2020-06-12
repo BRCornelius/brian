@@ -1,7 +1,7 @@
 version: 0.2
 env:
     secrets-manager:
-        secret_api_key: x-api-key
+        secret_api_key: corneliuses-api-key:x-api-key
 phases:
     install:
         commands:
