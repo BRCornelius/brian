@@ -11,7 +11,8 @@ phases:
     build:
         commands:
             - echo Build started on `date`
-            - echo $secret_api_key
+            - echo setting secret key
+            - export apiKey=$secret_api_key
             - ng build --prod
     post_build:
          commands:
