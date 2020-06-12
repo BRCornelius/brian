@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'splash-page',
@@ -10,5 +11,5 @@ export class SplashPage implements OnInit {
   constructor() {}
 
   ngOnInit() {}
-  title: string = `Brian's Page`;
+  title: string = environment.test;
 }

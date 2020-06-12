@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiKey: process.env.apiKey
+  apiKey: process.env.apiKey,
+  test: process.env.testVal
 };
 
 /*
