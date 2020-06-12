@@ -10,7 +10,7 @@ export class MediaService {
 
   constructor(private http: HttpClient) { }
   httpOptions = {
-    headers: new HttpHeaders({'X-Api-Key': process.env.apiKey})
+    headers: new HttpHeaders({'X-Api-Key': env.apiKey})
   };
   kidsVideos: Observable<any> = this.http.get('https://services.corneliuses.com/get-kids-videos');
   otfVideos: Observable<any> = this.http.get('https://services.corneliuses.com/get-otf', this.httpOptions);
