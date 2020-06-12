@@ -1,7 +1,4 @@
 version: 0.2
-env:
-    secrets-manager:
-        secret_api_key: corneliuses-api-key:x-api-key
 phases:
     install:
         commands:
@@ -11,9 +8,6 @@ phases:
     build:
         commands:
             - echo Build started on `date`
-            - echo setting variables
-            - export apiKey=$secret_api_key
-            - export testVal=test
             - ng build --prod
     post_build:
          commands:
