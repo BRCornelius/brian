@@ -1,4 +1,6 @@
+<common-interstitial *ngIf="!videos" [topic]="interstitial"></common-interstitial>
 <video-display
+    *ngIf="videos"
     [videos]="videos | kidsVideo"
     [activeVideoUrl]="activeVideoUrl"
     [activeVideoTitle]="activeVideoTitle"

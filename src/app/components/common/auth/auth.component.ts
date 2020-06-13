@@ -27,6 +27,7 @@ export class AuthComponent implements OnInit {
       if(res.body) {
         document.cookie=res.body
         this.data.successFn();
+        this.auth.isAuthorized();
         this.dialog.closeAll();
       } else {
         this.hasErrors = true;

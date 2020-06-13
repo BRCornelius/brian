@@ -1,7 +1,10 @@
-<recipe-toggle
-  *ngFor="let recipe of recipes"
-  [photo]="recipe.PHOTO.S"
-  [title]="recipe.NAME.S"
-  [instructions]="recipe.INSTRUCTIONS.SS"
-  [ingredients]="recipe.INGREDIENTS.L"
-></recipe-toggle>
+<div *ngIf="recipes">
+  <recipe-toggle
+    *ngFor="let recipe of recipes"
+    [photo]="recipe.PHOTO.S"
+    [title]="recipe.NAME.S"
+    [instructions]="recipe.INSTRUCTIONS.SS"
+    [ingredients]="recipe.INGREDIENTS.L"
+  ></recipe-toggle>
+</div>
+<common-interstitial *ngIf="!recipes" [topic]="interstitial"></common-interstitial>

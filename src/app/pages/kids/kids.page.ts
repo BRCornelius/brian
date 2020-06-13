@@ -23,5 +23,6 @@ export class KidsPage implements OnInit {
 
   activeVideoTitle: string;
   activeVideoUrl: string;
+  interstitial: string = "https://assets.corneliuses.com/photos/common/interstitial-syd.gif";
   videos: IKidsVideo[];
 }

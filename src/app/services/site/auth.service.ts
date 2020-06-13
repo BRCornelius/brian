@@ -18,11 +18,13 @@ export class AuthService {
     return this.http.post('https://services.corneliuses.com/authenticate', this.credentials)
   };
   isAuthorized: Function = (): Subscription => {
-    if(document.cookie){
-      const params = { token: document.cookie };
-      return this.http.post('https://services.corneliuses.com/authorize', params).subscribe((response: any) => this.authorized = response.body);
-    } else {
-      return this.http.post('https://services.corneliuses.com/authorize', {}).subscribe((response: any) => this.authorized = response.body);
-    }
-  }
-}
+    if(!this.authorized){
+      if(document.cookie){
+        const params = { token: document.cookie };
+        return this.http.post('https://services.corneliuses.com/authorize', params).subscribe((response: any) => this.authorized = response.body);
+      } else {
+        return this.http.post('https://services.corneliuses.com/authorize', {}).subscribe((response: any) => this.authorized = response.body);
+      };
+    };
+  };
+};
