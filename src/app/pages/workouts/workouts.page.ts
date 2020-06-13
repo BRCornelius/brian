@@ -19,18 +19,21 @@ export class WorkoutsPage implements OnInit {
 
   ngOnInit() {
     this.auth.isAuthorized();
-    this.media.otfVideos.subscribe(res => {
-      this.videos = res.data.Items;
-      const limit = Math.floor(Math.random() * (this.videos.length - 1));
-      this.activeVideoTitle = this.videos[limit].TITLE.S;
-      this.activeVideoUrl = this.activeVideoTitle;
-    });
+    if(this.isAuthorized){
+      this.media.otfVideos.subscribe(res => {
+        this.videos = res.data.Items;
+        const limit = Math.floor(Math.random() * (this.videos.length - 1));
+        this.activeVideoTitle = this.videos[limit].TITLE.S;
+        this.activeVideoUrl = this.activeVideoTitle;
+      });
+    }
   }
 
   activeVideoTitle: string;
   activeVideoUrl: string;
-  errorText: string = 'You are not authorized to view this page.  Please email brian@corneliuses.com to request access.'
+  errorText: string = 'You are not authorized to view this page.  Please email brian@corneliuses.com to request access.';
   options: IOptions[] = this.otf.options;
+  interstitial: string = "https://assets.corneliuses.com/photos/common/interstitial-typing.gif";
   isAuthorized: boolean = this.auth.authorized;
   videos: IOTFVideo[];
 }

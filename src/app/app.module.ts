@@ -22,6 +22,7 @@ import {
   ContentToggleComponent,
   ErrorComponent,
   FooterComponent,
+  InterstitialComponent,
   MediaCardComponent,
   MediaGridComponent,
   NavigationComponent,
@@ -79,6 +80,7 @@ import { KidsVideoPipe, LegoSetPipe, SafePipe, OtfUrlPipe, OtfVideoPipe } from '
     OtfVideoPipe,
     OtfUrlPipe,
     KidsVideoPipe,
+    InterstitialComponent,
   ],
   imports: [
     AppRoutingModule,

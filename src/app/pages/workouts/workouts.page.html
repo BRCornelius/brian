@@ -1,5 +1,6 @@
+<common-interstitial *ngIf="isAuthorized && !videos" [topic]="interstitial"></common-interstitial>
 <video-display
-    *ngIf="isAuthorized"
+    *ngIf="isAuthorized && videos"
     [videos]="videos | otfVideo"
     [activeVideoUrl]="activeVideoUrl | otfUrl"
     [activeVideoTitle]="activeVideoTitle"

@@ -15,5 +15,6 @@ export class RecipeListComponent implements OnInit {
     this.recipe.recipes.subscribe(res => this.recipes = res.data.Items);
   }
 
+  interstitial: string = "https://assets.corneliuses.com/photos/common/interstitial-duncan.gif";
   recipes: IRecipe[];
 }
