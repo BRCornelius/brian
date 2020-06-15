@@ -3,18 +3,19 @@ import { environment } from '../../../environments/environment';
 
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { AwsService } from '../site';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MediaService {
 
-  constructor(private http: HttpClient) { }
-  httpOptions = {
-    headers: new HttpHeaders({'X-Api-Key': environment.apiKey})
-  };
-  kidsVideos: Observable<any> = this.http.get('https://services.corneliuses.com/get-kids-videos');
-  otfVideos: Observable<any> = this.http.get('https://services.corneliuses.com/get-otf', this.httpOptions);
+  constructor(
+    private aws: AwsService,
+    private http: HttpClient) { }
+  headers = this.aws.httpOptions;
+  kidsVideos: Observable<any> = this.http.get('https://services.corneliuses.com/get-kids-videos', this.headers);
+  otfVideos: Observable<any> = this.http.get('https://services.corneliuses.com/get-otf', this.headers);
 
   sortVideos: Function = (videos: any[], option: string): any[] =>
     videos.sort((a,b) => {

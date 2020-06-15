@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { AwsService } from '../site/aws.service';
+import { AwsService } from '../site';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -11,9 +11,7 @@ export class EmailService {
   constructor(private http: HttpClient, private aws: AwsService) { }
 
   sendEmail: Function = (): Observable<{}> => {
-    const httpOptions = {
-      headers: new HttpHeaders({'X-Api-Key': 'secret'})
-    };
+    const httpOptions = this.aws.httpOptions;
     return this.http.post('https://services.corneliuses.com/sendEmail', {httpOptions});
   };
 };

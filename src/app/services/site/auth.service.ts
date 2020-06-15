@@ -3,28 +3,30 @@ import { Observable, Subscription } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 import { ICredential } from '../../utilities/types';
+import { AwsService } from './aws.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private aws: AwsService,
+    private http: HttpClient
+  ) { }
 
   authorized: boolean = false;
   credentials: ICredential;
+  headers = this.aws.httpOptions;
 
   authenticate: Function = (): Observable<{}> => {
-    return this.http.post('https://services.corneliuses.com/authenticate', this.credentials)
+    return this.http.post('https://services.corneliuses.com/authenticate', this.credentials, {...this.headers})
   };
   isAuthorized: Function = (): Subscription => {
     if(!this.authorized){
-      if(document.cookie){
-        const params = { token: document.cookie };
-        return this.http.post('https://services.corneliuses.com/authorize', params).subscribe((response: any) => this.authorized = response.body);
-      } else {
-        return this.http.post('https://services.corneliuses.com/authorize', {}).subscribe((response: any) => this.authorized = response.body);
-      };
+      const token = document.cookie ? document.cookie : '';
+      const params = { token: token };
+      return this.http.post('https://services.corneliuses.com/authorize', params, {...this.headers}).subscribe((response: any) => this.authorized = response.body);
     };
   };
 };

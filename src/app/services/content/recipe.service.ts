@@ -1,14 +1,20 @@
 import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import { AwsService } from '../site';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RecipeService {
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private aws: AwsService,
+    private http: HttpClient) { }
 
-  recipes: Observable<any> = this.http.get('https://services.corneliuses.com/getrecipes-brian');
+  headers = this.aws.httpOptions;
+
+  recipes: Observable<any> = this.http.get('https://services.corneliuses.com/getrecipes-brian', {...this.headers});
 }
