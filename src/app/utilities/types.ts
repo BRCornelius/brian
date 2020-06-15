@@ -1,4 +1,5 @@
 interface IDynamoDBEntry {
+    N?: number;
     S?: string;
     SS?: string[];
     L?: any[];
@@ -12,9 +13,15 @@ export interface IRecipeTime {
     prep: IDynamoDBEntry;
     total: IDynamoDBEntry;
 }
+export interface IInstruction {
+    M: {
+        step: IDynamoDBEntry;
+        instruction: IDynamoDBEntry;
+    }
+}
 export interface IRecipe {
     INGREDIENTS: IIngredient[];
-    INSTRUCTIONS: IDynamoDBEntry;
+    INSTRUCTIONS: IInstruction[];
     PHOTO: IDynamoDBEntry;
     TIME: IRecipeTime;
     NAME: IDynamoDBEntry;

@@ -9,9 +9,7 @@ export class InterstitialComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    console.log(this.options, this.topic)
-  }
+  ngOnInit() {}
 
   @Input() topic: string;
 

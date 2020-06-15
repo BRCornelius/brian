@@ -3,7 +3,7 @@
     *ngFor="let recipe of recipes"
     [photo]="recipe.PHOTO.S"
     [title]="recipe.NAME.S"
-    [instructions]="recipe.INSTRUCTIONS.SS"
+    [instructions]="recipe.INSTRUCTIONS.L |  listOrder"
     [ingredients]="recipe.INGREDIENTS.L"
   ></recipe-toggle>
 </div>

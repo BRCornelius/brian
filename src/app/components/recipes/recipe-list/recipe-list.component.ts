@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipeService } from 'src/app/services';
 import { IRecipe } from 'src/app/utilities';
+import { ListOrderPipe } from 'src/app/pipes';
 
 @Component({
   selector: 'recipe-list',
   templateUrl: './recipe-list.component.html',
-  styleUrls: ['./recipe-list.component.css']
+  styleUrls: ['./recipe-list.component.css'],
+  providers: [ListOrderPipe]
 })
 export class RecipeListComponent implements OnInit {
 
