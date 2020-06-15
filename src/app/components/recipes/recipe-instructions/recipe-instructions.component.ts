@@ -9,7 +9,7 @@ export class RecipeInstructionsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() { console.log(this.instructions) }
+  ngOnInit() {}
 
   @Input() instructions: string[];
 }
