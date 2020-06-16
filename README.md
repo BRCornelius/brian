@@ -12,12 +12,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 Run `ng generate component components/<category>/<component-name>` to generate a new component.
 Run `ng generate service services/<actions | content | site>/<service-name>` to generate a new service.
 Run `ng generate pipe pipes/<pipe-name>` to generate a new pipe.
+Run `ng generate interface interfaces/i-<interface-name>` to generate a new interface.
 You can also use `ng generate directive|class|guard|enum|module`.
 
-All services, components, and pipes must be indexed and imported as a group into app.module.ts.
-
-Types and interfaces are defined in and exported from `src/app/utilities/types.ts`.
-Interface naming convention is to begin with `I`.
+All services, components, interfaces, and pipes must be indexed and imported as a group into app.module.ts.
 
 Non-private keys are stored in the environment.
 
