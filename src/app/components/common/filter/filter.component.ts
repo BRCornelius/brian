@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IOptions } from '../../../utilities';
+import { IOptions } from '../../../interfaces';
 import { FilterService } from '../../../services';
 
 @Component({

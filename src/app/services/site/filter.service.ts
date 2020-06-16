@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IFacet, IOTFVideo, IKidsVideo } from '../../utilities';
+import { IFacet, IOTFVideo, IKidsVideo } from '../../interfaces';
 
 @Injectable({
   providedIn: 'root'

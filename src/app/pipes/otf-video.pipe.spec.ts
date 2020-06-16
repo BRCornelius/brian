@@ -1,5 +1,5 @@
 import { OtfVideoPipe } from './otf-video.pipe';
-import { IOTFVideo } from '../utilities';
+import { IOTFVideo } from '../interfaces';
 
 describe('OtfVideoPipe', () => {
   let pipe: OtfVideoPipe;

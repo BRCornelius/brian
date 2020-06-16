@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MediaService } from 'src/app/services';
-import { IKidsVideo } from 'src/app/utilities';
+import { IKidsVideo } from 'src/app/interfaces';
 import { KidsVideoPipe } from 'src/app/pipes/';
 
 @Component({

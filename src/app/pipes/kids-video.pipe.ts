@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { IKidsVideo, IFormattedKidsVideo } from '../utilities';
+import { IKidsVideo, IFormattedKidsVideo } from '../interfaces';
 
 @Pipe({
   name: 'kidsVideo'

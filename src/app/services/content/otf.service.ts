@@ -1,5 +1,5 @@
 import { Injectable, OnInit } from '@angular/core';
-import { IFormattedOTFVideo, IOTFVideo, IOptions } from '../../utilities';
+import { IFormattedOTFVideo, IOTFVideo, IOptions } from '../../interfaces';
 
 @Injectable({
   providedIn: 'root'
