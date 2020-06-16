@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IIngredient } from 'src/app/utilities/types';
+import { IIngredient } from 'src/app/interfaces';
 
 @Component({
   selector: 'recipe-toggle',

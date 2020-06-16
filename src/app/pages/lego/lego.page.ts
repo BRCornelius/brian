@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LegoService } from '../../services';
-import { IDropdownOption, IURL } from 'src/app/utilities';
+import { IDropdownOption, IUrl } from 'src/app/interfaces';
 import { LegoSetPipe, SafePipe } from 'src/app/pipes';
 
 @Component({
@@ -27,7 +27,7 @@ export class LegoPage implements OnInit {
   updateActiveSet: Function = (selectedOption: number): void => {
     this.lego.getInstructions(selectedOption).subscribe(response => {
       const body = JSON.parse(response.body);
-      this.instructions = body.instructions.reduce((agg: string[], curr: IURL, index: number) => {
+      this.instructions = body.instructions.reduce((agg: string[], curr: IUrl, index: number) => {
         if(index % 2 === 0) {
           agg.push(curr.URL);
           return agg;

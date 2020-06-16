@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IOTFVideo, IKidsVideo, IOptions } from 'src/app/utilities';
+import { IOTFVideo, IKidsVideo, IOptions } from 'src/app/interfaces';
 
 @Component({
   selector: 'video-display',

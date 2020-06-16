@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipeService } from 'src/app/services';
-import { IRecipe } from 'src/app/utilities';
+import { IRecipe } from 'src/app/interfaces';
 import { ListOrderPipe } from 'src/app/pipes';
 
 @Component({

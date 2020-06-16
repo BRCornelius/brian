@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
-import { ICredential } from '../../utilities/types';
+import { ICredential } from '../../interfaces';
 import { AwsService } from './aws.service';
 
 @Injectable({

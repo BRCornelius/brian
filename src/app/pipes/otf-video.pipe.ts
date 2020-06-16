@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { IOTFVideo, IFormattedOTFVideo } from '../utilities';
+import { IOTFVideo, IFormattedOTFVideo } from '../interfaces';
 
 @Pipe({
   name: 'otfVideo'

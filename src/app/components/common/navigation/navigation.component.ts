@@ -1,6 +1,6 @@
 import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { NavigationService } from 'src/app/services';
-import { INavLink } from 'src/app/utilities/types';
+import { INavLink } from 'src/app/interfaces';
 
 @Component({
   selector: 'common-navigation',

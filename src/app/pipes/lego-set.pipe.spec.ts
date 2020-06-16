@@ -1,5 +1,5 @@
 import { LegoSetPipe } from './lego-set.pipe';
-import { ILegoSet } from '../utilities';
+import { ILegoSet } from '../interfaces';
 
 describe('LegoSetPipe', () => {
   let pipe: LegoSetPipe;

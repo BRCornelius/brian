@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { IInstruction } from '../utilities';
+import { IInstruction } from '../interfaces';
 
 @Pipe({
   name: 'listOrder'

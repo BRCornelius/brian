@@ -1,6 +1,6 @@
 import { Component, OnInit, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MediaService, OtfService, AuthService } from 'src/app/services';
-import { IFormattedOTFVideo, IOptions, IOTFVideo } from '../../utilities';
+import { IFormattedOTFVideo, IOptions, IOTFVideo } from '../../interfaces';
 import { OtfUrlPipe, OtfVideoPipe } from 'src/app/pipes';
 
 @Component({
