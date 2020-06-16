@@ -53,8 +53,6 @@ import {
   OtfUrlPipe,
   OtfVideoPipe
 } from './pipes';
-import {  } from './pipes/list-order.pipe';
-
 
 @NgModule({
   declarations: [
