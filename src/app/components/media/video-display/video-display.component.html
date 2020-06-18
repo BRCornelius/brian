@@ -5,8 +5,8 @@
     <media-grid
         [media]="videos"
         [listedMedia]="videos"
-        [setActiveMedia]="setActiveVideo"
         [displayFilter]="displayFilter"
         [$options]="$options"
+        (handleClick)="handleClick($event)"
     ></media-grid>
 </div>

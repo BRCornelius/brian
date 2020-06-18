@@ -18,8 +18,8 @@ export class VideoDisplayComponent implements OnInit {
   @Input() displayFilter: boolean;
   @Input() $options: IOptions[] = [];
 
-  setActiveVideo: Function = (event): void => {
-    this.activeVideoTitle = event.target.title;
-    this.activeVideoUrl = event.target.id;
-  };
+  handleClick: Function = (media): void => {
+    this.activeVideoTitle = media.title;
+    this.activeVideoUrl = media.src;
+  }
 }

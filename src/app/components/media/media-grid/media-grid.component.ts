@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { IKidsVideo, IOTFVideo, IOptions } from '../../../interfaces';
@@ -20,9 +20,10 @@ export class MediaGridComponent implements OnInit {
 
   @Input() media: IKidsVideo[] | IOTFVideo[];
   @Input() listedMedia: IKidsVideo[] | IOTFVideo[];
-  @Input() setActiveMedia: Function;
   @Input() displayFilter: boolean;
   @Input() $options: IOptions[];
+
+  @Output() handleClick: EventEmitter<{}> = new EventEmitter();
 
   currentRoute: string = this.router.url.replace('/', '');
 
@@ -35,5 +36,10 @@ export class MediaGridComponent implements OnInit {
     const newMedia = this.filter.filterContent(this.media, this.filter.facets);
     this.media = newMedia;
   };
-  setActive: Function = ($event): void => this.setActiveMedia($event);
+  setActive: Function = ($event): void => {
+    this.handleClick.emit({
+      src: $event.target.id,
+      title: $event.target.title
+    });
+  }
 }
