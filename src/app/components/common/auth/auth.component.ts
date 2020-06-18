@@ -48,8 +48,6 @@ export class AuthButtonComponent {
 
   constructor(private dialog: MatDialog) {}
 
-  @Input() successFn: Function;
-
   @Output() onAuthenticate: EventEmitter<{}> = new EventEmitter();
 
   handleAuthenticated: Function = () => this.onAuthenticate.emit();
