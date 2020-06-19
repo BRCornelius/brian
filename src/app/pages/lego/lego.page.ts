@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LegoService } from '../../services';
-import { IDropdownOption, IUrl } from 'src/app/interfaces';
+import { IUrl, ILegoSet } from 'src/app/interfaces';
 import { LegoSetPipe, SafePipe } from 'src/app/pipes';
 
 @Component({
@@ -17,12 +17,13 @@ export class LegoPage implements OnInit {
 
   ngOnInit() {
     this.lego.getSets().subscribe(response => {
-      this.sets = JSON.parse(response.body).sets;
+      // this.sets = JSON.parse(response.body).sets;        // For Production
+      this.sets = this.lego.mockData                        // For Testing
     });
   }
 
   instructions: string[];
-  sets: IDropdownOption[];
+  sets: ILegoSet[];
 
   updateActiveSet: Function = (selectedOption: number): void => {
     this.lego.getInstructions(selectedOption).subscribe(response => {

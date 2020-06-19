@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AwsService } from '../site';
+import { ILegoSet } from 'src/app/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,8 @@ export class LegoService {
     private http: HttpClient) { }
 
   headers = this.aws.httpOptions;
+
+  mockData: ILegoSet[] = [{ name: "Poppy's Village", setID: 29367, image: { thumbnailURL: '' } }]
 
   getInstructions: Function = (setID): Observable<{}> => {
     const options = { setID: setID };
