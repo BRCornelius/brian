@@ -17,4 +17,5 @@ export class RecipeService {
   headers = this.aws.httpOptions;
 
   recipes: Observable<any> = this.http.get('https://services.corneliuses.com/getrecipes-brian', {...this.headers});
+  toTry: Observable<any> = this.http.get('https://services.corneliuses.com/get-recipe-to-ry-brian', {...this.headers});
 }

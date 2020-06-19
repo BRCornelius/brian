@@ -1,3 +1,4 @@
 <div class="list-container">
-  <recipe-list></recipe-list>
+  <common-interstitial *ngIf="!recipes" [topic]="interstitial"></common-interstitial>
+  <recipe-list [recipes]="recipes"></recipe-list>
 </div>
