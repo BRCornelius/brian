@@ -17,5 +17,5 @@ export class SplashPage implements OnInit {
   isAuthorized: boolean = this.auth.authorized;
   title: string = `Brian's Page`;
 
-  handleAuthenticated: Function = (): boolean => this.isAuthorized = true;
+  handleAuthenticated: Function = (authorized): boolean => this.isAuthorized = authorized;
 }
