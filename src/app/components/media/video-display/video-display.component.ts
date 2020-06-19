@@ -10,13 +10,13 @@ export class VideoDisplayComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
-
   @Input() videos: IOTFVideo[] | IKidsVideo[];
   @Input() activeVideoTitle: string;
   @Input() activeVideoUrl: string;
   @Input() displayFilter: boolean;
   @Input() $options: IOptions[] = [];
+
+  ngOnInit() {}
 
   handleClick: Function = (media): void => {
     this.activeVideoTitle = media.title;

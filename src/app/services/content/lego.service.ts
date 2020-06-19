@@ -15,11 +15,11 @@ export class LegoService {
 
   headers = this.aws.httpOptions;
 
-  mockData: ILegoSet[] = [{ name: "Poppy's Village", setID: 29367, image: { thumbnailURL: '' } }]
+  mockData: ILegoSet[] = [{ name: 'Poppy\'s Village', setID: 29367, image: { thumbnailURL: '' } }];
 
   getInstructions: Function = (setID): Observable<{}> => {
     const options = { setID: setID };
     return this.http.post('https://services.corneliuses.com/get-lego-instructions', options, this.headers);
-  };
+  }
   getSets: Function = (): Observable<{}> => this.http.get('https://services.corneliuses.com/get-lego-sets', this.headers);
 }

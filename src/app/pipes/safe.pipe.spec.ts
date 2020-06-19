@@ -3,7 +3,7 @@ import { inject, TestBed } from '@angular/core/testing';
 import { SafePipe } from './safe.pipe';
 
 describe('SafePipe', () => {
-  let pipe: SafePipe
+  let pipe: SafePipe;
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [

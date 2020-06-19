@@ -5,7 +5,7 @@ import { NavigationService } from './navigation.service';
 describe('NavigationService', () => {
   let service: NavigationService;
   beforeEach(() => {
-    TestBed.configureTestingModule({})
+    TestBed.configureTestingModule({});
     service = TestBed.get(NavigationService);
   });
 
@@ -16,5 +16,5 @@ describe('NavigationService', () => {
   it('should hold state', () => {
     const { navLinks } = service;
     expect(navLinks).toBeDefined();
-  })
+  });
 });

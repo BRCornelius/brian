@@ -7,12 +7,12 @@ import { ILegoSet, IDropdownOption } from '../interfaces';
 export class LegoSetPipe implements PipeTransform {
 
   transform(legoSetArray: ILegoSet[]): IDropdownOption[] {
-    if(legoSetArray) {
+    if (legoSetArray) {
       return legoSetArray.map(set => ({
         title: set.name,
         value: set.setID,
         image: set.image.thumbnailURL
-      }));;
+      }));
     } else {
       return [];
     }

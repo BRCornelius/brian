@@ -7,12 +7,12 @@ import { IInstruction } from '../interfaces';
 export class ListOrderPipe implements PipeTransform {
 
   transform(instructions: IInstruction[], args?: any): any {
-    if(instructions){
-      return instructions.sort((a,b) => {
-        if ( a.M.step.N < b.M.step.N ){
+    if (instructions) {
+      return instructions.sort((a, b) => {
+        if ( a.M.step.N < b.M.step.N ) {
           return -1;
         }
-        if ( a.M.step.N > b.M.step.N ){
+        if ( a.M.step.N > b.M.step.N ) {
           return 1;
         }
         return 0;

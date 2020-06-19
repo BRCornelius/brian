@@ -18,5 +18,5 @@ export class OtfService {
       title: 'Group',
       options: this.groups,
     }
-  ]
+  ];
 }

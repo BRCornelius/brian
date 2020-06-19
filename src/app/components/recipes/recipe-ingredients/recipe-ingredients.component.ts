@@ -10,8 +10,8 @@ export class RecipeIngredientsComponent implements OnInit {
 
   constructor() { }
 
+  @Input() ingredients: IIngredient[];
+
   ngOnInit() {
   }
-
-  @Input() ingredients: IIngredient[];
 }

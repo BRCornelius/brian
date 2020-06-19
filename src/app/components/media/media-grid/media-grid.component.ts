@@ -16,8 +16,6 @@ export class MediaGridComponent implements OnInit {
     private filter: FilterService
   ) { }
 
-  ngOnInit() {}
-
   @Input() media: IKidsVideo[] | IOTFVideo[];
   @Input() listedMedia: IKidsVideo[] | IOTFVideo[];
   @Input() displayFilter: boolean;
@@ -27,6 +25,8 @@ export class MediaGridComponent implements OnInit {
 
   currentRoute: string = this.router.url.replace('/', '');
 
+  ngOnInit() {}
+
 
   checkRoute: Function = (route: string): boolean => {
     return route === this.currentRoute;
@@ -35,7 +35,7 @@ export class MediaGridComponent implements OnInit {
     this.media = this.listedMedia;
     const newMedia = this.filter.filterContent(this.media, this.filter.facets);
     this.media = newMedia;
-  };
+  }
   setActive: Function = ($event): void => {
     this.handleClick.emit({
       src: $event.target.id,

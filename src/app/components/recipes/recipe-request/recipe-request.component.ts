@@ -9,9 +9,9 @@ import { EmailService } from 'src/app/services';
 export class RecipeRequestComponent implements OnInit {
 
   constructor(private email: EmailService) { }
+  sendEmail: Function = this.email.sendEmail;
+  show = false;
 
   ngOnInit() {
   }
-  sendEmail: Function = this.email.sendEmail;
-  show: boolean = false;
 }

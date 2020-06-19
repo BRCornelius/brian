@@ -16,7 +16,7 @@ describe('RadioComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(RadioComponent);
     component = fixture.componentInstance;
-    component.$option = { title: '', options: []}
+    component.$option = { title: '', options: []};
     fixture.detectChanges();
   });
 

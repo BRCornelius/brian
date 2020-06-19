@@ -15,17 +15,17 @@ export class AuthComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
 
-  ngOnInit() {}
+  hasErrors = false;
+  name = '';
+  password = '';
 
-  hasErrors: boolean = false;
-  name: string = "";
-  password: string = "";
+  ngOnInit() {}
 
   onSubmit: Function = (): void => {
     this.auth.credentials = { name: this.name, password: this.password};
     this.auth.authenticate().subscribe((res: any) => {
-      if(res.body) {
-        document.cookie=res.body
+      if (res.body) {
+        document.cookie = res.body;
         this.data.handleAuthenticated();
         this.auth.isAuthorized();
         this.dialog.closeAll();
@@ -33,7 +33,7 @@ export class AuthComponent implements OnInit {
         this.hasErrors = true;
       }
     });
-  };
+  }
   onCancel: Function = (): void => {
     this.dialog.closeAll();
   }
@@ -57,5 +57,5 @@ export class AuthButtonComponent {
       data: {
         handleAuthenticated: this.handleAuthenticated
       }
-    });
+    })
 }

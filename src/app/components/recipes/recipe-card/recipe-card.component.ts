@@ -11,11 +11,11 @@ export class RecipeCardComponent implements OnInit {
 
   constructor(private recipe: RecipeService) { }
 
-  ngOnInit() {
-  }
-
   @Input() photo: string;
   @Input() instructions: string[];
   @Input() ingredients: IIngredient[];
   @Input() time: IRecipeTime;
+
+  ngOnInit() {
+  }
 }

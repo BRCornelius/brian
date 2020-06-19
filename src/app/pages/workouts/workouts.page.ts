@@ -17,9 +17,17 @@ export class WorkoutsPage implements OnInit {
     private otf: OtfService
   ) { }
 
+  activeVideoTitle: string;
+  activeVideoUrl: string;
+  errorText = 'You are not authorized to view this page.  Please email brian@corneliuses.com to request access.';
+  options: IOptions[] = this.otf.options;
+  interstitial = 'https://assets.corneliuses.com/photos/common/interstitial-typing.gif';
+  isAuthorized: boolean = this.auth.authorized;
+  videos: IOTFVideo[];
+
   ngOnInit() {
     this.auth.isAuthorized();
-    if(this.isAuthorized){
+    if (this.isAuthorized) {
       this.media.otfVideos.subscribe(res => {
         this.videos = res.data.Items;
         const limit = Math.floor(Math.random() * (this.videos.length - 1));
@@ -28,12 +36,4 @@ export class WorkoutsPage implements OnInit {
       });
     }
   }
-
-  activeVideoTitle: string;
-  activeVideoUrl: string;
-  errorText: string = 'You are not authorized to view this page.  Please email brian@corneliuses.com to request access.';
-  options: IOptions[] = this.otf.options;
-  interstitial: string = "https://assets.corneliuses.com/photos/common/interstitial-typing.gif";
-  isAuthorized: boolean = this.auth.authorized;
-  videos: IOTFVideo[];
 }

@@ -11,13 +11,13 @@ export class FilterComponent implements OnInit {
 
   constructor(private filter: FilterService) {}
 
-  ngOnInit() {}
-
   @Input() $options: IOptions[];
   @Input() filterFunction: Function;
+
+  ngOnInit() {}
 
   update: Function = (event) => {
     this.filter.updateFacets(event);
     this.filterFunction();
-  };
+  }
 }

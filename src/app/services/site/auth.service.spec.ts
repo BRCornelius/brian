@@ -23,15 +23,15 @@ describe('AuthService', () => {
     service.authenticate().subscribe((response: any) => {
       expect(response.body).toBeFalsy();
       done();
-    })
+    });
   });
 
   it('should deny bad authorization', (done: DoneFn) => {
-    document.cookie = "";
+    document.cookie = '';
     service.isAuthorized().subscribe((response: any) => {
       expect(response.body).toBeFalsy();
       done();
-    })
+    });
   });
 
   it('should hold auth properties', () => {
@@ -39,5 +39,5 @@ describe('AuthService', () => {
     const { authorized, credentials } = service;
     expect(authorized).toBeDefined();
     expect(credentials).toBeDefined();
-  })
+  });
 });

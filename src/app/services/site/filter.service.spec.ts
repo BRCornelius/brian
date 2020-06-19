@@ -25,7 +25,7 @@ describe('FilterService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [ FilterService ]
-    })
+    });
     service = TestBed.get(FilterService);
   });
 
@@ -64,5 +64,5 @@ describe('FilterService', () => {
     ];
     const filtered = service.filterContent(mockVideos, testingFacets);
     expect(filtered[0].category).toBe('comedy');
-  })
+  });
 });

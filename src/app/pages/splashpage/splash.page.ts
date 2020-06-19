@@ -10,12 +10,12 @@ export class SplashPage implements OnInit {
 
   constructor(private auth: AuthService) {}
 
+  isAuthorized: boolean = this.auth.authorized;
+  title = `Brian's Page`;
+
   ngOnInit() {
     this.auth.isAuthorized();
   }
-
-  isAuthorized: boolean = this.auth.authorized;
-  title: string = `Brian's Page`;
 
   handleAuthenticated: Function = (authorized): boolean => this.isAuthorized = authorized;
 }
