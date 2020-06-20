@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { EmailService } from 'src/app/services';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { RecipeService } from 'src/app/services';
 
 @Component({
   selector: 'recipe-request',
@@ -8,7 +9,7 @@ import { EmailService } from 'src/app/services';
 })
 export class RecipeRequestComponent implements OnInit {
 
-  constructor(private email: EmailService) { }
+  constructor(private recipes: RecipeService) { }
 
   ngOnInit() {
     let title = new FormControl();
@@ -16,8 +17,8 @@ export class RecipeRequestComponent implements OnInit {
     this.toTryForm = new FormGroup({title, url});
     this.submitted = false;
   }
-  sendEmail: Function = this.email.sendEmail;
-  show: boolean = false;
+
+  show:boolean;
   submitted:boolean;
   toTryForm: FormGroup;
 
