@@ -9,10 +9,10 @@ export class MediaCardComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
   @Input() thumbnail: string;
   @Input() source: string;
   @Input() header: string;
+
+  ngOnInit() {
+  }
 }

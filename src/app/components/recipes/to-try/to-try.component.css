@@ -1,0 +1,11 @@
+.recipe-button {
+    background-color: burlywood;
+    border: 1px solid darkslateblue;
+    border-left: 0;
+    border-right: 0;
+    color: darkslateblue;
+    font-size: 1rem;
+    padding: 0.5rem;
+    text-align: start;
+    width: 100%;
+}

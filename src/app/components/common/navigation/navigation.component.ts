@@ -11,10 +11,10 @@ export class NavigationComponent implements OnInit {
 
   constructor(private nav: NavigationService) {}
 
-  ngOnInit() {}
-
   activeNavLink: string;
   navLinks: INavLink[] = this.nav.navLinks;
+
+  ngOnInit() {}
 
   updateActiveNavLink: Function = (new_label): void => {
     this.activeNavLink = new_label;

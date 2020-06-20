@@ -13,6 +13,11 @@ export class KidsPage implements OnInit {
 
   constructor(private media: MediaService) { }
 
+  activeVideoTitle: string;
+  activeVideoUrl: string;
+  interstitial = 'https://assets.corneliuses.com/photos/common/interstitial-syd.gif';
+  videos: IKidsVideo[];
+
   ngOnInit() {
     this.media.kidsVideos.subscribe(res => {
       this.videos = res.data.Items;
@@ -20,9 +25,4 @@ export class KidsPage implements OnInit {
       this.activeVideoUrl = this.videos[0].URL.S;
     });
   }
-
-  activeVideoTitle: string;
-  activeVideoUrl: string;
-  interstitial: string = "https://assets.corneliuses.com/photos/common/interstitial-syd.gif";
-  videos: IKidsVideo[];
 }

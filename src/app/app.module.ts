@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -35,6 +35,7 @@ import {
   RecipeListComponent,
   DropdownComponent,
   FilterComponent,
+  ToTryComponent,
   WorkoutCardComponent,
   VideoDisplayComponent,
 } from './components';
@@ -88,6 +89,7 @@ import {
     KidsVideoPipe,
     InterstitialComponent,
     ListOrderPipe,
+    ToTryComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -103,6 +105,7 @@ import {
     MatSelectModule,
     MatTabsModule,
     MatToolbarModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

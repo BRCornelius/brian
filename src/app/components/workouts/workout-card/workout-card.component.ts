@@ -12,9 +12,9 @@ export class WorkoutCardComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
-
   @Input() title: string;
   @Input() grp: string;
   @Input() cat: string;
+
+  ngOnInit() {}
 }

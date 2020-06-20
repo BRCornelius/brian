@@ -20,7 +20,7 @@ describe('OtfVideoPipe', () => {
   ];
   beforeEach(() => {
     pipe = new OtfVideoPipe();
-  })
+  });
 
   it('create an instance', () => {
     expect(pipe).toBeTruthy();
@@ -32,5 +32,5 @@ describe('OtfVideoPipe', () => {
     expect(keys[0]).toBe('title');
     expect(keys[1]).toBe('category');
     expect(keys[2]).toBe('group');
-  })
+  });
 });

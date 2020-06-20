@@ -20,5 +20,5 @@ describe('OtfService', () => {
     expect(categories.length).toBeGreaterThanOrEqual(1);
     expect(groups.length).toBeGreaterThanOrEqual(1);
     expect(options.length).toBeGreaterThanOrEqual(1);
-  })
+  });
 });

@@ -29,5 +29,5 @@ describe('LegoSetPipe', () => {
     expect(keys[0]).toBe('title');
     expect(keys[1]).toBe('value');
     expect(keys[2]).toBe('image');
-  })
+  });
 });

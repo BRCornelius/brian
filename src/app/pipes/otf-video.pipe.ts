@@ -7,7 +7,7 @@ import { IOTFVideo, IFormattedOTFVideo } from '../interfaces';
 export class OtfVideoPipe implements PipeTransform {
 
   transform(otfVideos: IOTFVideo[]): IFormattedOTFVideo[] {
-    if(otfVideos){
+    if (otfVideos) {
       return otfVideos.map((video: IOTFVideo): IFormattedOTFVideo => ({
         title: video.TITLE.S,
         category: video.CAT.S,

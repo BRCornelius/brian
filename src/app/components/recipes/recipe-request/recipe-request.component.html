@@ -1,32 +1,37 @@
-<button *ngIf="!show" id="request-button" (click)="show = !show">Request a Recipe</button>
-<div *ngIf="show">
-  <mat-grid-list *ngIf="!requested" cols=4>
-    <mat-grid-tile
-      [colspan]=1
-      class="image-container">
-      <img src="https://assets.corneliuses.com/photos/common/chef.jpg" alt="confused chef">
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]=3>
-      Do you want to make a dish but can't decide which recipe to use?  Request a recipe and I will do the experimentation and find a simple recipe that will work for you!
-    </mat-grid-tile>
-    <mat-grid-tile class="input" [colspan]=3>
-      <textarea
-        name="request"
-        class="text-input"
-        id="recipe-request"
-        placeholder="Request a recipe"></textarea>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]=1>
-      <div style="text-align:center">
-        <button class="form-button" id="submit-button" (click)="sendEmail()">Submit</button>
-        <br>
-        <br>
-        <button class="form-button" id="close-button" (click)="show = !show">X Close</button>
-      </div>
-    </mat-grid-tile>
-  </mat-grid-list>
-  <div *ngIf="requested">
-    Thank you for requesting a recipe!  I will get back to you as soon as I can!<br>
-    <button class="form-button" id="close-button" (click)="show = !show">X Close</button>
-  </div>
+<div class="container">
+  <button *ngIf="!show" id="request-button" (click)="show = !show">Submit a recipe</button>
+  <p *ngIf="submitted">Recipe submitted!</p>
+</div>
+<div *ngIf="show" class="inner-container">
+  <form
+    [formGroup]="toTryForm"
+    (ngSubmit)="onSubmit(toTryForm.value)"
+    autocomplete="off"
+    novalidate
+  >
+    <div class="form-group">
+      <label for="title">Recipe Title:</label>
+      <input
+        formControlName="title"
+        id="title"
+        type="text"
+        class="form-control"
+        placeholder="Title..."
+      />
+    </div>
+    <div class="form-group">
+      <label for="url">Recipe URL:</label>
+      <input
+        formControlName="url"
+        id="url"
+        type="text"
+        class="form-control"
+        placeholder="URL..."
+      />
+    </div>
+    <div class="button-container">
+      <button type="submit" class="submit-button" (click)="onSubmit(toTryForm.value); show = !show">Submit</button>
+      <button type="text" class="close-button" (click)="show = !show">X Cancel</button>
+    </div>
+  </form>
 </div>

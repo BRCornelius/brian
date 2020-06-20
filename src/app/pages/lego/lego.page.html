@@ -1,7 +1,7 @@
 <div class="container" id="dropdown">
   <common-dropdown
     [dropdownOptions]="sets | legoSet"
-    [selectOption]="updateActiveSet"
+    (handleSelection)="updateActiveSet($event)"
   ></common-dropdown>
 </div>
 <div class="container" id="instructions">
