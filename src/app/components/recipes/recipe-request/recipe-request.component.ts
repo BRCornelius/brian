@@ -18,6 +18,7 @@ export class RecipeRequestComponent implements OnInit {
     this.submitted = false;
   }
 
+  show:boolean;
   submitted:boolean;
   toTryForm: FormGroup;
 

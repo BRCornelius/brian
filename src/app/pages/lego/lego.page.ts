@@ -20,8 +20,8 @@ export class LegoPage implements OnInit {
 
   ngOnInit() {
     this.lego.getSets().subscribe(response => {
-      // this.sets = JSON.parse(response.body).sets;        // For Production
-      this.sets = this.lego.mockData;                        // For Testing
+      this.sets = JSON.parse(response.body).sets;        // For Production
+      // this.sets = this.lego.mockData;                        // For Testing
     });
   }
 
