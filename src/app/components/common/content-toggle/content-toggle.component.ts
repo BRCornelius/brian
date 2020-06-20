@@ -9,7 +9,7 @@ export class ContentToggleComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  show = true;
 
-  show: boolean = true;
+  ngOnInit() {}
 }

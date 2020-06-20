@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { RecipeService } from 'src/app/services';
-import { IRecipe } from 'src/app/interfaces';
+import { Component, OnInit, Input } from '@angular/core';
+import { IRecipe, IRecipeToTry } from 'src/app/interfaces';
 import { ListOrderPipe } from 'src/app/pipes';
 
 @Component({
@@ -11,12 +10,10 @@ import { ListOrderPipe } from 'src/app/pipes';
 })
 export class RecipeListComponent implements OnInit {
 
-  constructor(private recipe: RecipeService) { }
+  constructor() { }
 
-  ngOnInit() {
-    this.recipe.recipes.subscribe(res => this.recipes = res.data.Items);
-  }
+  ngOnInit() {}
 
-  interstitial: string = "https://assets.corneliuses.com/photos/common/interstitial-duncan.gif";
-  recipes: IRecipe[];
+  @Input() recipes: IRecipe[];
+  @Input() toTry: IRecipeToTry[];
 }

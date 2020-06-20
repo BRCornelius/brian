@@ -13,4 +13,5 @@ export * from './i-o-t-f-video';
 export * from './i-options';
 export * from './i-recipe';
 export * from './i-recipe-time';
+export * from './i-recipe-to-try';
 export * from './i-url';

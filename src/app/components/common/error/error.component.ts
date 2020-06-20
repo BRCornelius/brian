@@ -9,9 +9,9 @@ export class ErrorComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
   @Input() allowLogin: boolean;
   @Input() text: string;
+
+  ngOnInit() {
+  }
 }

@@ -22,5 +22,5 @@ describe('RecipeService', () => {
       expect(response.data.Items.length).toBeGreaterThanOrEqual(1);
       done();
     });
-  })
+  });
 });

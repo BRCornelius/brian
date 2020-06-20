@@ -10,10 +10,10 @@ export class RadioComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {};
 
   @Input() $option: IOptions;
   @Input() filterFunction: Function;
 
+  ngOnInit() {}
   setFacet: Function = ($event): void => this.filterFunction($event);
 }

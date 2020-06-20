@@ -10,12 +10,12 @@ export class RecipeToggleComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
-  show: boolean = false;
+  show = false;
   @Input() photo: string;
   @Input() instructions: string[];
   @Input() ingredients: IIngredient[];
   @Input() title: string;
+
+  ngOnInit() {
+  }
 }

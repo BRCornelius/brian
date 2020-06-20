@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RecipeService } from 'src/app/services';
+import { IRecipe, IRecipeToTry } from 'src/app/interfaces';
 
 @Component({
   selector: 'recipe-page',
@@ -7,8 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipesPage implements OnInit {
 
-  constructor() {}
+  constructor(private recipe: RecipeService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.recipe.getRecipes.subscribe(res => this.recipes = res.data.Items);
+    this.recipe.getToTry.subscribe(res => this.toTry = res.data.Items);
+  }
 
+  interstitial = 'https://assets.corneliuses.com/photos/common/interstitial-duncan.gif';
+  recipes: IRecipe[];
+  toTry: IRecipeToTry[];
 }

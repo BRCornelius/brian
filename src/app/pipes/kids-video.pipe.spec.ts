@@ -19,7 +19,7 @@ describe('KidsVideoPipe', () => {
   ];
   beforeEach(() => {
     pipe = new KidsVideoPipe();
-  })
+  });
 
   it('create an instance', () => {
     expect(pipe).toBeTruthy();
@@ -31,5 +31,5 @@ describe('KidsVideoPipe', () => {
     expect(keys[0]).toBe('title');
     expect(keys[1]).toBe('thumbnail');
     expect(keys[2]).toBe('url');
-  })
+  });
 });

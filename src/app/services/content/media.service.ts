@@ -18,13 +18,13 @@ export class MediaService {
   otfVideos: Observable<any> = this.http.get('https://services.corneliuses.com/get-otf', this.headers);
 
   sortVideos: Function = (videos: any[], option: string): any[] =>
-    videos.sort((a,b) => {
-      if ( a[option] < b[option] ){
+    videos.sort((a, b) => {
+      if ( a[option] < b[option] ) {
         return -1;
       }
-      if ( a[option] > b[option] ){
+      if ( a[option] > b[option] ) {
         return 1;
       }
       return 0;
-  });
+  })
 }

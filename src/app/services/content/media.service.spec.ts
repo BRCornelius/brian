@@ -35,11 +35,11 @@ describe('MediaService', () => {
     service.otfVideos.subscribe(response => {
       expect(response.data.Items.length).toBeGreaterThanOrEqual(1);
       done();
-    })
+    });
   });
 
   it('should sort videos', () => {
     const sortedVideos = service.sortVideos(mockVideos, 'count');
     expect(sortedVideos[0].category).toBe('romance');
-  })
+  });
 });

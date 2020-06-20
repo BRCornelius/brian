@@ -4,5 +4,5 @@ export interface IInstruction {
     M: {
         step: IDynamoDBEntry;
         instruction: IDynamoDBEntry;
-    }
-}
+    };
+};

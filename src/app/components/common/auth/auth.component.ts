@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Inject } from '@angular/core';
+import { Component, OnInit, Input, Inject, Output, EventEmitter } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AuthService } from 'src/app/services/site/auth.service';
 
@@ -15,25 +15,25 @@ export class AuthComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
 
-  ngOnInit() {}
+  hasErrors = false;
+  name = '';
+  password = '';
 
-  hasErrors: boolean = false;
-  name: string = "";
-  password: string = "";
+  ngOnInit() {}
 
   onSubmit: Function = (): void => {
     this.auth.credentials = { name: this.name, password: this.password};
     this.auth.authenticate().subscribe((res: any) => {
-      if(res.body) {
-        document.cookie=res.body
-        this.data.successFn();
+      if (res.body) {
+        document.cookie = res.body;
+        this.data.handleAuthenticated();
         this.auth.isAuthorized();
         this.dialog.closeAll();
       } else {
         this.hasErrors = true;
       }
     });
-  };
+  }
   onCancel: Function = (): void => {
     this.dialog.closeAll();
   }
@@ -48,12 +48,14 @@ export class AuthButtonComponent {
 
   constructor(private dialog: MatDialog) {}
 
-  @Input() successFn: Function;
+  @Output() onAuthenticate: EventEmitter<{}> = new EventEmitter();
+
+  handleAuthenticated: Function = () => this.onAuthenticate.emit(true);
 
   toggleOpen: Function = (): MatDialogRef<AuthComponent> =>
     this.dialog.open(AuthComponent, {
       data: {
-        successFn: this.successFn
+        handleAuthenticated: this.handleAuthenticated
       }
-    });
+    })
 }

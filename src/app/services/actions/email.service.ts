@@ -13,5 +13,5 @@ export class EmailService {
   sendEmail: Function = (): Observable<{}> => {
     const httpOptions = this.aws.httpOptions;
     return this.http.post('https://services.corneliuses.com/sendEmail', {httpOptions});
-  };
-};
+  }
+}
