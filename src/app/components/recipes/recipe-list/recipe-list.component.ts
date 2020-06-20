@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IRecipe } from 'src/app/interfaces';
+import { IRecipe, IRecipeToTry } from 'src/app/interfaces';
 import { ListOrderPipe } from 'src/app/pipes';
 
 @Component({
@@ -15,4 +15,5 @@ export class RecipeListComponent implements OnInit {
   ngOnInit() {}
 
   @Input() recipes: IRecipe[];
+  @Input() toTry: IRecipeToTry[];
 }

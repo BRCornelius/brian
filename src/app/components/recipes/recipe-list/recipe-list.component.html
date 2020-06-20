@@ -7,3 +7,11 @@
     [ingredients]="recipe.INGREDIENTS.L"
   ></recipe-toggle>
 </div>
+<div *ngIf="toTry">
+  <recipe-to-try
+    *ngFor="let recipe of toTry"
+    [title]="recipe.title.S"
+    [url]="recipe.url.S"
+  ></recipe-to-try>
+</div>
+

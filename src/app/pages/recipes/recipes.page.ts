@@ -12,8 +12,8 @@ export class RecipesPage implements OnInit {
   constructor(private recipe: RecipeService) {}
 
   ngOnInit() {
-    this.recipe.recipes.subscribe(res => this.recipes = res.data.Items);
-    this.recipe.toTry.subscribe(res => this.toTry = res.data.Items);
+    this.recipe.getRecipes.subscribe(res => this.recipes = res.data.Items);
+    this.recipe.getToTry.subscribe(res => this.toTry = res.data.Items);
   }
 
   interstitial = 'https://assets.corneliuses.com/photos/common/interstitial-duncan.gif';
