@@ -4,5 +4,7 @@
     width: 100%;
 }
 .interstitial {
+    border-radius: 50%;
+    opacity: 50%;
     width: 90%;
 }
