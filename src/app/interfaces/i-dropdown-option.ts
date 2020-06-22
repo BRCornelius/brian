@@ -1,5 +1,5 @@
 export interface IDropdownOption {
     title: string;
-    value: number;
+    value: number | string;
     image?: string;
 }

@@ -1,5 +1,6 @@
 <div class="container" id="dropdown">
   <common-dropdown
+    [dropdownLabel]="dropdownLabel"
     [dropdownOptions]="sets | legoSet"
     (handleSelection)="updateActiveSet($event)"
   ></common-dropdown>
