@@ -51,4 +51,7 @@ export class ContactFormComponent implements OnInit {
       this.dialog.closeAll();
     };
   };
+  onClose: Function = () => {
+    this.dialog.closeAll();
+  }
 }
