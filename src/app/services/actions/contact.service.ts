@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AwsService } from '../site';
-import { Subscription } from 'rxjs';
 import { IDropdownOption } from 'src/app/interfaces';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -16,9 +16,8 @@ export class ContactService {
     { title: 'text', value: 'text' }
   ];
 
-  sendEmail: Function = (): Subscription => {
+  sendEmail: Function = (values): void => {
     const httpOptions = this.aws.httpOptions;
-    return this.http.post('https://services.corneliuses.com/sendEmail', {httpOptions})
-      .subscribe();
+    this.http.post('https://services.corneliuses.com/sendEmail', values, httpOptions).subscribe();
   }
 }
