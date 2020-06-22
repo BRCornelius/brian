@@ -13,7 +13,7 @@ export class ContactService {
 
   contactOptions: IDropdownOption[] = [
     { title: 'email', value: 'email' },
-    { title: 'text', value: 'text' }
+    // { title: 'text', value: 'text' }
   ];
 
   sendEmail: Function = (values): void => {
