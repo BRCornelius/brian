@@ -1,4 +1,8 @@
 .media-card {
     height: 100%;
     width: 100%;
+    background-color: gold;
+}
+.media-card:hover {
+    opacity: 30%;
 }
