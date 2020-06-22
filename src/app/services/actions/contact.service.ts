@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AwsService } from '../site';
 import { IDropdownOption } from 'src/app/interfaces';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
