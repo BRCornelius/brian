@@ -1,0 +1,32 @@
+img {
+    height: inherit;
+}
+.container {
+    padding: 1rem;
+    text-align: center;
+}
+.button-container {
+    text-align: center;
+    padding: 0.5rem
+}
+.inner-container {
+    padding: 0 1rem;
+}
+.form-control {
+    width: 100%;
+}
+
+.close-button {
+    color: red;
+    border: 0;
+    background-color: floralwhite;
+    margin-left: 1rem;
+}
+.submit-button {
+    background-color: blue;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    padding: 0.5rem;
+    margin-right: 1rem;
+}

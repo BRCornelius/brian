@@ -1,11 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'common-interstitial',
   templateUrl: './interstitial.component.html',
   styleUrls: ['./interstitial.component.css']
 })
-export class InterstitialComponent implements OnInit {
+export class InterstitialComponent{
 
   constructor() { }
 
@@ -22,5 +22,4 @@ export class InterstitialComponent implements OnInit {
     ? this.options[this.topic]
     : 'https://assets.corneliuses.com/photos/common/interstitial-duncan.gif';
 
-  ngOnInit() {}
 }

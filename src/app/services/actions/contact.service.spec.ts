@@ -1,16 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 
-import { EmailService } from './email.service';
+import { ContactService } from './contact.service';
 import { HttpClientModule } from '@angular/common/http';
 
-describe('EmailService', () => {
-  let service: EmailService;
+describe('ContactService', () => {
+  let service: ContactService;
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [ HttpClientModule ],
-      providers: [EmailService]
+      providers: [ContactService]
     });
-    service = TestBed.get(EmailService);
+    service = TestBed.get(ContactService);
   });
 
   it('should be created', () => {
