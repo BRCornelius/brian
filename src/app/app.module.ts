@@ -38,6 +38,9 @@ import {
   ToTryComponent,
   WorkoutCardComponent,
   VideoDisplayComponent,
+  ContactComponent,
+  ContactButtonComponent,
+  ContactFormComponent,
 } from './components';
 import {
   KidsPage,
@@ -90,6 +93,9 @@ import {
     InterstitialComponent,
     ListOrderPipe,
     ToTryComponent,
+    ContactComponent,
+    ContactButtonComponent,
+    ContactFormComponent
   ],
   imports: [
     AppRoutingModule,
@@ -109,7 +115,7 @@ import {
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [AuthComponent],
+  entryComponents: [AuthComponent, ContactComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }

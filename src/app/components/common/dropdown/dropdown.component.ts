@@ -10,6 +10,7 @@ export class DropdownComponent implements OnInit {
 
   constructor() { }
 
+  @Input() dropdownLabel: string;
   @Input() dropdownOptions: IDropdownOption[];
 
   @Output() handleSelection = new EventEmitter();

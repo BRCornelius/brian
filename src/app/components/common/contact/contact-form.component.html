@@ -1,0 +1,31 @@
+<form
+  [formGroup]="contactForm"
+  (ngSubmit)="onSubmit(contactForm.value)"
+  autocomplete="off"
+  novalidate
+>
+  <div class="form-group">
+    <label for="from">{{fromLabel}}</label>
+    <input
+      formControlName="from"
+      id="from"
+      type="text"
+      class="form-control"
+      placeholder={{fromPlaceholder}}
+    />
+  </div>
+  <div class="form-group">
+    <label for="body">Message:</label>
+    <input
+      formControlName="body"
+      id="body"
+      type="text"
+      class="form-control"
+      placeholder="Message..."
+    />
+  </div>
+  <div class="button-container">
+    <button type="submit" class="submit-button" (click)="onSubmit(contactForm.value); show = !show">Submit</button>
+    <button type="text" class="close-button" (click)="show = !show">X Cancel</button>
+  </div>
+</form>
