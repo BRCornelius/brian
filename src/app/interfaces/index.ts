@@ -15,3 +15,4 @@ export * from './i-recipe';
 export * from './i-recipe-time';
 export * from './i-recipe-to-try';
 export * from './i-url';
+export * from './i-contact-values';
