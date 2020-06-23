@@ -17,7 +17,7 @@ export class ContactComponent {
   ) { }
 
   contactMethod: string = this.data.contactMethod
-
+  titleCopy: string = this.contactMethod === 'text' ? 'Send a text:' : 'Send an email:';
 }
 
 @Component({

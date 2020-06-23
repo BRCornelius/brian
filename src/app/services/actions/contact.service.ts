@@ -11,8 +11,8 @@ export class ContactService {
   constructor(private http:HttpClient, private aws:AwsService) { }
 
   contactOptions:IDropdownOption[] = [
-    { title: 'email', value: 'email' },
-    { title: 'text', value: 'text' }
+    { title: 'Email', value: 'email' },
+    { title: 'Text', value: 'text' }
   ];
 
   sendEmail: Function = (values:IContactValues):void => {
