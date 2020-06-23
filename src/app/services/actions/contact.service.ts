@@ -1,22 +1,25 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AwsService } from '../site';
-import { IDropdownOption } from 'src/app/interfaces';
+import { IDropdownOption, IContactValues } from 'src/app/interfaces';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
 
-  constructor(private http: HttpClient, private aws: AwsService) { }
+  constructor(private http:HttpClient, private aws:AwsService) { }
 
-  contactOptions: IDropdownOption[] = [
+  contactOptions:IDropdownOption[] = [
     { title: 'email', value: 'email' },
-    // { title: 'text', value: 'text' }
+    { title: 'text', value: 'text' }
   ];
 
-  sendEmail: Function = (values): void => {
-    const httpOptions = this.aws.httpOptions;
-    this.http.post('https://services.corneliuses.com/sendEmail', values, httpOptions).subscribe();
+  sendEmail: Function = (values:IContactValues):void => {
+    this.http.post('https://services.corneliuses.com/sendEmail', values, this.aws.httpOptions).subscribe();
+  }
+
+  sendText: Function = (values:IContactValues):void => {
+    this.http.post('https://services.corneliuses.com/send-text-brian', values, this.aws.httpOptions).subscribe();
   }
 }
