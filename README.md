@@ -9,13 +9,18 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Code scaffolding
 
-Run `ng generate component components/<category>/<component-name>` to generate a new component.
-Run `ng generate service services/<actions | content | site>/<service-name>` to generate a new service.
+Run `ng generate component components/<category>/<component-name>` to generate a new component or page.
+    Component categories are `common`, `media`, `recipes`, `workouts`.
+    Component selector should be named `category-component-name` in skewer-case.
+    Page Components should be suffixed with `-Page`.
+    Page selectors should be named `page-name-page`.
+Run `ng generate service services/<category>/<service-name>` to generate a new service.
+    Service categories are `actions`, `content`, `site`.
 Run `ng generate pipe pipes/<pipe-name>` to generate a new pipe.
 Run `ng generate interface interfaces/i-<interface-name>` to generate a new interface.
 You can also use `ng generate directive|class|guard|enum|module`.
 
-All services, components, interfaces, and pipes must be indexed and imported as a group into app.module.ts.
+All services, components, interfaces, and pipes must be indexed and imported as a barrel into app.module.ts.
 
 Non-private keys are stored in the environment.
 

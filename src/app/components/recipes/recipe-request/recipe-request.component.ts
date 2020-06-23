@@ -18,15 +18,19 @@ export class RecipeRequestComponent implements OnInit {
     this.submitted = false;
   }
 
+  @Output() handleSubmit:EventEmitter<any> = new EventEmitter();
+
   show:boolean;
   submitted:boolean;
   toTryForm: FormGroup;
 
   onSubmit: Function = (values): void => {
-    this.recipes.addToTry({
+    const data = {
       title: values.title,
       url: values.url
-    });
+    };
+    this.recipes.addToTry(data);
+    this.handleSubmit.emit(data);
     this.submitted = true;
   }
 }

@@ -5,6 +5,7 @@
     [activeVideoUrl]="activeVideoUrl | otfUrl"
     [activeVideoTitle]="activeVideoTitle"
     [displayFilter]="true"
+    [displayControls]="true"
     [$options]="options"
 ></video-display>
 <common-error *ngIf="!isAuthorized" [text]="errorText" [allowLogin]=false></common-error>
