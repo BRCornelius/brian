@@ -16,7 +16,7 @@ export class LegoPage implements OnInit {
   ) { }
 
   instructions: string[];
-  dropdownLabel: string = "Lego Sets";
+  dropdownLabel = 'Lego Sets';
   sets: ILegoSet[];
 
   ngOnInit() {

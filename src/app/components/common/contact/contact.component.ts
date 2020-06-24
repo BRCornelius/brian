@@ -16,7 +16,7 @@ export class ContactComponent {
     @Inject(MAT_DIALOG_DATA) public data: any
   ) { }
 
-  contactMethod: string = this.data.contactMethod
+  contactMethod: string = this.data.contactMethod;
   titleCopy: string = this.contactMethod === 'text' ? 'Send a text:' : 'Send an email:';
 }
 
@@ -32,10 +32,10 @@ export class ContactButtonComponent {
     private dialog: MatDialog
   ) { }
 
-  contactOptions:IDropdownOption[] = this.contact.contactOptions;
-  dropdownLabel: string = "Contact";
+  contactOptions: IDropdownOption[] = this.contact.contactOptions;
+  dropdownLabel = 'Contact';
 
-  handleSelection:Function = (selection) => this.toggleOpen(selection);
+  handleSelection: Function = (selection) => this.toggleOpen(selection);
   toggleOpen: Function = (contactMethod): MatDialogRef<ContactComponent> =>
     this.dialog.open(ContactComponent, {
       data: { contactMethod }

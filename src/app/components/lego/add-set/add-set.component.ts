@@ -10,32 +10,32 @@ import { LegoService } from 'src/app/services';
 })
 export class AddSetComponent implements OnInit {
 
-  constructor(private lego:LegoService) { }
+  constructor(private lego: LegoService) { }
+
+  addSetForm: FormGroup;
+  errorMessage: string;
+  hasErrors: boolean;
+  setAdded: boolean;
 
   ngOnInit() {
-    let setNumber = new FormControl();
+    const setNumber = new FormControl();
     this.addSetForm = new FormGroup({ setNumber });
     this.setAdded = false;
   }
 
-  addSetForm:FormGroup;
-  errorMessage:string;
-  hasErrors:boolean;
-  setAdded:boolean;
-
-  onSubmit:Function = (values:ILegoSetNumber):void => {
-    this.lego.addSet(values).subscribe((res:any):void => {
-      if(res.errorType === "TypeError") {
-        this.errorMessage = "Please check the set and version number and resubmit.";
+  onSubmit: Function = (values: ILegoSetNumber): void => {
+    this.lego.addSet(values).subscribe((res: any): void => {
+      if (res.errorType === 'TypeError') {
+        this.errorMessage = 'Please check the set and version number and resubmit.';
         this.hasErrors = true;
       } else if (res.StatusCode === 200) {
         this.setAdded = true;
       } else {
         console.log(res);
       }
-  });;
+  });
   }
-  toggleSetAddedFalse:Function = ():void => {
+  toggleSetAddedFalse: Function = (): void => {
     this.setAdded = false;
     this.hasErrors = false;
   }

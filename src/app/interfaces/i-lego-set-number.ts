@@ -1,3 +1,3 @@
 export interface ILegoSetNumber {
-    setNumber:string;
+    setNumber: string;
 }

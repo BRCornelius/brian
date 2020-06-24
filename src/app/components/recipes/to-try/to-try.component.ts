@@ -9,10 +9,10 @@ export class ToTryComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
-
   @Input() title: string;
   @Input() url: string;
+
+  ngOnInit() {}
 
   navigate: Function = (): void => {
     const win = window.open(this.url, '_blank');

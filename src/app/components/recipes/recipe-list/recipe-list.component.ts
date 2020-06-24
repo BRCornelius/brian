@@ -12,8 +12,8 @@ export class RecipeListComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
-
   @Input() recipes: IRecipe[];
   @Input() toTry: IRecipeToTry[];
+
+  ngOnInit() {}
 }

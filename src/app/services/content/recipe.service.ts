@@ -21,5 +21,5 @@ export class RecipeService {
 
   addToTry: Function = (values: IRecipeToTry) => {
     this.http.put('https://services.corneliuses.com/add-recipe-to-try-brian', values, {...this.headers}).subscribe();
-  };
+  }
 }
