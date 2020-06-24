@@ -48,7 +48,8 @@ import {
   LegoPage,
   SplashPage,
   RecipesPage,
-  WorkoutsPage
+  WorkoutsPage,
+  ErrorPage,
 } from './pages';
 import {
   KidsVideoPipe,
@@ -97,7 +98,8 @@ import {
     ContactComponent,
     ContactButtonComponent,
     ContactFormComponent,
-    AddSetComponent
+    AddSetComponent,
+    ErrorPage
   ],
   imports: [
     AppRoutingModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IRecipe, IRecipeToTry } from 'src/app/interfaces';
 import { ListOrderPipe } from 'src/app/pipes';
 
@@ -8,7 +8,7 @@ import { ListOrderPipe } from 'src/app/pipes';
   styleUrls: ['./recipe-list.component.css'],
   providers: [ListOrderPipe]
 })
-export class RecipeListComponent implements OnInit {
+export class RecipeListComponent {
 
   constructor() { }
 
