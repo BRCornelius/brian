@@ -41,6 +41,7 @@ import {
   ContactComponent,
   ContactButtonComponent,
   ContactFormComponent,
+  AddSetComponent
 } from './components';
 import {
   KidsPage,
@@ -95,7 +96,8 @@ import {
     ToTryComponent,
     ContactComponent,
     ContactButtonComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    AddSetComponent
   ],
   imports: [
     AppRoutingModule,

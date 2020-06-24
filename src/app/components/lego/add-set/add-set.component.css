@@ -1,0 +1,19 @@
+.errors {
+    color: crimson;
+    font-style: oblique;
+    font-weight: lighter;
+}
+
+.form-group {
+    background-color: cornflowerblue;
+    padding: 1rem;
+}
+
+form {
+    margin-bottom: 1rem;
+}
+
+label {
+    font-size: large;
+    font-weight: bolder;
+}
