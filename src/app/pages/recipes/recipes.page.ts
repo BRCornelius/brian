@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RecipeService } from 'src/app/services';
+import { RecipeService, AuthService } from 'src/app/services';
 import { IRecipe, IRecipeToTry } from 'src/app/interfaces';
 
 @Component({
@@ -9,7 +9,10 @@ import { IRecipe, IRecipeToTry } from 'src/app/interfaces';
 })
 export class RecipesPage implements OnInit {
 
-  constructor(private recipe: RecipeService) {}
+  constructor(
+    private auth: AuthService,
+    private recipe: RecipeService
+  ) {}
 
   ngOnInit() {
     this.recipe.getRecipes.subscribe(res => this.recipes = res.data.Items);
@@ -17,6 +20,7 @@ export class RecipesPage implements OnInit {
   }
 
   interstitial = 'https://assets.corneliuses.com/photos/common/interstitial-duncan.gif';
+  isAuthorized = this.auth.authorized;
   recipes: IRecipe[];
   toTry: any[];
 

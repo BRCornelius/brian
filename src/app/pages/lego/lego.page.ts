@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LegoService } from '../../services';
+import { LegoService, AuthService } from '../../services';
 import { IUrl, ILegoSet } from 'src/app/interfaces';
 import { LegoSetPipe, SafePipe } from 'src/app/pipes';
 
@@ -12,10 +12,12 @@ import { LegoSetPipe, SafePipe } from 'src/app/pipes';
 export class LegoPage implements OnInit {
 
   constructor(
+    private auth: AuthService,
     private lego: LegoService
   ) { }
 
   instructions: string[];
+  isAuthorized: boolean =  this.auth.authorized;
   dropdownLabel = 'Lego Sets';
   sets: ILegoSet[];
 
