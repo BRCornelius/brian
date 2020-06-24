@@ -1,0 +1,20 @@
+<form
+  [formGroup]="addSetForm"
+  (ngSubmit)="onSubmit(addSetForm.value)"
+  autocomplete="off"
+  novalidate
+>
+  <div class="form-group">
+    <label for="setNumber">Add Set By Set Number</label><br/>
+    <input
+      class="form-control"
+      formControlName="setNumber"
+      id="setNumber"
+      type="text"
+      placeholder="Set Number (XXXXX-X)..."
+      (click)="toggleSetAddedFalse()"
+    />
+    <button type="submit" class="submit-button" (click)="onSubmit(addSetForm.value)">Submit</button>
+  </div>
+  <p *ngIf="hasErrors" class="errors">{{errorMessage}}</p>
+</form>

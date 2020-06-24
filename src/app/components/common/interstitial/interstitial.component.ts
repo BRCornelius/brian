@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
   templateUrl: './interstitial.component.html',
   styleUrls: ['./interstitial.component.css']
 })
-export class InterstitialComponent{
+export class InterstitialComponent {
 
   constructor() { }
 

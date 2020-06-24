@@ -8,18 +8,18 @@ import { IDropdownOption, IContactValues } from 'src/app/interfaces';
 })
 export class ContactService {
 
-  constructor(private http:HttpClient, private aws:AwsService) { }
+  constructor(private http: HttpClient, private aws: AwsService) { }
 
-  contactOptions:IDropdownOption[] = [
+  contactOptions: IDropdownOption[] = [
     { title: 'Email', value: 'email' },
     { title: 'Text', value: 'text' }
   ];
 
-  sendEmail: Function = (values:IContactValues):void => {
+  sendEmail: Function = (values: IContactValues): void => {
     this.http.post('https://services.corneliuses.com/sendEmail', values, this.aws.httpOptions).subscribe();
   }
 
-  sendText: Function = (values:IContactValues):void => {
+  sendText: Function = (values: IContactValues): void => {
     this.http.post('https://services.corneliuses.com/send-text-brian', values, this.aws.httpOptions).subscribe();
   }
 }

@@ -18,5 +18,13 @@ export class RecipesPage implements OnInit {
 
   interstitial = 'https://assets.corneliuses.com/photos/common/interstitial-duncan.gif';
   recipes: IRecipe[];
-  toTry: IRecipeToTry[];
+  toTry: any[];
+
+  updateToTry:Function = (recipe:IRecipeToTry):void => {
+    const newRecipe = {
+      title: { S: recipe.title },
+      url: { S: recipe.url }
+    }
+    this.toTry = [...this.toTry, newRecipe]
+  };
 }

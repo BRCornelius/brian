@@ -16,3 +16,4 @@ export * from './i-recipe-time';
 export * from './i-recipe-to-try';
 export * from './i-url';
 export * from './i-contact-values';
+export * from './i-lego-set-number';

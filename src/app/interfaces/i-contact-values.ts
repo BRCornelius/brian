@@ -1,4 +1,4 @@
 export interface IContactValues {
-    body:string;
-    from:string;
+    body: string;
+    from: string;
 }

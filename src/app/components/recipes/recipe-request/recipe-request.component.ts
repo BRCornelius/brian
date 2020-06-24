@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { RecipeService } from 'src/app/services';
+import { IRecipeToTry } from 'src/app/interfaces';
 
 @Component({
   selector: 'recipe-request',
@@ -12,21 +13,21 @@ export class RecipeRequestComponent implements OnInit {
   constructor(private recipes: RecipeService) { }
 
   ngOnInit() {
-    let title = new FormControl();
-    let url = new FormControl();
+    const title = new FormControl();
+    const url = new FormControl();
     this.toTryForm = new FormGroup({title, url});
     this.submitted = false;
   }
+
+  @Output() handleSubmit:EventEmitter<any> = new EventEmitter();
 
   show:boolean;
   submitted:boolean;
   toTryForm: FormGroup;
 
-  onSubmit: Function = (values): void => {
-    this.recipes.addToTry({
-      title: values.title,
-      url: values.url
-    });
+  onSubmit: Function = (values: IRecipeToTry): void => {
+    this.recipes.addToTry(values);
+    this.handleSubmit.emit(values);
     this.submitted = true;
   }
 }

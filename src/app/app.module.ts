@@ -41,13 +41,15 @@ import {
   ContactComponent,
   ContactButtonComponent,
   ContactFormComponent,
+  AddSetComponent
 } from './components';
 import {
   KidsPage,
   LegoPage,
   SplashPage,
   RecipesPage,
-  WorkoutsPage
+  WorkoutsPage,
+  ErrorPage,
 } from './pages';
 import {
   KidsVideoPipe,
@@ -95,7 +97,9 @@ import {
     ToTryComponent,
     ContactComponent,
     ContactButtonComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    AddSetComponent,
+    ErrorPage
   ],
   imports: [
     AppRoutingModule,

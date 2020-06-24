@@ -14,6 +14,7 @@ export class VideoDisplayComponent implements OnInit {
   @Input() activeVideoTitle: string;
   @Input() activeVideoUrl: string;
   @Input() displayFilter: boolean;
+  @Input() displayControls:boolean;
   @Input() $options: IOptions[] = [];
 
   ngOnInit() {}
