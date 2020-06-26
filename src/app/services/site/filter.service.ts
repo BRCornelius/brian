@@ -29,11 +29,13 @@ export class FilterService {
       return facet;
     });
   }
-  filterContent: Function = (content, facets): IOTFVideo[] | IKidsVideo[] => facets.reduce((agg, curr) => {
-    const facetKey = Object.keys(curr)[0];
-    const facetValue = curr[facetKey];
-    return agg.filter(item => item[facetKey.toLowerCase()] === facetValue);
-  }, content)
+  // tslint:disable-next-line:max-line-length
+  filterContent: Function = (content, facets): IOTFVideo[] | IKidsVideo[] => facets.reduce(
+    (agg, curr) => {
+      const facetKey = Object.keys(curr)[0];
+      const facetValue = curr[facetKey];
+      return agg.filter(item => item[facetKey.toLowerCase()] === facetValue);
+    }, content)
   updateFacets: Function = (event): void => {
     const key = event.target.name;
     const value = event.target.value;

@@ -11,7 +11,7 @@ export class NavigationComponent implements OnInit {
 
   constructor(private nav: NavigationService) {}
 
-  activeNavLink: string = 'Home';
+  activeNavLink = 'Home';
   navLinks: INavLink[] = this.nav.navLinks;
 
   ngOnInit() {}

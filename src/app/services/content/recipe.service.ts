@@ -16,10 +16,20 @@ export class RecipeService {
 
   headers = this.aws.httpOptions;
 
-  getRecipes: Observable<any> = this.http.get('https://services.corneliuses.com/getrecipes-brian', {...this.headers});
-  getToTry: Observable<any> = this.http.get('https://services.corneliuses.com/get-recipe-to-ry-brian', {...this.headers});
+  getRecipes: Observable<any> = this.http.get(
+    'https://services.corneliuses.com/getrecipes-brian',
+    {...this.headers}
+  );
+  getToTry: Observable<any> = this.http.get(
+    'https://services.corneliuses.com/get-recipe-to-ry-brian',
+    {...this.headers}
+  );
 
   addToTry: Function = (values: IRecipeToTry) => {
-    this.http.put('https://services.corneliuses.com/add-recipe-to-try-brian', values, {...this.headers}).subscribe();
+    this.http.put(
+      'https://services.corneliuses.com/add-recipe-to-try-brian',
+      values,
+      {...this.headers}
+    ).subscribe();
   }
 }

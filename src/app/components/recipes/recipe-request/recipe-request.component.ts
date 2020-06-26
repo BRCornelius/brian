@@ -12,18 +12,18 @@ export class RecipeRequestComponent implements OnInit {
 
   constructor(private recipes: RecipeService) { }
 
+  @Output() handleSubmit: EventEmitter<any> = new EventEmitter();
+
+  show: boolean;
+  submitted: boolean;
+  toTryForm: FormGroup;
+
   ngOnInit() {
     const title = new FormControl();
     const url = new FormControl();
     this.toTryForm = new FormGroup({title, url});
     this.submitted = false;
   }
-
-  @Output() handleSubmit:EventEmitter<any> = new EventEmitter();
-
-  show:boolean;
-  submitted:boolean;
-  toTryForm: FormGroup;
 
   onSubmit: Function = (values: IRecipeToTry): void => {
     this.recipes.addToTry(values);

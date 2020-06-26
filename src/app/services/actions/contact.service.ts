@@ -16,10 +16,18 @@ export class ContactService {
   ];
 
   sendEmail: Function = (values: IContactValues): void => {
-    this.http.post('https://services.corneliuses.com/sendEmail', values, this.aws.httpOptions).subscribe();
+    this.http.post(
+      'https://services.corneliuses.com/sendEmail',
+      values,
+      this.aws.httpOptions
+    ).subscribe();
   }
 
   sendText: Function = (values: IContactValues): void => {
-    this.http.post('https://services.corneliuses.com/send-text-brian', values, this.aws.httpOptions).subscribe();
+    this.http.post(
+      'https://services.corneliuses.com/send-text-brian',
+      values,
+      this.aws.httpOptions
+    ).subscribe();
   }
 }

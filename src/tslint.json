@@ -4,13 +4,13 @@
         "directive-selector": [
             true,
             "attribute",
-            "app",
+            ["app", "common", "kids", "lego", "media", "recipe", "splash", "workout"],
             "camelCase"
         ],
         "component-selector": [
             true,
             "element",
-            "app",
+            ["app", "common", "kids", "lego", "media", "recipe", "splash", "workout"],
             "kebab-case"
         ]
     }

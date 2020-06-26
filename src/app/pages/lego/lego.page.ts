@@ -31,14 +31,15 @@ export class LegoPage implements OnInit {
   updateActiveSet: Function = (selectedOption: number): void => {
     this.lego.getInstructions(selectedOption).subscribe(response => {
       const body = JSON.parse(response.body);
-      this.instructions = body.instructions.reduce((agg: string[], curr: IUrl, index: number) => {
-        if (index % 2 === 0) {
-          agg.push(curr.URL);
-          return agg;
-        } else {
-          return agg;
-        }
-      }, []);
+      this.instructions = body.instructions.reduce(
+        (agg: string[], curr: IUrl, index: number) => {
+          if (index % 2 === 0) {
+            agg.push(curr.URL);
+            return agg;
+          } else {
+            return agg;
+          }
+        }, []);
     });
   }
 }

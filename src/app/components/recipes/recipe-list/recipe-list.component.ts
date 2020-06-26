@@ -15,5 +15,4 @@ export class RecipeListComponent {
   @Input() recipes: IRecipe[];
   @Input() toTry: IRecipeToTry[];
 
-  ngOnInit() {}
 }

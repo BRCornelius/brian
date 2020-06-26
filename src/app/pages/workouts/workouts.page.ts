@@ -4,7 +4,7 @@ import { IFormattedOTFVideo, IOptions, IOTFVideo } from '../../interfaces';
 import { OtfUrlPipe, OtfVideoPipe } from 'src/app/pipes';
 
 @Component({
-  selector: 'workouts-page',
+  selector: 'workout-page',
   templateUrl: './workouts.page.html',
   styleUrls: ['./workouts.page.css'],
   providers: [OtfUrlPipe, OtfVideoPipe]
@@ -19,7 +19,8 @@ export class WorkoutsPage implements OnInit {
 
   activeVideoTitle: string;
   activeVideoUrl: string;
-  errorText = 'You are not authorized to view this page.  Please email brian@corneliuses.com to request access.';
+  // tslint:disable-next-line:max-line-length
+  errorText = 'You are not authorized to view this page. Please email me via the contact below to request access.';
   options: IOptions[] = this.otf.options;
   interstitial = 'https://assets.corneliuses.com/photos/common/interstitial-typing.gif';
   isAuthorized: boolean = this.auth.authorized;

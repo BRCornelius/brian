@@ -20,14 +20,21 @@ export class AuthService {
   headers = this.aws.httpOptions;
 
   authenticate: Function = (): Observable<{}> => {
-    return this.http.post('https://services.corneliuses.com/authenticate', this.credentials, {...this.headers});
+    return this.http.post(
+      'https://services.corneliuses.com/authenticate',
+      this.credentials,
+      {...this.headers}
+    );
   }
   isAuthorized: Function = (): Subscription => {
     if (!this.authorized) {
       const token = document.cookie ? document.cookie : '';
       const params = { token: token };
-      return this.http.post('https://services.corneliuses.com/authorize', params, {...this.headers})
-        .subscribe((response: any) => this.authorized = response.body);
+      return this.http.post(
+        'https://services.corneliuses.com/authorize',
+        params,
+        {...this.headers}
+      ).subscribe((response: any) => this.authorized = response.body);
     }
   }
 }

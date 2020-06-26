@@ -48,9 +48,9 @@ export class AuthButtonComponent {
 
   constructor(private dialog: MatDialog) {}
 
-  @Output() onAuthenticate: EventEmitter<{}> = new EventEmitter();
+  @Output() setAuthenticated: EventEmitter<{}> = new EventEmitter();
 
-  handleAuthenticated: Function = () => this.onAuthenticate.emit(true);
+  handleAuthenticated: Function = () => this.setAuthenticated.emit(true);
 
   toggleOpen: Function = (): MatDialogRef<AuthComponent> =>
     this.dialog.open(AuthComponent, {

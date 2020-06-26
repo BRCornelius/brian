@@ -9,5 +9,5 @@
     Look around the site to see recipes, lego instructions, and workout templates.
     Please email via the contact link below with any comments or suggestions.
   </p>
-  <common-auth-button *ngIf="!isAuthorized" (onAuthenticate)="handleAuthenticated($event)"></common-auth-button>
+  <common-auth-button *ngIf="!isAuthorized" (setAuthenticated)="handleAuthenticated($event)"></common-auth-button>
 </div>

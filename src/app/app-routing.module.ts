@@ -1,6 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SplashPage, RecipesPage, KidsPage, WorkoutsPage, LegoPage, ErrorPage } from './pages';
+import {
+  SplashPage,
+  RecipesPage,
+  KidsPage,
+  WorkoutsPage,
+  LegoPage,
+  ErrorPage
+} from './pages';
 
 const routes: Routes = [
   { path: '', component: SplashPage },

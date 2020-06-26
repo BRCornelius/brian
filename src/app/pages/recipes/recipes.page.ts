@@ -14,21 +14,21 @@ export class RecipesPage implements OnInit {
     private recipe: RecipeService
   ) {}
 
-  ngOnInit() {
-    this.recipe.getRecipes.subscribe(res => this.recipes = res.data.Items);
-    this.recipe.getToTry.subscribe(res => this.toTry = res.data.Items);
-  }
-
   interstitial = 'https://assets.corneliuses.com/photos/common/interstitial-duncan.gif';
   isAuthorized = this.auth.authorized;
   recipes: IRecipe[];
   toTry: any[];
 
-  updateToTry:Function = (recipe:IRecipeToTry):void => {
+  ngOnInit() {
+    this.recipe.getRecipes.subscribe(res => this.recipes = res.data.Items);
+    this.recipe.getToTry.subscribe(res => this.toTry = res.data.Items);
+  }
+
+  updateToTry: Function = (recipe: IRecipeToTry): void => {
     const newRecipe = {
       title: { S: recipe.title },
       url: { S: recipe.url }
-    }
-    this.toTry = [...this.toTry, newRecipe]
-  };
+    };
+    this.toTry = [...this.toTry, newRecipe];
+  }
 }

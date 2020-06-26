@@ -44,7 +44,10 @@ describe('FilterService', () => {
   });
 
   it('can check state facets individually', () => {
-    const updatedFacets = service.checkFacetsIndividually(mockStateFacets, { category: 'horror' });
+    const updatedFacets = service.checkFacetsIndividually(
+      mockStateFacets,
+      { category: 'horror' }
+    );
     const checked = service.checkFacetsForKey(updatedFacets, { category: 'horror' });
     expect(checked).toBeTruthy();
   });
