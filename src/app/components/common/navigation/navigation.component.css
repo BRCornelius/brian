@@ -1,0 +1,9 @@
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%
+}
+
+a {
+    padding: 0
+}
