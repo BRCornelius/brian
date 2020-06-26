@@ -1,15 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'recipe-instructions',
   templateUrl: './recipe-instructions.component.html',
   styleUrls: ['./recipe-instructions.component.css']
 })
-export class RecipeInstructionsComponent implements OnInit {
+export class RecipeInstructionsComponent {
 
   constructor() { }
 
   @Input() instructions: string[];
-
-  ngOnInit() {}
 }

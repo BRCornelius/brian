@@ -7,7 +7,7 @@ import { AuthService } from '../../../services';
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.css']
 })
-export class AuthComponent implements OnInit {
+export class AuthComponent {
 
   constructor(
     private auth: AuthService,
@@ -18,8 +18,6 @@ export class AuthComponent implements OnInit {
   hasErrors = false;
   name = '';
   password = '';
-
-  ngOnInit() {}
 
   onSubmit: Function = (): void => {
     this.auth.credentials = { name: this.name, password: this.password};

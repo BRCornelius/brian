@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IIngredient } from 'src/app/interfaces';
 
 @Component({
@@ -6,7 +6,7 @@ import { IIngredient } from 'src/app/interfaces';
   templateUrl: './recipe-toggle.component.html',
   styleUrls: ['./recipe-toggle.component.css']
 })
-export class RecipeToggleComponent implements OnInit {
+export class RecipeToggleComponent {
 
   constructor() { }
 
@@ -16,6 +16,4 @@ export class RecipeToggleComponent implements OnInit {
   @Input() ingredients: IIngredient[];
   @Input() title: string;
 
-  ngOnInit() {
-  }
 }

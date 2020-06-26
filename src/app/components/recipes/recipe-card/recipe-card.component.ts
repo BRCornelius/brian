@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RecipeService } from 'src/app/services/content/recipe.service';
 import { IIngredient, IRecipeTime } from 'src/app/interfaces';
 
@@ -7,7 +7,7 @@ import { IIngredient, IRecipeTime } from 'src/app/interfaces';
   templateUrl: './recipe-card.component.html',
   styleUrls: ['./recipe-card.component.css']
 })
-export class RecipeCardComponent implements OnInit {
+export class RecipeCardComponent {
 
   constructor(private recipe: RecipeService) { }
 
@@ -16,6 +16,4 @@ export class RecipeCardComponent implements OnInit {
   @Input() ingredients: IIngredient[];
   @Input() time: IRecipeTime;
 
-  ngOnInit() {
-  }
 }

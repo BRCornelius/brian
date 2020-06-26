@@ -1,5 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { OtfService } from 'src/app/services';
+import { Component, Input } from '@angular/core';
 import { OtfUrlPipe } from 'src/app/pipes';
 
 @Component({
@@ -8,7 +7,7 @@ import { OtfUrlPipe } from 'src/app/pipes';
   styleUrls: ['./workout-card.component.css'],
   providers: [OtfUrlPipe]
 })
-export class WorkoutCardComponent implements OnInit {
+export class WorkoutCardComponent {
 
   constructor() { }
 
@@ -16,5 +15,4 @@ export class WorkoutCardComponent implements OnInit {
   @Input() grp: string;
   @Input() cat: string;
 
-  ngOnInit() {}
 }

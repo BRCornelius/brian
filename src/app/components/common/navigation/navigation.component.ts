@@ -1,4 +1,4 @@
-import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavigationService } from 'src/app/services';
 import { INavLink } from 'src/app/interfaces';
 
@@ -7,14 +7,12 @@ import { INavLink } from 'src/app/interfaces';
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css'],
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent {
 
   constructor(private nav: NavigationService) {}
 
   activeNavLink = 'Home';
   navLinks: INavLink[] = this.nav.navLinks;
-
-  ngOnInit() {}
 
   updateActiveNavLink: Function = (new_label): void => this.activeNavLink = new_label;
   checkActiveNavLink: Function = (test): boolean => this.activeNavLink === test;

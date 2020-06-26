@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { IDropdownOption } from '../../../interfaces';
 
 @Component({
@@ -6,7 +6,7 @@ import { IDropdownOption } from '../../../interfaces';
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.css']
 })
-export class DropdownComponent implements OnInit {
+export class DropdownComponent {
 
   constructor() { }
 
@@ -16,8 +16,6 @@ export class DropdownComponent implements OnInit {
   @Output() handleSelection = new EventEmitter();
 
   selectedOption: string;
-
-  ngOnInit() {}
 
   selectOption: Function = () => {
     this.handleSelection.emit(this.selectedOption);

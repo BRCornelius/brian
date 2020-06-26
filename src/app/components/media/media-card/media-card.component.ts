@@ -1,11 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'media-card',
   templateUrl: './media-card.component.html',
   styleUrls: ['./media-card.component.css']
 })
-export class MediaCardComponent implements OnInit {
+export class MediaCardComponent {
 
   constructor() { }
 
@@ -13,6 +13,4 @@ export class MediaCardComponent implements OnInit {
   @Input() source: string;
   @Input() header: string;
 
-  ngOnInit() {
-  }
 }

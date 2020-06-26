@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IOptions } from '../../../interfaces';
 import { FilterService } from '../../../services';
 
@@ -7,14 +7,12 @@ import { FilterService } from '../../../services';
   templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.css']
 })
-export class FilterComponent implements OnInit {
+export class FilterComponent {
 
   constructor(private filter: FilterService) {}
 
   @Input() $options: IOptions[];
   @Input() filterFunction: Function;
-
-  ngOnInit() {}
 
   update: Function = (event) => {
     this.filter.updateFacets(event);

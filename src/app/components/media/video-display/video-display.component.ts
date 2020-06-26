@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IOTFVideo, IKidsVideo, IOptions } from 'src/app/interfaces';
 
 @Component({
@@ -6,7 +6,7 @@ import { IOTFVideo, IKidsVideo, IOptions } from 'src/app/interfaces';
   templateUrl: './video-display.component.html',
   styleUrls: ['./video-display.component.css'],
 })
-export class VideoDisplayComponent implements OnInit {
+export class VideoDisplayComponent {
 
   constructor() {}
 
@@ -16,8 +16,6 @@ export class VideoDisplayComponent implements OnInit {
   @Input() displayFilter: boolean;
   @Input() displayControls: boolean;
   @Input() $options: IOptions[] = [];
-
-  ngOnInit() {}
 
   handleClick: Function = (media): void => {
     this.activeVideoTitle = media.title;

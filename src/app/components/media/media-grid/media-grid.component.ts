@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { IKidsVideo, IOTFVideo, IOptions } from '../../../interfaces';
@@ -9,7 +9,7 @@ import { FilterService } from '../../../services';
   templateUrl: './media-grid.component.html',
   styleUrls: ['./media-grid.component.css']
 })
-export class MediaGridComponent implements OnInit {
+export class MediaGridComponent {
 
   constructor(
     private router: Router,
@@ -24,9 +24,6 @@ export class MediaGridComponent implements OnInit {
   @Output() handleClick: EventEmitter<{}> = new EventEmitter();
 
   currentRoute: string = this.router.url.replace('/', '');
-
-  ngOnInit() {}
-
 
   checkRoute: Function = (route: string): boolean => {
     return route === this.currentRoute;

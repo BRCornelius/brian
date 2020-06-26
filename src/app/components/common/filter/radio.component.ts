@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IOptions } from 'src/app/interfaces';
 
 @Component({
@@ -6,7 +6,7 @@ import { IOptions } from 'src/app/interfaces';
   templateUrl: './radio.component.html',
   styleUrls: ['./radio.component.css']
 })
-export class RadioComponent implements OnInit {
+export class RadioComponent {
 
   constructor() {}
 
@@ -14,6 +14,5 @@ export class RadioComponent implements OnInit {
   @Input() $option: IOptions;
   @Input() filterFunction: Function;
 
-  ngOnInit() {}
   setFacet: Function = ($event): void => this.filterFunction($event);
 }
