@@ -12,7 +12,8 @@ export class MediaService {
 
   constructor(
     private aws: AwsService,
-    private http: HttpClient) { }
+    private http: HttpClient
+  ) { }
   headers = this.aws.httpOptions;
   kidsVideos: Observable<any> = this.http.get(
     'https://services.corneliuses.com/get-kids-videos',

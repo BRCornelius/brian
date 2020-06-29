@@ -16,7 +16,7 @@ getTestBed().initTestEnvironment(
 // const context = require.context('./', true, /\.spec\.ts$/);
 
 // Then we find a specific test.
-const context = require.context('./', true, /workout-card.component\.spec\.ts$/)
+const context = require.context('./', true, /media.service\.spec\.ts$/)
 
 // And load the modules.
 context.keys().map(context);

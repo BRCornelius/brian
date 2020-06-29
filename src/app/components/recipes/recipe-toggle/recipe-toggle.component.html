@@ -1,4 +1,4 @@
-<button class="recipe-button" (click)="show = !show">{{title}}</button>
+<button class="recipe-button" [@openClose]="show ? 'open' : 'closed'" (click)="toggleShow()">{{title}}</button>
 <div *ngIf="show">
   <recipe-card
     [instructions]="instructions"
