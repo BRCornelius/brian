@@ -38,5 +38,7 @@ export class MediaGridComponent {
       src: $event.target.id,
       title: $event.target.title
     });
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
 }
