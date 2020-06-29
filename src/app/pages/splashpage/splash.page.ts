@@ -10,7 +10,7 @@ export class SplashPage implements OnInit {
 
   constructor(public auth: AuthService) {}
 
-  interstitial: string = 'https://assets.corneliuses.com/photos/common/interstitial-farouk.gif';
+  interstitial = 'https://assets.corneliuses.com/photos/common/interstitial-farouk.gif';
   title = `Brian's Page`;
 
   ngOnInit() {

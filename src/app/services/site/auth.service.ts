@@ -17,7 +17,7 @@ export class AuthService {
 
   authorized = false;
   credentials: ICredential;
-  hasAuthorizationRun: boolean = false;
+  hasAuthorizationRun = false;
   headers = this.aws.httpOptions;
 
   authenticate: Function = (): Observable<{}> => {
@@ -36,7 +36,7 @@ export class AuthService {
         params,
         {...this.headers}
       ).subscribe((response: any) => {
-        this.authorized = response.body
+        this.authorized = response.body;
         this.hasAuthorizationRun = true;
       });
     }

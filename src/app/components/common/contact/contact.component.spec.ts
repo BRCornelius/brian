@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ContactComponent } from './contact.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { MatDialogRef } from "@angular/material";
+import { MatDialogRef } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
 describe('ContactComponent', () => {

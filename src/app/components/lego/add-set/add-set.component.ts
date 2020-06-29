@@ -18,7 +18,7 @@ export class AddSetComponent implements OnInit {
   errorMessage: string;
   hasErrors: boolean;
   setAdded: boolean;
-  successMessage: string = "Set has been added to collection!"
+  successMessage = 'Set has been added to collection!';
 
   ngOnInit() {
     const setNumber = new FormControl();
