@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RecipeListComponent } from './recipe-list.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { ListOrderPipe } from 'src/app/pipes';
 
 describe('RecipeListComponent', () => {
   let component: RecipeListComponent;
@@ -10,7 +11,7 @@ describe('RecipeListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RecipeListComponent ],
+      declarations: [ RecipeListComponent, ListOrderPipe ],
       imports: [ HttpClientModule ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })

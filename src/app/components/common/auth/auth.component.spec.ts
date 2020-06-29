@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AuthComponent } from './auth.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 describe('AuthComponent', () => {
   let component: AuthComponent;
@@ -12,7 +12,11 @@ describe('AuthComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ AuthComponent ],
-      imports: [ FormsModule, HttpClientModule, MatDialogModule ]
+      imports: [ FormsModule, HttpClientModule, MatDialogModule ],
+      providers: [
+        { provide: MAT_DIALOG_DATA, useValue: {} },
+        { provide: MatDialogRef, useValue: {} }
+      ],
     })
     .compileComponents();
   }));
