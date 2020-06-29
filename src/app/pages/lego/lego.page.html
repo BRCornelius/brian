@@ -4,7 +4,7 @@
     [dropdownOptions]="sets | legoSet"
     (handleSelection)="updateActiveSet($event)"
   ></common-dropdown>
-  <lego-add-set *ngIf="isAuthorized"></lego-add-set>
+  <lego-add-set *ngIf="isAuthorized" (updateSetList)="updateSetList($event)"></lego-add-set>
 </div>
 <div class="container" id="instructions">
   <iframe

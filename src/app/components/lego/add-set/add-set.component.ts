@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ILegoSetNumber } from 'src/app/interfaces';
 import { LegoService } from 'src/app/services';
@@ -12,10 +12,13 @@ export class AddSetComponent implements OnInit {
 
   constructor(private lego: LegoService) { }
 
+  @Output() updateSetList: EventEmitter<any> = new EventEmitter();
+
   addSetForm: FormGroup;
   errorMessage: string;
   hasErrors: boolean;
   setAdded: boolean;
+  successMessage: string = "Set has been added to collection!"
 
   ngOnInit() {
     const setNumber = new FormControl();
@@ -28,12 +31,11 @@ export class AddSetComponent implements OnInit {
       if (res.errorType === 'TypeError') {
         this.errorMessage = 'Please check the set and version number and resubmit.';
         this.hasErrors = true;
-      } else if (res.StatusCode === 200) {
-        this.setAdded = true;
       } else {
-        console.log(res);
+        this.updateSetList.emit('success');
+        this.setAdded = true;
       }
-  });
+    });
   }
   toggleSetAddedFalse: Function = (): void => {
     this.setAdded = false;

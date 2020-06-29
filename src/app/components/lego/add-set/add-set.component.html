@@ -14,7 +14,8 @@
       placeholder="Set Number (XXXXX-X)..."
       (click)="toggleSetAddedFalse()"
     />
-    <button type="submit" class="submit-button" (click)="onSubmit(addSetForm.value)">Submit</button>
+    <button *ngIf="!setAdded" type="submit" class="submit-button" (click)="onSubmit(addSetForm.value)">Submit</button>
   </div>
+  <p *ngIf="setAdded" class="success">{{successMessage}}</p>
   <p *ngIf="hasErrors" class="errors">{{errorMessage}}</p>
 </form>

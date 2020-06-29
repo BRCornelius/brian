@@ -42,4 +42,9 @@ export class LegoPage implements OnInit {
         }, []);
     });
   }
+  updateSetList: Function = (arg: string): void => {
+    this.lego.getSets().subscribe(response => {
+      this.sets = JSON.parse(response.body).sets;
+    });
+  }
 }

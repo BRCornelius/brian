@@ -8,6 +8,9 @@
     background-color: cornflowerblue;
     padding: 1rem;
 }
+.success {
+    color: cornflowerblue;
+}
 
 form {
     margin-bottom: 1rem;
