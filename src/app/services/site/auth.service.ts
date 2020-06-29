@@ -17,6 +17,7 @@ export class AuthService {
 
   authorized = false;
   credentials: ICredential;
+  hasAuthorizationRun: boolean = false;
   headers = this.aws.httpOptions;
 
   authenticate: Function = (): Observable<{}> => {
@@ -34,7 +35,10 @@ export class AuthService {
         'https://services.corneliuses.com/authorize',
         params,
         {...this.headers}
-      ).subscribe((response: any) => this.authorized = response.body);
+      ).subscribe((response: any) => {
+        this.authorized = response.body
+        this.hasAuthorizationRun = true;
+      });
     }
   }
 }

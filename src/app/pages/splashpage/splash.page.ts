@@ -10,12 +10,10 @@ export class SplashPage implements OnInit {
 
   constructor(private auth: AuthService) {}
 
-  isAuthorized: boolean = this.auth.authorized;
+  interstitial: string = 'https://assets.corneliuses.com/photos/common/interstitial-farouk.gif';
   title = `Brian's Page`;
 
   ngOnInit() {
     this.auth.isAuthorized();
   }
-
-  handleAuthenticated: Function = (authorized): boolean => this.isAuthorized = authorized;
 }

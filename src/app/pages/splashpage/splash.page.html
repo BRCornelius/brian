@@ -1,4 +1,4 @@
-<div class="body">
+<div class="body" *ngIf="auth.hasAuthorizationRun">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -9,5 +9,8 @@
     Look around the site to see recipes, lego instructions, and workout templates.
     Please email via the contact link below with any comments or suggestions.
   </p>
-  <common-auth-button *ngIf="!isAuthorized" (setAuthenticated)="handleAuthenticated($event)"></common-auth-button>
+  <common-auth-button *ngIf="!auth.authorized" (setAuthenticated)="handleAuthenticated($event)"></common-auth-button>
 </div>
+<common-interstitial *ngIf="!auth.hasAuthorizationRun" [topic]="interstitial"></common-interstitial>
+
+
