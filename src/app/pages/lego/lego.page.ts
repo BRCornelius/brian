@@ -13,37 +13,13 @@ export class LegoPage implements OnInit {
 
   constructor(
     public auth: AuthService,
-    private lego: LegoService
+    public lego: LegoService
   ) { }
 
-  instructions: string[];
   dropdownLabel = 'Lego Sets';
-  sets: ILegoSet[];
 
   ngOnInit() {
-    this.lego.getSets().subscribe(response => {
-      this.sets = JSON.parse(response.body).sets;        // For Production
-      // this.sets = this.lego.mockData;                        // For Testing
-    });
+    this.lego.getSets();
   }
 
-  updateActiveSet: Function = (selectedOption: number): void => {
-    this.lego.getInstructions(selectedOption).subscribe(response => {
-      const body = JSON.parse(response.body);
-      this.instructions = body.instructions.reduce(
-        (agg: string[], curr: IUrl, index: number) => {
-          if (index % 2 === 0) {
-            agg.push(curr.URL);
-            return agg;
-          } else {
-            return agg;
-          }
-        }, []);
-    });
-  }
-  updateSetList: Function = (arg: string): void => {
-    this.lego.getSets().subscribe(response => {
-      this.sets = JSON.parse(response.body).sets;
-    });
-  }
 }

@@ -1,14 +1,14 @@
 <div class="container" id="dropdown">
   <common-dropdown
     [dropdownLabel]="dropdownLabel"
-    [dropdownOptions]="sets | legoSet"
-    (handleSelection)="updateActiveSet($event)"
+    [dropdownOptions]="lego.mySets | legoSet"
+    (handleSelection)="lego.getInstructions($event)"
   ></common-dropdown>
-  <lego-add-set *ngIf="auth.authorized" (updateSetList)="updateSetList($event)"></lego-add-set>
+  <lego-add-set *ngIf="auth.authorized" (updateSetList)="lego.getSets()"></lego-add-set>
 </div>
 <div class="container" id="instructions">
   <iframe
-    *ngFor="let instruction of instructions"
+    *ngFor="let instruction of lego.instructions"
     class="link"
     [src]="instruction | safe: 'resourceUrl'"
     type="application/pdf"
