@@ -34,7 +34,7 @@ export class MediaService {
       this.activeKidsVideoTitle = this.kidsVideos[0].TITLE.S;
       this.activeKidsVideoURL = this.kidsVideos[0].URL.S;
     }
-  );
+  )
   getOtfVideos: Function = (): Subscription => this.http.get(
     'https://services.corneliuses.com/get-otf',
     this.headers)
@@ -45,7 +45,7 @@ export class MediaService {
       this.activeOtfVideoTitle = this.otfVideos[limit].TITLE.S;
       this.activeOtfVideoUrl = this.activeOtfVideoTitle;
     }
-  );
+  )
 
   sortVideos: Function = (videos: any[], option: string): any[] =>
     videos.sort((a, b) => {

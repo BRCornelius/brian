@@ -25,7 +25,7 @@ export class LegoService {
     'https://services.corneliuses.com/add-lego-set',
     setNumber,
     this.headers
-  );
+  )
   getInstructions: Function = (setID): Subscription => {
     const options = { setID: setID };
     return this.http.post(
@@ -44,13 +44,13 @@ export class LegoService {
           }
         }, []);
     });
-  };
+  }
   getSets: Function = (): Subscription => this.http.get(
     'https://services.corneliuses.com/get-lego-sets',
     this.headers
   ).subscribe((res: any) => {
     this.mySets = JSON.parse(res.body).sets;
     // this.mySets = this.mockData;                        // For Testing
-  });
+  })
 
 }
