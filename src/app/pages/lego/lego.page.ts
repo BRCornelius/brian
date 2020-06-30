@@ -12,12 +12,11 @@ import { LegoSetPipe, SafePipe } from 'src/app/pipes';
 export class LegoPage implements OnInit {
 
   constructor(
-    private auth: AuthService,
+    public auth: AuthService,
     private lego: LegoService
   ) { }
 
   instructions: string[];
-  isAuthorized: boolean =  this.auth.authorized;
   dropdownLabel = 'Lego Sets';
   sets: ILegoSet[];
 

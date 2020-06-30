@@ -8,7 +8,7 @@ export class OtfService {
 
   constructor() { }
 
-  categories: string[] = ['Endurance', 'Mayhem', 'Power', 'Strength'];
+  categories: string[] = ['Endurance', 'Heart', 'Mayhem', 'Power', 'Strength'];
   groups: string[] = ['Back', 'Chest', 'Legs', '??'];
   options: IOptions[] = [
     {

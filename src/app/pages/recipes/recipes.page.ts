@@ -10,12 +10,11 @@ import { IRecipe, IRecipeToTry } from 'src/app/interfaces';
 export class RecipesPage implements OnInit {
 
   constructor(
-    private auth: AuthService,
+    public auth: AuthService,
     private recipe: RecipeService
   ) {}
 
   interstitial = 'https://assets.corneliuses.com/photos/common/interstitial-duncan.gif';
-  isAuthorized = this.auth.authorized;
   recipes: IRecipe[];
   toTry: any[];
 

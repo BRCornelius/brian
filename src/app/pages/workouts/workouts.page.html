@@ -1,6 +1,6 @@
-<common-interstitial *ngIf="isAuthorized && !videos" [topic]="interstitial"></common-interstitial>
+<common-interstitial *ngIf="auth.authorized && !videos" [topic]="interstitial"></common-interstitial>
 <media-video-display
-    *ngIf="isAuthorized && videos"
+    *ngIf="auth.authorized && videos"
     [videos]="videos | otfVideo"
     [activeVideoUrl]="activeVideoUrl | otfUrl"
     [activeVideoTitle]="activeVideoTitle"
@@ -8,4 +8,4 @@
     [displayControls]="true"
     [$options]="options"
 ></media-video-display>
-<common-error *ngIf="!isAuthorized" [text]="errorText" [allowLogin]=false></common-error>
+<common-error *ngIf="!auth.authorized" [text]="errorText" [allowLogin]=false></common-error>
