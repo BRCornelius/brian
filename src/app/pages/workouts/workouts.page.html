@@ -1,11 +1,11 @@
-<common-interstitial *ngIf="auth.authorized && !videos" [topic]="interstitial"></common-interstitial>
+<common-interstitial *ngIf="auth.authorized && !media.otfVideos" [topic]="interstitial"></common-interstitial>
 <media-video-display
-    *ngIf="auth.authorized && videos"
-    [videos]="videos | otfVideo"
-    [activeVideoUrl]="activeVideoUrl | otfUrl"
-    [activeVideoTitle]="activeVideoTitle"
+    *ngIf="auth.authorized && media.otfVideos"
+    [videos]="media.otfVideos | otfVideo"
+    [activeVideoUrl]="media.activeOtfVideoUrl | otfUrl"
+    [activeVideoTitle]="media.activeOtfVideoTitle"
     [displayFilter]="true"
     [displayControls]="true"
-    [$options]="options"
+    [$options]="otf.options"
 ></media-video-display>
 <common-error *ngIf="!auth.authorized" [text]="errorText" [allowLogin]=false></common-error>

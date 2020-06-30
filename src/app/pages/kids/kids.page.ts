@@ -11,18 +11,11 @@ import { KidsVideoPipe } from 'src/app/pipes/';
 })
 export class KidsPage implements OnInit {
 
-  constructor(private media: MediaService) { }
+  constructor(public media: MediaService) { }
 
-  activeVideoTitle: string;
-  activeVideoUrl: string;
   interstitial = 'https://assets.corneliuses.com/photos/common/interstitial-syd.gif';
-  videos: IKidsVideo[];
 
   ngOnInit() {
-    this.media.kidsVideos.subscribe(res => {
-      this.videos = res.data.Items;
-      this.activeVideoTitle = this.videos[0].TITLE.S;
-      this.activeVideoUrl = this.videos[0].URL.S;
-    });
+    this.media.getKidsVideos();
   }
 }
