@@ -14,6 +14,8 @@ export class SplashPage implements OnInit {
   title = `Brian's Page`;
 
   ngOnInit() {
-    this.auth.isAuthorized();
+    if (!this.auth.authorized) {
+      this.auth.isAuthorized();
+    }
   }
 }

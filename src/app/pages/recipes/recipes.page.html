@@ -1,4 +1,5 @@
-<div class="list-container">
+<common-interstitial *ngIf="!auth.hasAuthorizationRun" [topic]="authInterstitial"></common-interstitial>
+<div class="list-container" *ngIf="auth.hasAuthorizationRun">
   <recipe-request *ngIf="auth.authorized"></recipe-request>
   <common-interstitial
     *ngIf="!recipe.recipesFavorites || !recipe.recipesToTry"

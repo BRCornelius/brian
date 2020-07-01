@@ -16,10 +16,16 @@ export class LegoPage implements OnInit {
     public lego: LegoService
   ) { }
 
+    // tslint:disable-next-line:max-line-length
+  authInterstitial = 'https://assets.corneliuses.com/photos/common/interstitial-farouk.gif';
   dropdownLabel = 'Lego Sets';
 
   ngOnInit() {
-    this.lego.getSets();
+    if (this.auth.authorized) {
+      this.lego.getSets();
+    } else {
+      this.auth.isAuthorized();
+    }
   }
 
 }

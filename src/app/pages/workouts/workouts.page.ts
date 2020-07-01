@@ -1,6 +1,5 @@
-import { Component, OnInit, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MediaService, OtfService, AuthService } from 'src/app/services';
-import { IFormattedOTFVideo, IOptions, IOTFVideo } from '../../interfaces';
 import { OtfUrlPipe, OtfVideoPipe } from 'src/app/pipes';
 
 @Component({
@@ -17,13 +16,17 @@ export class WorkoutsPage implements OnInit {
     public otf: OtfService
   ) { }
 
-  // tslint:disable-next-line:max-line-length
+    // tslint:disable-next-line:max-line-length
   errorText = 'You are not authorized to view this page. Please email me via the contact below to request access.';
   interstitial = 'https://assets.corneliuses.com/photos/common/interstitial-typing.gif';
+    // tslint:disable-next-line:max-line-length
+  authInterstitial = 'https://assets.corneliuses.com/photos/common/interstitial-farouk.gif';
 
   ngOnInit() {
     if (this.auth.authorized) {
       this.media.getOtfVideos();
+    } else {
+      this.auth.isAuthorized();
     }
   }
 }

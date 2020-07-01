@@ -1,4 +1,5 @@
-<div class="container" id="dropdown">
+<common-interstitial *ngIf="!auth.hasAuthorizationRun" [topic]="authInterstitial"></common-interstitial>
+<div class="container" id="dropdown" *ngIf="auth.hasAuthorizationRun">
   <common-dropdown
     [dropdownLabel]="dropdownLabel"
     [dropdownOptions]="lego.mySets | legoSet"
