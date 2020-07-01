@@ -11,7 +11,7 @@ describe('RecipeToggleComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ RecipeToggleComponent ],
-      imports: [ NoopAnimationsModule ],
+      imports: [ NoopAnimationsModule ], 
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
