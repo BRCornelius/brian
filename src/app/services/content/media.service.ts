@@ -40,7 +40,6 @@ export class MediaService {
     this.headers)
     .subscribe((res: any) => {
       this.otfVideos = res.data.Items;
-      console.log(this.otfVideos);
       const limit = Math.floor(Math.random() * (this.otfVideos.length - 1));
       this.activeOtfVideoTitle = this.otfVideos[limit].TITLE.S;
       this.activeOtfVideoUrl = this.activeOtfVideoTitle;

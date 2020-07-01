@@ -16,11 +16,4 @@ describe('RecipeService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-
-  it('should get recipes', (done: DoneFn) => {
-    service.getRecipes.subscribe(response => {
-      expect(response.data.Items.length).toBeGreaterThanOrEqual(1);
-      done();
-    });
-  });
 });

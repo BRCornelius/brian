@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RecipeToggleComponent } from './recipe-toggle.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('RecipeToggleComponent', () => {
   let component: RecipeToggleComponent;
@@ -10,6 +11,7 @@ describe('RecipeToggleComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ RecipeToggleComponent ],
+      imports: [ NoopAnimationsModule ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
