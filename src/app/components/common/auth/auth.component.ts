@@ -46,5 +46,5 @@ export class AuthButtonComponent {
   constructor(private dialog: MatDialog) {}
 
   toggleOpen: Function = (): MatDialogRef<AuthComponent> =>
-    this.dialog.open(AuthComponent);
+    this.dialog.open(AuthComponent)
 }
