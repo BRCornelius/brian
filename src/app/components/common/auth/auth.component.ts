@@ -1,4 +1,4 @@
-import { Component, Inject, Output, EventEmitter } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AuthService } from '../../../services';
 
@@ -24,7 +24,6 @@ export class AuthComponent {
     this.auth.authenticate().subscribe((res: any) => {
       if (res.body) {
         document.cookie = res.body;
-        this.data.handleAuthenticated();
         this.auth.isAuthorized();
         this.dialog.closeAll();
       } else {
@@ -46,14 +45,6 @@ export class AuthButtonComponent {
 
   constructor(private dialog: MatDialog) {}
 
-  @Output() setAuthenticated: EventEmitter<{}> = new EventEmitter();
-
-  handleAuthenticated: Function = () => this.setAuthenticated.emit(true);
-
   toggleOpen: Function = (): MatDialogRef<AuthComponent> =>
-    this.dialog.open(AuthComponent, {
-      data: {
-        handleAuthenticated: this.handleAuthenticated
-      }
-    })
+    this.dialog.open(AuthComponent);
 }
