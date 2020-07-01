@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { RecipeService } from 'src/app/services';
 import { IRecipeToTry } from 'src/app/interfaces';
@@ -11,8 +11,6 @@ import { IRecipeToTry } from 'src/app/interfaces';
 export class RecipeRequestComponent implements OnInit {
 
   constructor(private recipes: RecipeService) { }
-
-  @Output() handleSubmit: EventEmitter<any> = new EventEmitter();
 
   show: boolean;
   submitted: boolean;
@@ -27,7 +25,6 @@ export class RecipeRequestComponent implements OnInit {
 
   onSubmit: Function = (values: IRecipeToTry): void => {
     this.recipes.addToTry(values);
-    this.handleSubmit.emit(values);
     this.submitted = true;
   }
 }

@@ -1,6 +1,12 @@
 <div class="list-container">
-  <recipe-request *ngIf="auth.authorized" (handleSubmit)="updateToTry($event)"></recipe-request>
-  <common-interstitial *ngIf="!recipes || !toTry" [topic]="interstitial"></common-interstitial>
-  <recipe-list *ngIf="recipes && toTry" [toTry]="toTry"></recipe-list>
-  <recipe-list *ngIf="recipes && toTry" [recipes]="recipes"></recipe-list>
+  <recipe-request *ngIf="auth.authorized"></recipe-request>
+  <common-interstitial
+    *ngIf="!recipe.recipesFavorites || !recipe.recipesToTry"
+    [topic]="interstitial"></common-interstitial>
+  <recipe-list
+    *ngIf="recipe.recipesFavorites && recipe.recipesToTry"
+    [toTry]="recipe.recipesToTry"></recipe-list>
+  <recipe-list
+    *ngIf="recipe.recipesFavorites && recipe.recipesToTry"
+    [recipes]="recipe.recipesFavorites"></recipe-list>
 </div>

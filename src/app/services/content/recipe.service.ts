@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 
-import { Observable } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { AwsService } from '../site';
-import { IRecipeToTry } from 'src/app/interfaces';
+import { IRecipeToTry, IRecipe } from 'src/app/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -15,15 +15,21 @@ export class RecipeService {
     private http: HttpClient) { }
 
   headers = this.aws.httpOptions;
+  recipesToTry: any[];
+  recipesFavorites: IRecipe[];
 
-  getRecipes: Observable<any> = this.http.get(
+  getRecipes: Function = (): Subscription => this.http.get(
     'https://services.corneliuses.com/getrecipes-brian',
     {...this.headers}
-  );
-  getToTry: Observable<any> = this.http.get(
+  ).subscribe((res: any) => {
+    this.recipesFavorites = res.data.Items;
+  })
+  getToTry: Function = (): Subscription => this.http.get(
     'https://services.corneliuses.com/get-recipe-to-ry-brian',
     {...this.headers}
-  );
+  ).subscribe((res: any) => {
+    this.recipesToTry = res.data.Items;
+  })
 
   addToTry: Function = (values: IRecipeToTry) => {
     this.http.put(
@@ -31,5 +37,10 @@ export class RecipeService {
       values,
       {...this.headers}
     ).subscribe();
+    const newRecipe = {
+      title: { S: values.title },
+      url: { S: values.url }
+    };
+    this.recipesToTry = [...this.recipesToTry, newRecipe];
   }
 }
