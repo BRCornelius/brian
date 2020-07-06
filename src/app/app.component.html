@@ -1,4 +1,5 @@
 <div class="app">
+    <common-auth-button *ngIf="!auth.authorized"></common-auth-button>
     <common-navigation></common-navigation>
     <div class="app-body">
         <router-outlet></router-outlet>

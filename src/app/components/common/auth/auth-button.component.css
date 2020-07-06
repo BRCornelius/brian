@@ -3,6 +3,12 @@ button {
     border-radius: 15px;
     background-color: dodgerblue;
     color: ghostwhite;
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
+}
+.container {
+    background-color: crimson;
+    height: 1rem;
+}
+.text {
+    color: white;
+    font-style: italic;
 }

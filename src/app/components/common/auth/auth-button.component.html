@@ -1,1 +1,11 @@
-<button (click)="toggleOpen()">Log In</button>
+<mat-grid-list class="container" cols="6" rowHeight=30>
+    <mat-grid-tile class="text" [colspan]="5">
+        You are not logged in.
+    </mat-grid-tile>
+    <mat-grid-tile class="button-container" [colspan]="1">
+        <button (click)="toggleOpen()">Log In</button>
+    </mat-grid-tile>
+</mat-grid-list>
+<!-- <div class="container">
+    <button (click)="toggleOpen()">Log In</button>
+</div> -->

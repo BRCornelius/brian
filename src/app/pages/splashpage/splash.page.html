@@ -9,7 +9,6 @@
     Look around the site to see recipes, lego instructions, and workout templates.
     Please email via the contact link below with any comments or suggestions.
   </p>
-  <common-auth-button *ngIf="!auth.authorized"></common-auth-button>
 </div>
 <common-interstitial *ngIf="!auth.hasAuthorizationRun" [topic]="interstitial"></common-interstitial>
 
