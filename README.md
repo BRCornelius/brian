@@ -31,16 +31,20 @@ Run `ng generate component components/<category>/<component-name>` to generate a
 -- `recipes` for components specific to the lego page  
 -- `workouts` for components specific to the workouts page  
 - Naming convention for component selectors is `<category>-<component-name>`  
+  
 **Services**  
 Run `ng generate service services/<category>/<service-name>` to generate a new service.  
 - Service `category` can include:  
 -- `actions` For external actions performed on behalf of the site  
 -- `content` For fetching content to be displayed on the site  
 -- `site` For internal site actions  
+  
 **Pipes**  
 Run `ng generate pipe pipes/<pipe-name>` to generate a new pipe.  
+  
 ***Interfaces**  
 Run `ng generate interface interfaces/i-<interface-name>` to generate a new interface.  
+  
 ***Other**  
 You can also use `ng generate directive|class|guard|enum|module`.  
   
