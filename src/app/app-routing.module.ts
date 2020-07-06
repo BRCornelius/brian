@@ -10,7 +10,8 @@ import {
 } from './pages';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', component: SplashPage },
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
+  { path: 'home', component: SplashPage },
   { path: 'recipes', component: RecipesPage },
   { path: 'kids', component: KidsPage },
   { path: 'workouts', component: WorkoutsPage },

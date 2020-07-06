@@ -11,7 +11,7 @@ export class NavigationComponent {
 
   constructor(private nav: NavigationService) {}
 
-  activeNavLink = 'Home';
+  activeNavLink = this.nav.currentLabel;
   navLinks: INavLink[] = this.nav.navLinks;
 
   updateActiveNavLink: Function = (new_label): void => this.activeNavLink = new_label;
