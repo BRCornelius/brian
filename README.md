@@ -42,10 +42,10 @@ Run `ng generate service services/<category>/<service-name>` to generate a new s
 **Pipes**  
 Run `ng generate pipe pipes/<pipe-name>` to generate a new pipe.  
   
-***Interfaces**  
+**Interfaces**  
 Run `ng generate interface interfaces/i-<interface-name>` to generate a new interface.  
   
-***Other**  
+**Other**  
 You can also use `ng generate directive|class|guard|enum|module`.  
   
 All services, components, interfaces, and pipes must be barreled and imported as a group into app.module.ts.  
