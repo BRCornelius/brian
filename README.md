@@ -8,7 +8,7 @@ QA for this site can be found at http://qa-brian.corneliuses.com
 **Code repository can be found in [aws codecommit](https://console.aws.amazon.com/codesuite/codecommit/repositories/brcornelius/browse?region=us-east-1)**  
 - Create your new branch off master  
 - After committing changes, push your branch to the repo and create a pull request to the qa branch.  
-**If the qa branch does not exist, first create a qa branch off master**  
+*If the qa branch does not exist, first create a qa branch off master*  
 - Get approval from the last two devs to push changes to the qa branch  
 - Merge in the pull request  
 - In your terminal `git pull origin qa && ng build --prod`  
@@ -22,7 +22,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Code scaffolding
 
-*Components*  
+**Components**  
 Run `ng generate component components/<category>/<component-name>` to generate a new component.  
 -Component `category` can include:  
 -- `common` for components that are reused across pages and in other components  
@@ -31,17 +31,17 @@ Run `ng generate component components/<category>/<component-name>` to generate a
 -- `recipes` for components specific to the lego page  
 -- `workouts` for components specific to the workouts page  
 - Naming convention for component selectors is `<category>-<component-name>`  
-*Services*  
+**Services**  
 Run `ng generate service services/<category>/<service-name>` to generate a new service.  
 - Service `category` can include:  
 -- `actions` For external actions performed on behalf of the site  
 -- `content` For fetching content to be displayed on the site  
 -- `site` For internal site actions  
-*Pipes*  
+**Pipes**  
 Run `ng generate pipe pipes/<pipe-name>` to generate a new pipe.  
-*Interfaces*  
+***Interfaces**  
 Run `ng generate interface interfaces/i-<interface-name>` to generate a new interface.  
-*Other*  
+***Other**  
 You can also use `ng generate directive|class|guard|enum|module`.  
   
 All services, components, interfaces, and pipes must be barreled and imported as a group into app.module.ts.  
