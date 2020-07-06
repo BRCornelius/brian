@@ -21,9 +21,8 @@ export class LegoPage implements OnInit {
   dropdownLabel = 'Lego Sets';
 
   ngOnInit() {
-    if (this.auth.authorized) {
-      this.lego.getSets();
-    } else {
+    this.lego.getSets();
+    if (!this.auth.authorized) {
       this.auth.isAuthorized();
     }
   }
