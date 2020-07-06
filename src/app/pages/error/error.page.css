@@ -1,0 +1,9 @@
+.container {
+    background-image: url("https://assets.corneliuses.com/photos/common/error-snow.gif");
+    padding: 4rem 1rem;
+    max-width: 100%;
+    text-align: center;
+}
+h1 {
+    color: floralwhite;
+}
