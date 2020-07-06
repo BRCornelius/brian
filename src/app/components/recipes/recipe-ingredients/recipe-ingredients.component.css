@@ -1,3 +1,6 @@
 .container {
     background-color: yellow;
 }
+.content-list {
+    padding-bottom: 1rem;
+}
