@@ -9,7 +9,7 @@ export class NavigationService {
   constructor() { }
 
   splitURL: string[] = window.location.href.split('/');
-  currentPath: string = this.splitURL[this.splitURL.length -1];
+  currentPath: string = this.splitURL[this.splitURL.length - 1];
   // tslint:disable-next-line:max-line-length
   currentLabel: string = this.currentPath[0].toUpperCase() + this.currentPath.substring(1);
   navLinks: INavLink[] = [
