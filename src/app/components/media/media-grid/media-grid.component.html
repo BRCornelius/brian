@@ -18,8 +18,8 @@
       *ngIf="checkRoute('workouts')"
       class="media-card"
       [title]="item.title"
-      [grp]="item.group"
-      [cat]="item.category"
+      [grp]="item.grp"
+      [cat]="item.cat"
       (click)="setActive($event)"
     ></workout-card>
   </mat-grid-tile>

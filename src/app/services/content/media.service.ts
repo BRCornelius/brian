@@ -39,9 +39,9 @@ export class MediaService {
     'https://services.corneliuses.com/get-otf',
     this.headers)
     .subscribe((res: any) => {
-      this.otfVideos = res.data.Items;
+      this.otfVideos = res.data;
       const limit = Math.floor(Math.random() * (this.otfVideos.length - 1));
-      this.activeOtfVideoTitle = this.otfVideos[limit].TITLE.S;
+      this.activeOtfVideoTitle = this.otfVideos[limit].title;
       this.activeOtfVideoUrl = this.activeOtfVideoTitle;
     }
   )

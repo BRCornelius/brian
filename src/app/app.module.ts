@@ -56,7 +56,6 @@ import {
   ListOrderPipe,
   SafePipe,
   OtfUrlPipe,
-  OtfVideoPipe
 } from './pipes';
 
 @NgModule({
@@ -88,7 +87,6 @@ import {
     DropdownComponent,
     SafePipe,
     LegoSetPipe,
-    OtfVideoPipe,
     OtfUrlPipe,
     InterstitialComponent,
     ListOrderPipe,

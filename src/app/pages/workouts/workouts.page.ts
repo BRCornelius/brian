@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MediaService, OtfService, AuthService } from 'src/app/services';
-import { OtfUrlPipe, OtfVideoPipe } from 'src/app/pipes';
+import { OtfUrlPipe } from 'src/app/pipes';
 
 @Component({
   selector: 'workout-page',
   templateUrl: './workouts.page.html',
   styleUrls: ['./workouts.page.css'],
-  providers: [OtfUrlPipe, OtfVideoPipe]
+  providers: [OtfUrlPipe]
 })
 export class WorkoutsPage implements OnInit {
 

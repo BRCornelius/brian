@@ -3,7 +3,7 @@
     <common-interstitial *ngIf="auth.authorized && !media.otfVideos" [topic]="interstitial"></common-interstitial>
     <media-video-display
         *ngIf="auth.authorized && media.otfVideos"
-        [videos]="media.otfVideos | otfVideo"
+        [videos]="media.otfVideos"
         [activeVideoUrl]="media.activeOtfVideoUrl | otfUrl"
         [activeVideoTitle]="media.activeOtfVideoTitle"
         [displayFilter]="true"
