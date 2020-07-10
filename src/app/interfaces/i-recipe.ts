@@ -4,9 +4,9 @@ import { IRecipeTime } from './i-recipe-time';
 import { IIngredient } from './i-ingredient';
 
 export interface IRecipe {
-    INGREDIENTS: IIngredient[];
-    INSTRUCTIONS: IInstruction[];
-    PHOTO: IDynamoDBEntry;
-    TIME: IRecipeTime;
-    NAME: IDynamoDBEntry;
+    ingredients: IIngredient[];
+    instructions: IInstruction[];
+    photo: IDynamoDBEntry;
+    times: IRecipeTime;
+    name: IDynamoDBEntry;
 }

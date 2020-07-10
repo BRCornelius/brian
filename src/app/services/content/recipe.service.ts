@@ -28,7 +28,7 @@ export class RecipeService {
     'https://services.corneliuses.com/get-recipe-to-ry-brian',
     {...this.headers}
   ).subscribe((res: any) => {
-    this.recipesToTry = res.data.Items;
+    this.recipesToTry = res.data;
   })
 
   addToTry: Function = (values: IRecipeToTry) => {

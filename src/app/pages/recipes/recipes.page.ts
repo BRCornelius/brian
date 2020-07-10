@@ -18,6 +18,7 @@ export class RecipesPage implements OnInit {
   interstitial = 'https://assets.corneliuses.com/photos/common/interstitial-duncan.gif';
 
   ngOnInit() {
+    console.log('onInit')
     this.recipe.getRecipes();
     this.recipe.getToTry();
     if (!this.auth.authorized) {
