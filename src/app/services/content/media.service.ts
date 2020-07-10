@@ -30,9 +30,9 @@ export class MediaService {
     'https://services.corneliuses.com/get-kids-videos',
     this.headers)
     .subscribe((res: any) => {
-      this.kidsVideos = res.data.Items;
-      this.activeKidsVideoTitle = this.kidsVideos[0].TITLE.S;
-      this.activeKidsVideoURL = this.kidsVideos[0].URL.S;
+      this.kidsVideos = res.data;
+      this.activeKidsVideoTitle = this.kidsVideos[0].title;
+      this.activeKidsVideoURL = this.kidsVideos[0].url;
     }
   )
   getOtfVideos: Function = (): Subscription => this.http.get(

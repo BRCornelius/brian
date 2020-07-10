@@ -52,7 +52,6 @@ import {
   ErrorPage,
 } from './pages';
 import {
-  KidsVideoPipe,
   LegoSetPipe,
   ListOrderPipe,
   SafePipe,
@@ -91,7 +90,6 @@ import {
     LegoSetPipe,
     OtfVideoPipe,
     OtfUrlPipe,
-    KidsVideoPipe,
     InterstitialComponent,
     ListOrderPipe,
     ToTryComponent,

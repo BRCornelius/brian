@@ -1,7 +1,7 @@
 <common-interstitial *ngIf="!media.kidsVideos" [topic]="interstitial"></common-interstitial>
 <media-video-display
     *ngIf="media.kidsVideos"
-    [videos]="media.kidsVideos | kidsVideo"
+    [videos]="media.kidsVideos"
     [activeVideoUrl]="media.activeKidsVideoURL"
     [activeVideoTitle]="media.activeKidsVideoTitle"
     [displayFilter]="false"
