@@ -1,6 +1,5 @@
 export * from './i-credential';
 export * from './i-dropdown-option';
-export * from './i-dynamo-d-b-entry';
 export * from './i-facet';
 export * from './i-formatted-kids-video';
 export * from './i-formatted-o-t-f-video';
