@@ -22,7 +22,7 @@ export class RecipeService {
     'https://services.corneliuses.com/getrecipes-brian',
     {...this.headers}
   ).subscribe((res: any) => {
-    this.recipesFavorites = res.data.Items;
+    this.recipesFavorites = res.data;
   })
   getToTry: Function = (): Subscription => this.http.get(
     'https://services.corneliuses.com/get-recipe-to-ry-brian',

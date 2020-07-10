@@ -1,10 +1,10 @@
 <div *ngIf="recipes">
   <recipe-toggle
     *ngFor="let recipe of recipes"
-    [photo]="recipe.PHOTO.S"
-    [title]="recipe.NAME.S"
-    [instructions]="recipe.INSTRUCTIONS.L |  listOrder"
-    [ingredients]="recipe.INGREDIENTS.L"
+    [photo]="recipe.photo"
+    [title]="recipe.name"
+    [instructions]="recipe.instructions |  listOrder"
+    [ingredients]="recipe.ingredients"
   ></recipe-toggle>
 </div>
 <div *ngIf="toTry">

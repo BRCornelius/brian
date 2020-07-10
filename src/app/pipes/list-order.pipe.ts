@@ -9,14 +9,14 @@ export class ListOrderPipe implements PipeTransform {
   transform(instructions: IInstruction[], args?: any): any {
     if (instructions) {
       return instructions.sort((a, b) => {
-        if ( a.M.step.N < b.M.step.N ) {
+        if ( a.step < b.step ) {
           return -1;
         }
-        if ( a.M.step.N > b.M.step.N ) {
+        if ( a.step > b.step ) {
           return 1;
         }
         return 0;
-      }).map(step => step.M.instruction.S);
+      }).map(step => step.instruction);
     }
   }
 
