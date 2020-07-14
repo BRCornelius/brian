@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { environment } from '../../../environments/environment';
 
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { AwsService } from '../site';
 import { IOTFVideo, IKidsVideo } from 'src/app/interfaces';
@@ -18,23 +17,10 @@ export class MediaService {
 
   headers = this.aws.httpOptions;
 
-  activeKidsVideoTitle: string;
-  activeKidsVideoURL: string;
-  kidsVideos: IKidsVideo[];
-
   activeOtfVideoTitle: string;
   activeOtfVideoUrl: string;
   otfVideos: IOTFVideo[];
 
-  getKidsVideos: Function = (): Subscription => this.http.get(
-    'https://services.corneliuses.com/get-kids-videos',
-    this.headers)
-    .subscribe((res: any) => {
-      this.kidsVideos = res.data;
-      this.activeKidsVideoTitle = this.kidsVideos[0].title;
-      this.activeKidsVideoURL = this.kidsVideos[0].url;
-    }
-  )
   getOtfVideos: Function = (): Subscription => this.http.get(
     'https://services.corneliuses.com/get-otf',
     this.headers)

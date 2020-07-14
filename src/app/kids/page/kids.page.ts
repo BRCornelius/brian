@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MediaService } from 'src/app/services';
+import { KidsVideosService } from '../services/kids-videos.service';
 
 @Component({
   selector: 'kids-page',
@@ -8,11 +8,11 @@ import { MediaService } from 'src/app/services';
 })
 export class KidsPage implements OnInit {
 
-  constructor(public media: MediaService) { }
+  constructor(public kids: KidsVideosService) { }
 
   interstitial = 'https://assets.corneliuses.com/photos/common/interstitial-syd.gif';
 
   ngOnInit() {
-    this.media.getKidsVideos();
+    this.kids.getKidsVideos()
   }
 }

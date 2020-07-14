@@ -5,5 +5,4 @@ export * from './auth/auth.component';
 export * from './filter';
 export * from './error/error.component';
 export * from './dropdown/dropdown.component';
-export * from './interstitial/interstitial.component';
 export * from './contact';

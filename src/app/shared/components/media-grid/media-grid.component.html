@@ -5,22 +5,13 @@
     [$options]="$options"
     [filterFunction]="updateDisplayedMedia"
   ></common-filter>
-  <mat-grid-tile *ngFor="let item of media" class="media-item" [colspan]="1">
-    <media-card
-      *ngIf="checkRoute('kids')"
-      class="media-card"
-      [source]="item.url"
-      [thumbnail]="item.thumbnail"
-      [header]="item.title"
-      (click)="setActive($event)"
-    ></media-card>
-    <workout-card
+    <!-- <workout-card
       *ngIf="checkRoute('workouts')"
       class="media-card"
       [title]="item.title"
       [grp]="item.grp"
       [cat]="item.cat"
       (click)="setActive($event)"
-    ></workout-card>
-  </mat-grid-tile>
+    ></workout-card> -->
+    <ng-content></ng-content>
 </mat-grid-list>

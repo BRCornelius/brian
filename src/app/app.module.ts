@@ -22,9 +22,6 @@ import {
   ContentToggleComponent,
   ErrorComponent,
   FooterComponent,
-  InterstitialComponent,
-  MediaCardComponent,
-  MediaGridComponent,
   NavigationComponent,
   RadioComponent,
   RecipeCardComponent,
@@ -37,7 +34,6 @@ import {
   FilterComponent,
   ToTryComponent,
   WorkoutCardComponent,
-  VideoDisplayComponent,
   ContactComponent,
   ContactButtonComponent,
   ContactFormComponent,
@@ -56,7 +52,7 @@ import {
   SafePipe,
   OtfUrlPipe,
 } from './pipes';
-import { KidsModule } from './kids/kids.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -74,9 +70,6 @@ import { KidsModule } from './kids/kids.module';
     RecipeToggleComponent,
     FooterComponent,
     RecipeRequestComponent,
-    MediaGridComponent,
-    VideoDisplayComponent,
-    MediaCardComponent,
     WorkoutCardComponent,
     AuthComponent,
     AuthButtonComponent,
@@ -87,7 +80,6 @@ import { KidsModule } from './kids/kids.module';
     SafePipe,
     LegoSetPipe,
     OtfUrlPipe,
-    InterstitialComponent,
     ListOrderPipe,
     ToTryComponent,
     ContactComponent,
@@ -111,6 +103,7 @@ import { KidsModule } from './kids/kids.module';
     MatTabsModule,
     MatToolbarModule,
     ReactiveFormsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent],

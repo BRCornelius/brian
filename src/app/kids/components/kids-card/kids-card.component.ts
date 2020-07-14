@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'media-card',
-  templateUrl: './media-card.component.html',
-  styleUrls: ['./media-card.component.css']
+  selector: 'kids-card',
+  templateUrl: './kids-card.component.html',
+  styleUrls: ['./kids-card.component.css']
 })
-export class MediaCardComponent {
+export class KidsCardComponent {
 
   constructor() { }
 

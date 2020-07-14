@@ -1,8 +1,26 @@
-<common-interstitial *ngIf="!media.kidsVideos" [topic]="interstitial"></common-interstitial>
+<common-interstitial *ngIf="!kids.kidsVideos" [topic]="interstitial"></common-interstitial>
 <media-video-display
-    *ngIf="media.kidsVideos"
-    [videos]="media.kidsVideos"
-    [activeVideoUrl]="media.activeKidsVideoURL"
-    [activeVideoTitle]="media.activeKidsVideoTitle"
+    *ngIf="kids.kidsVideos"
+    [videos]="kids.kidsVideos"
+    [activeVideoUrl]="kids.activeKidsVideoURL"
+    [activeVideoTitle]="kids.activeKidsVideoTitle"
     [displayFilter]="false"
-></media-video-display>
+>
+    <media-grid
+        [displayFilter]="displayFilter"
+        [$options]="$options"
+        (handleClick)="handleClick($event)"
+    >
+    <mat-grid-list cols="2" rowHeight="2:1" [gutterSize]="16">
+        <mat-grid-tile *ngFor="let item of kids.kidsVideos" class="media-item" [colspan]="1">
+            <kids-card
+                class="media-card"
+                [source]="item.url"
+                [thumbnail]="item.thumbnail"
+                [header]="item.title"
+                (click)="kids.setActiveKidsVideo($event)"
+            ></kids-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </media-grid>
+</media-video-display>
