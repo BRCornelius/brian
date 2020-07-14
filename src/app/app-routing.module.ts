@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import {
   SplashPage,
   RecipesPage,
-  KidsPage,
   WorkoutsPage,
   LegoPage,
   ErrorPage
@@ -13,7 +12,7 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: SplashPage },
   { path: 'recipes', component: RecipesPage },
-  { path: 'kids', component: KidsPage },
+  { path: 'kids', loadChildren: () => import('./kids/kids.module').then(m => m.KidsModule)},
   { path: 'workouts', component: WorkoutsPage },
   { path: 'lego', component: LegoPage },
   { path: '**', component: ErrorPage}

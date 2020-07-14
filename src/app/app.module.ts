@@ -44,7 +44,6 @@ import {
   AddSetComponent
 } from './components';
 import {
-  KidsPage,
   LegoPage,
   SplashPage,
   RecipesPage,
@@ -57,10 +56,10 @@ import {
   SafePipe,
   OtfUrlPipe,
 } from './pipes';
+import { KidsModule } from './kids/kids.module';
 
 @NgModule({
   declarations: [
-    KidsPage,
     LegoPage,
     RecipesPage,
     SplashPage,
