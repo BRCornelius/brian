@@ -33,7 +33,6 @@ import {
   DropdownComponent,
   FilterComponent,
   ToTryComponent,
-  WorkoutCardComponent,
   ContactComponent,
   ContactButtonComponent,
   ContactFormComponent,
@@ -43,14 +42,12 @@ import {
   LegoPage,
   SplashPage,
   RecipesPage,
-  WorkoutsPage,
   ErrorPage,
 } from './pages';
 import {
   LegoSetPipe,
   ListOrderPipe,
   SafePipe,
-  OtfUrlPipe,
 } from './pipes';
 import { SharedModule } from './shared/shared.module';
 
@@ -59,7 +56,6 @@ import { SharedModule } from './shared/shared.module';
     LegoPage,
     RecipesPage,
     SplashPage,
-    WorkoutsPage,
     AppComponent,
     ContentToggleComponent,
     NavigationComponent,
@@ -70,7 +66,6 @@ import { SharedModule } from './shared/shared.module';
     RecipeToggleComponent,
     FooterComponent,
     RecipeRequestComponent,
-    WorkoutCardComponent,
     AuthComponent,
     AuthButtonComponent,
     ErrorComponent,
@@ -79,7 +74,6 @@ import { SharedModule } from './shared/shared.module';
     DropdownComponent,
     SafePipe,
     LegoSetPipe,
-    OtfUrlPipe,
     ListOrderPipe,
     ToTryComponent,
     ContactComponent,

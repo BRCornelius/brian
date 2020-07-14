@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MediaService, OtfService, AuthService } from 'src/app/services';
-import { OtfUrlPipe } from 'src/app/pipes';
+import { AuthService } from 'src/app/services';
+
+import { OtfUrlPipe } from '../pipes/otf-url.pipe';
+import { OtfService } from '../services/otf.service';
 
 @Component({
   selector: 'workout-page',
@@ -12,7 +14,6 @@ export class WorkoutsPage implements OnInit {
 
   constructor(
     public auth: AuthService,
-    public media: MediaService,
     public otf: OtfService
   ) { }
 
@@ -24,7 +25,7 @@ export class WorkoutsPage implements OnInit {
 
   ngOnInit() {
     if (this.auth.authorized) {
-      this.media.getOtfVideos();
+      this.otf.getOtfVideos();
     } else {
       this.auth.isAuthorized();
     }

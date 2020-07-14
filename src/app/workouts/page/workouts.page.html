@@ -1,0 +1,31 @@
+<common-interstitial *ngIf="!auth.hasAuthorizationRun" [topic]="authInterstitial"></common-interstitial>
+<div *ngIf="auth.hasAuthorizationRun">
+    <common-interstitial *ngIf="auth.authorized && !otf.otfVideos" [topic]="interstitial"></common-interstitial>
+    <media-video-display
+        *ngIf="auth.authorized && otf.otfVideos"
+        [videos]="otf.otfVideos"
+        [activeVideoUrl]="otf.activeOtfVideoUrl | otfUrl"
+        [activeVideoTitle]="otf.activeOtfVideoTitle"
+        [displayFilter]="true"
+        [displayControls]="true"
+        [$options]="otf.options"
+    >
+        <mat-grid-list cols="2" rowHeight="2:1" [gutterSize]="16">
+            <common-filter
+            class="filter-component"
+            [$options]="$options"
+            [filterFunction]="updateDisplayedMedia"
+            ></common-filter>
+            <mat-grid-tile *ngFor="let item of otf.otfVideos" class="media-item" [colspan]="1">
+                <workout-card
+                    class="otf-card"
+                    [title]="item.title"
+                    [grp]="item.grp"
+                    [cat]="item.cat"
+                    (click)="otf.setActiveOtfVideo($event)"
+                ></workout-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </media-video-display>
+    <common-error *ngIf="!auth.authorized" [text]="errorText" [allowLogin]=false></common-error>
+</div>

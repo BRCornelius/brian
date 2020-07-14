@@ -1,9 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WorkoutsPage } from './workouts.page';
-import { OtfVideoPipe, OtfUrlPipe } from 'src/app/pipes';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { OtfUrlPipe } from '../pipes/otf-url.pipe';
 
 describe('WorkoutsComponent', () => {
   let component: WorkoutsPage;
@@ -11,7 +11,7 @@ describe('WorkoutsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WorkoutsPage, OtfUrlPipe, OtfVideoPipe ],
+      declarations: [ WorkoutsPage, OtfUrlPipe ],
       imports: [ HttpClientModule ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })

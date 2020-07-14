@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import {
   SplashPage,
   RecipesPage,
-  WorkoutsPage,
   LegoPage,
   ErrorPage
 } from './pages';
@@ -13,7 +12,7 @@ const routes: Routes = [
   { path: 'home', component: SplashPage },
   { path: 'recipes', component: RecipesPage },
   { path: 'kids', loadChildren: () => import('./kids/kids.module').then(m => m.KidsModule)},
-  { path: 'workouts', component: WorkoutsPage },
+  { path: 'workouts', loadChildren: () => import('./workouts/workouts.module').then(m => m.WorkoutsModule)},
   { path: 'lego', component: LegoPage },
   { path: '**', component: ErrorPage}
 ];

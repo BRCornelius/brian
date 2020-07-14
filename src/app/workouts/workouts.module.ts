@@ -1,23 +1,25 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { KidsRoutingModule } from './kids-routing.module';
-import { KidsPage } from './page/kids.page';
+import { WorkoutsRoutingModule } from './workouts.routing.module';
+import { WorkoutsPage } from './page/workouts.page';
 import { SharedModule } from '../shared/shared.module';
-import { KidsCardComponent } from './components/kids-card/kids-card.component';
+import { WorkoutCardComponent } from './components';
+import { OtfUrlPipe } from './pipes/otf-url.pipe';
 
 import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
-    KidsCardComponent,
-    KidsPage,
+    WorkoutCardComponent,
+    WorkoutsPage,
+    OtfUrlPipe
   ],
   imports: [
     CommonModule,
-    KidsRoutingModule,
     MatGridListModule,
-    SharedModule
+    SharedModule,
+    WorkoutsRoutingModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
-export class KidsModule { }
+export class WorkoutsModule { }
