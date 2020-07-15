@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { IIngredient } from 'src/app/interfaces';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { openCloseRecipes } from '../../animations';
+import { openCloseRecipes } from '../../animations/animations';
 
 @Component({
   selector: 'recipe-toggle',

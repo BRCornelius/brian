@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {
   SplashPage,
-  RecipesPage,
   LegoPage,
   ErrorPage
 } from './pages';
@@ -10,7 +9,7 @@ import {
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: SplashPage },
-  { path: 'recipes', component: RecipesPage },
+  { path: 'recipes', loadChildren: () => import('./recipes/recipes.module').then(m => m.RecipesModule)},
   { path: 'kids', loadChildren: () => import('./kids/kids.module').then(m => m.KidsModule)},
   { path: 'workouts', loadChildren: () => import('./workouts/workouts.module').then(m => m.WorkoutsModule)},
   { path: 'lego', component: LegoPage },

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { IRecipe, IRecipeToTry } from 'src/app/interfaces';
-import { ListOrderPipe } from 'src/app/pipes';
+import { ListOrderPipe } from '../../pipes/list-order.pipe';
 
 @Component({
   selector: 'recipe-list',

@@ -24,15 +24,8 @@ import {
   FooterComponent,
   NavigationComponent,
   RadioComponent,
-  RecipeCardComponent,
-  RecipeRequestComponent,
-  RecipeToggleComponent,
-  RecipeIngredientsComponent,
-  RecipeInstructionsComponent,
-  RecipeListComponent,
   DropdownComponent,
   FilterComponent,
-  ToTryComponent,
   ContactComponent,
   ContactButtonComponent,
   ContactFormComponent,
@@ -41,12 +34,10 @@ import {
 import {
   LegoPage,
   SplashPage,
-  RecipesPage,
   ErrorPage,
 } from './pages';
 import {
   LegoSetPipe,
-  ListOrderPipe,
   SafePipe,
 } from './pipes';
 import { SharedModule } from './shared/shared.module';
@@ -54,18 +45,11 @@ import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [
     LegoPage,
-    RecipesPage,
     SplashPage,
     AppComponent,
     ContentToggleComponent,
     NavigationComponent,
-    RecipeCardComponent,
-    RecipeIngredientsComponent,
-    RecipeInstructionsComponent,
-    RecipeListComponent,
-    RecipeToggleComponent,
     FooterComponent,
-    RecipeRequestComponent,
     AuthComponent,
     AuthButtonComponent,
     ErrorComponent,
@@ -74,8 +58,6 @@ import { SharedModule } from './shared/shared.module';
     DropdownComponent,
     SafePipe,
     LegoSetPipe,
-    ListOrderPipe,
-    ToTryComponent,
     ContactComponent,
     ContactButtonComponent,
     ContactFormComponent,
