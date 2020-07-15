@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IOptions } from 'src/app/interfaces';
+import { IOptions } from 'src/app/core';
 
 @Component({
   selector: 'common-radio',

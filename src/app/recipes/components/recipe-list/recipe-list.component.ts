@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IRecipe, IRecipeToTry } from 'src/app/interfaces';
+import { IRecipe, IRecipeToTry } from '../../models';
 import { ListOrderPipe } from '../../pipes/list-order.pipe';
 
 @Component({

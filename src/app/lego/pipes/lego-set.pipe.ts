@@ -1,5 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { ILegoSet, IDropdownOption } from '../../interfaces';
+import { IDropdownOption } from 'src/app/core';
+import { ILegoSet } from '../models';
 
 @Pipe({
   name: 'legoSet'

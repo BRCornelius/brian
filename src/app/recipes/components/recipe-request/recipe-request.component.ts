@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { IRecipeToTry } from 'src/app/interfaces';
+import { IRecipeToTry } from '../../models';
 import { RecipeService } from '../../services';
 @Component({
   selector: 'recipe-request',

@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { IContactValues } from 'src/app/interfaces';
+import { IContactValues } from '../../models';
 import { ContactService } from '../../services';
 
 @Component({

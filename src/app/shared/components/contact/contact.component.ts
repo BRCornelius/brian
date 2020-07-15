@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
-import { IDropdownOption } from 'src/app/interfaces';
+import { IDropdownOption } from 'src/app/core';
 import { ContactService } from '../../services';
 
 @Component({

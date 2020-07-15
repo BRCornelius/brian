@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { AwsService, FilterService } from 'src/app/core';
 import { HttpClient } from '@angular/common/http';
 import { Subscription } from 'rxjs';
-import { IOTFVideo, IOptions } from 'src/app/interfaces';
+import { IOptions } from 'src/app/core';
+import { IOTFVideo } from '../models';
 
 @Injectable({
   providedIn: 'root'

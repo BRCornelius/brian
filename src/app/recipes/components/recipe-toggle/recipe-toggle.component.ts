@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IIngredient } from 'src/app/interfaces';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { IIngredient } from '../../models';
 import { openCloseRecipes } from '../../animations/animations';
 
 @Component({
