@@ -34,8 +34,10 @@ export class FilterService {
     (agg, curr) => {
       const facetKey = Object.keys(curr)[0];
       const facetValue = curr[facetKey];
-      return agg.filter(item => item[facetKey.toLowerCase()] === facetValue);
+      const result = agg.filter(item => item[facetKey.toLowerCase()] === facetValue);
+      return result;
     }, content)
+
   updateFacets: Function = (event): void => {
     const key = event.target.name;
     const value = event.target.value;

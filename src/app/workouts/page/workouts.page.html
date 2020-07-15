@@ -12,16 +12,16 @@
     >
         <mat-grid-list cols="2" rowHeight="2:1" [gutterSize]="16">
             <common-filter
-            class="filter-component"
-            [$options]="$options"
-            [filterFunction]="updateDisplayedMedia"
+                class="filter-component"
+                [$options]="otf.options"
+                [filterFunction]="otf.updateDisplayedMedia"
             ></common-filter>
             <mat-grid-tile *ngFor="let item of otf.otfVideos" class="media-item" [colspan]="1">
                 <workout-card
                     class="otf-card"
                     [title]="item.title"
-                    [grp]="item.grp"
-                    [cat]="item.cat"
+                    [grp]="item.group"
+                    [cat]="item.category"
                     (click)="otf.setActiveOtfVideo($event)"
                 ></workout-card>
             </mat-grid-tile>

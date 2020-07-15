@@ -17,7 +17,7 @@ export class DropdownComponent {
 
   selectedOption: string;
 
-  selectOption: Function = () => {
-    this.handleSelection.emit(this.selectedOption);
+  selectOption: Function = $event => {
+    this.handleSelection.emit($event.target.value);
   }
 }

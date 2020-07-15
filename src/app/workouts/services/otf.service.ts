@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AwsService } from 'src/app/services';
+import { AwsService, FilterService } from 'src/app/services';
 import { HttpClient } from '@angular/common/http';
 import { Subscription } from 'rxjs';
 import { IOTFVideo, IOptions } from 'src/app/interfaces';
@@ -11,13 +11,15 @@ export class OtfService {
 
   constructor(
     private aws: AwsService,
-    private http: HttpClient
+    private http: HttpClient,
+    private filter: FilterService
   ) { }
 
   headers = this.aws.httpOptions;
 
   activeOtfVideoTitle: string;
   activeOtfVideoUrl: string;
+  allOtfVideos: IOTFVideo[];
   otfVideos: IOTFVideo[];
 
   categories: string[] = ['Endurance', 'Heart', 'Mayhem', 'Power', 'Strength'];
@@ -36,7 +38,8 @@ export class OtfService {
     'https://services.corneliuses.com/get-otf',
     this.headers)
     .subscribe((res: any) => {
-      this.otfVideos = res.data;
+      this.allOtfVideos = res.data;
+      this.otfVideos = [...this.allOtfVideos];
       const limit = Math.floor(Math.random() * (this.otfVideos.length - 1));
       this.activeOtfVideoTitle = this.otfVideos[limit].title;
       this.activeOtfVideoUrl = this.activeOtfVideoTitle;
@@ -59,5 +62,12 @@ export class OtfService {
     this.activeOtfVideoTitle = $event.target.title;
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+
+
+  updateDisplayedMedia: Function = (): void => {
+    const allVideos = [...this.allOtfVideos];
+    const newMedia = this.filter.filterContent(allVideos, this.filter.facets);
+    this.otfVideos = newMedia;
   }
 }

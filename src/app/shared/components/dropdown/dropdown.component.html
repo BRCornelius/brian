@@ -1,13 +1,12 @@
-<mat-form-field>
-  <mat-label>{{dropdownLabel}}</mat-label>
-  <mat-select
-    [(ngModel)]="selectedOption"
-    (selectionChange)="selectOption()"
+<div class="container">
+  <select
     name="set"
-  >
-    <mat-option
+    id="set"
+    (change)="selectOption($event)">
+    <option default label={{dropdownLabel}}></option>
+    <option
       *ngFor="let option of dropdownOptions"
-      [value]="option.value"
-    >{{option.title}}</mat-option>
-  </mat-select>
-</mat-form-field>
+      label={{option.title}}
+      [value]="option.value"></option>
+  </select>
+</div>

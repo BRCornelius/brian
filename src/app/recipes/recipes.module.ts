@@ -5,6 +5,7 @@ import { RecipesPage } from './page/recipes.page';
 import { RecipeCardComponent, RecipeIngredientsComponent, RecipeInstructionsComponent, RecipeListComponent, RecipeRequestComponent, RecipeToggleComponent, ToTryComponent } from './components';
 import { ListOrderPipe } from './pipes/list-order.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    RecipesRoutingModule
+    RecipesRoutingModule,
+    SharedModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
