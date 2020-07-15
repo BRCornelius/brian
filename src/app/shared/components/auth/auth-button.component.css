@@ -1,0 +1,18 @@
+button {
+    border-color: goldenrod;
+    border-radius: 10px;
+    background-color: dodgerblue;
+    color: ghostwhite;
+}
+.container {
+    background-color: firebrick;
+    color: ghostwhite;
+    font-style: italic;
+    display: flex;
+    justify-content: space-between;
+    height: 1.4rem;
+}
+.text {
+    color: white;
+    font-style: italic;
+}

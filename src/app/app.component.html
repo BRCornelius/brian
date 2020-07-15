@@ -1,5 +1,7 @@
 <div class="app">
-    <common-auth-button *ngIf="!auth.authorized"></common-auth-button>
+    <div class="auth-container">
+        <common-auth-button *ngIf="!auth.authorized"></common-auth-button>
+    </div>
     <common-navigation></common-navigation>
     <div class="app-body">
         <router-outlet></router-outlet>

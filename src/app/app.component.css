@@ -1,3 +1,7 @@
 .app-body {
     background-color: floralwhite;
 }
+.auth-container {
+    display: flexbox;
+    align-items: stretch;
+}

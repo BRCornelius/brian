@@ -17,15 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
-  AuthComponent,
-  AuthButtonComponent,
   ContentToggleComponent,
-  ErrorComponent,
-  FooterComponent,
   NavigationComponent,
-  ContactComponent,
-  ContactButtonComponent,
-  ContactFormComponent,
 } from './components';
 import {
   SplashPage,
@@ -39,13 +32,6 @@ import { SharedModule } from './shared/shared.module';
     AppComponent,
     ContentToggleComponent,
     NavigationComponent,
-    FooterComponent,
-    AuthComponent,
-    AuthButtonComponent,
-    ErrorComponent,
-    ContactComponent,
-    ContactButtonComponent,
-    ContactFormComponent,
     ErrorPage
   ],
   imports: [
@@ -67,7 +53,7 @@ import { SharedModule } from './shared/shared.module';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [AuthComponent, ContactComponent],
+  entryComponents: [],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }
