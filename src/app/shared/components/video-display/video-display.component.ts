@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { IOTFVideo, IKidsVideo, IOptions } from 'src/app/interfaces';
 
 @Component({
   selector: 'media-video-display',
@@ -10,12 +9,10 @@ export class VideoDisplayComponent {
 
   constructor() {}
 
-  @Input() videos: IOTFVideo[] | IKidsVideo[];
+  @Input() videos: any[];
   @Input() activeVideoTitle: string;
   @Input() activeVideoUrl: string;
-  @Input() displayFilter: boolean;
   @Input() displayControls: boolean;
-  @Input() $options: IOptions[] = [];
 
   handleClick: Function = (media): void => {
     this.activeVideoTitle = media.title;

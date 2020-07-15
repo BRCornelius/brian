@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { ContactService } from 'src/app/services';
 import { MatDialog } from '@angular/material/dialog';
 import { IContactValues } from 'src/app/interfaces';
+import { ContactService } from '../../services';
 
 @Component({
   selector: 'common-contact-form',

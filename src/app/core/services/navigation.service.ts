@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { INavLink } from '../../interfaces';
+import { INavLink } from '../models';
 
 @Injectable({
   providedIn: 'root'

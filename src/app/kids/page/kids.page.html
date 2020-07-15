@@ -6,11 +6,6 @@
     [activeVideoTitle]="kids.activeKidsVideoTitle"
     [displayFilter]="false"
 >
-    <media-grid
-        [displayFilter]="displayFilter"
-        [$options]="$options"
-        (handleClick)="handleClick($event)"
-    >
     <mat-grid-list cols="2" rowHeight="2:1" [gutterSize]="16">
         <mat-grid-tile *ngFor="let item of kids.kidsVideos" class="media-item" [colspan]="1">
             <kids-card
@@ -22,5 +17,4 @@
             ></kids-card>
         </mat-grid-tile>
       </mat-grid-list>
-    </media-grid>
 </media-video-display>

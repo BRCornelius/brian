@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService, FilterService } from 'src/app/services';
+import { AuthService } from 'src/app/core';
 
 import { OtfUrlPipe } from '../pipes/otf-url.pipe';
 import { OtfService } from '../services/otf.service';

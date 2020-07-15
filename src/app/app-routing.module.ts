@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {
   SplashPage,
   ErrorPage
-} from './pages';
+} from './core';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },

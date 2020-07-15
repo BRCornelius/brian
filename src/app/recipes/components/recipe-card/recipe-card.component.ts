@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { RecipeService } from 'src/app/services/content/recipe.service';
+import { RecipeService } from '../../services';
 import { IIngredient, IRecipeTime } from 'src/app/interfaces';
 
 @Component({

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { IOptions } from '../../../interfaces';
-import { FilterService } from '../../../services';
+import { FilterService } from 'src/app/core';
 
 @Component({
   selector: 'common-filter',

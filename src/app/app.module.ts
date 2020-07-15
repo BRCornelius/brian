@@ -17,20 +17,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
-  ContentToggleComponent,
   NavigationComponent,
-} from './components';
-import {
   SplashPage,
   ErrorPage,
-} from './pages';
+} from './core';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     SplashPage,
     AppComponent,
-    ContentToggleComponent,
     NavigationComponent,
     ErrorPage
   ],

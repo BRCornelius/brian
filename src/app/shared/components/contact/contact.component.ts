@@ -1,8 +1,8 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
-import { ContactService } from 'src/app/services';
 import { IDropdownOption } from 'src/app/interfaces';
+import { ContactService } from '../../services';
 
 @Component({
   selector: 'common-contact',

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { NavigationService } from 'src/app/services';
-import { INavLink } from 'src/app/interfaces';
+import { NavigationService } from 'src/app/core/services';
+import { INavLink } from 'src/app/core/models';
 
 @Component({
   selector: 'common-navigation',

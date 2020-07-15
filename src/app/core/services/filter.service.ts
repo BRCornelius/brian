@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { IFacet, IOTFVideo, IKidsVideo } from '../../interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +7,7 @@ export class FilterService {
 
   constructor() { }
 
-  facets: IFacet[] = [];
+  facets: any[] = [];
 
   checkFacetsForKey: Function = (facetArray, facet): boolean => {
     return facetArray.reduce((agg, curr) => {
@@ -20,7 +19,7 @@ export class FilterService {
       }
     }, false);
   }
-  checkFacetsIndividually: Function = (facetArray, newFacet): IFacet[] => {
+  checkFacetsIndividually: Function = (facetArray, newFacet): any[] => {
     const key = Object.keys(newFacet)[0];
     return facetArray.map(facet => {
       if (facet[key]) {
@@ -30,7 +29,7 @@ export class FilterService {
     });
   }
   // tslint:disable-next-line:max-line-length
-  filterContent: Function = (content, facets): IOTFVideo[] | IKidsVideo[] => facets.reduce(
+  filterContent: Function = (content, facets): any[] => facets.reduce(
     (agg, curr) => {
       const facetKey = Object.keys(curr)[0];
       const facetValue = curr[facetKey];
