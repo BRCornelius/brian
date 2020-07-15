@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ILegoSetNumber } from 'src/app/interfaces';
-import { LegoService } from 'src/app/services';
+import { LegoService } from '../../services/lego.service';
 
 @Component({
   selector: 'lego-add-set',

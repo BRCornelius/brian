@@ -24,27 +24,19 @@ import {
   FooterComponent,
   NavigationComponent,
   RadioComponent,
-  DropdownComponent,
   FilterComponent,
   ContactComponent,
   ContactButtonComponent,
   ContactFormComponent,
-  AddSetComponent
 } from './components';
 import {
-  LegoPage,
   SplashPage,
   ErrorPage,
 } from './pages';
-import {
-  LegoSetPipe,
-  SafePipe,
-} from './pipes';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
-    LegoPage,
     SplashPage,
     AppComponent,
     ContentToggleComponent,
@@ -55,13 +47,9 @@ import { SharedModule } from './shared/shared.module';
     ErrorComponent,
     FilterComponent,
     RadioComponent,
-    DropdownComponent,
-    SafePipe,
-    LegoSetPipe,
     ContactComponent,
     ContactButtonComponent,
     ContactFormComponent,
-    AddSetComponent,
     ErrorPage
   ],
   imports: [

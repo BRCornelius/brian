@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RecipeListComponent } from './recipe-list.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { ListOrderPipe } from 'src/app/pipes';
+import { ListOrderPipe } from '../../pipes/list-order.pipe';
 
 describe('RecipeListComponent', () => {
   let component: RecipeListComponent;

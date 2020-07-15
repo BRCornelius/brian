@@ -4,7 +4,7 @@ import { RecipesRoutingModule } from './recipes-routing.module';
 import { RecipesPage } from './page/recipes.page';
 import { RecipeCardComponent, RecipeIngredientsComponent, RecipeInstructionsComponent, RecipeListComponent, RecipeRequestComponent, RecipeToggleComponent, ToTryComponent } from './components';
 import { ListOrderPipe } from './pipes/list-order.pipe';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    FormsModule,
     ReactiveFormsModule,
     RecipesRoutingModule
   ],

@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LegoPage } from './lego.page';
-import { LegoSetPipe, SafePipe } from 'src/app/pipes';
+import { LegoSetPipe, SafePipe } from 'src/app/lego/pipes';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 

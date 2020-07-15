@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { LegoService, AuthService } from '../../services';
-import { IUrl, ILegoSet } from 'src/app/interfaces';
-import { LegoSetPipe, SafePipe } from 'src/app/pipes';
+import { AuthService } from '../../services';
+import { LegoService } from '../services/lego.service';
+import { LegoSetPipe, SafePipe } from '../pipes';
 
 @Component({
   selector: 'lego-page',

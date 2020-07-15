@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WorkoutCardComponent } from './workout-card.component';
-import { OtfUrlPipe } from 'src/app/pipes';
+import { OtfUrlPipe } from '../../pipes/otf-url.pipe';
 
 describe('WorkoutCardComponent', () => {
   let component: WorkoutCardComponent;
