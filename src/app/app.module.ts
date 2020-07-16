@@ -22,6 +22,10 @@ import {
   ErrorPage,
 } from './core';
 import { SharedModule } from './shared/shared.module';
+import { KidsModule } from './kids/kids.module';
+import { LegoModule } from './lego/lego.module';
+import { RecipesModule } from './recipes/recipes.module';
+import { WorkoutsModule } from './workouts/workouts.module';
 
 @NgModule({
   declarations: [
@@ -47,7 +51,13 @@ import { SharedModule } from './shared/shared.module';
     ReactiveFormsModule,
     SharedModule
   ],
-  providers: [],
+  providers: [
+    KidsModule,
+    LegoModule,
+    RecipesModule,
+    SharedModule,
+    WorkoutsModule
+  ],
   bootstrap: [AppComponent],
   entryComponents: [],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

@@ -13,6 +13,6 @@ export class KidsPage implements OnInit {
   interstitial = 'https://assets.corneliuses.com/photos/common/interstitial-syd.gif';
 
   ngOnInit() {
-    this.kids.getKidsVideos()
+    this.kids.getKidsVideos();
   }
 }
