@@ -1,10 +1,12 @@
 <common-interstitial *ngIf="!auth.hasAuthorizationRun" [topic]="authInterstitial"></common-interstitial>
 <div class="container" id="dropdown" *ngIf="auth.hasAuthorizationRun">
-  <common-dropdown
-    [dropdownLabel]="dropdownLabel"
-    [dropdownOptions]="lego.mySets | legoSet"
-    (handleSelection)="lego.getInstructions($event)"
-  ></common-dropdown>
+  <div class="dropdown-container">
+    <common-dropdown
+      [dropdownLabel]="dropdownLabel"
+      [dropdownOptions]="lego.mySets | legoSet"
+      (handleSelection)="lego.getInstructions($event)"
+    ></common-dropdown>
+  </div>
   <lego-add-set *ngIf="auth.authorized" (updateSetList)="lego.getSets()"></lego-add-set>
 </div>
 <div class="container" id="instructions">

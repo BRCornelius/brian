@@ -1,1 +1,7 @@
-.container { padding: 1rem; }
+/* .container { padding: 1rem; } */
+select {
+    background-color: inherit;
+    border: 0;
+    color: inherit;
+    font: inherit;
+}
