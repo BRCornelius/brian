@@ -38,8 +38,8 @@ export class RecipeService {
       {...this.headers}
     ).subscribe();
     const newRecipe = {
-      title: { S: values.title },
-      url: { S: values.url }
+      title: values.title ,
+      url: values.url
     };
     this.recipesToTry = [...this.recipesToTry, newRecipe];
   }

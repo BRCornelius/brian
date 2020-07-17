@@ -49,7 +49,11 @@ import { WorkoutsModule } from './workouts/workouts.module';
     MatTabsModule,
     MatToolbarModule,
     ReactiveFormsModule,
-    SharedModule
+    KidsModule, // LL-remove
+    LegoModule, // LL-remove
+    RecipesModule, // LL-remove
+    SharedModule,
+    WorkoutsModule // LL-remove
   ],
   providers: [
     KidsModule,
