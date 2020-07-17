@@ -1,5 +1,8 @@
 <div class="container">
-  <h2 class="subheader">Ingredients</h2>
+  <div class="subheader-container">
+    <h2 class="subheader">Ingredients</h2>
+  </div>
+  <hr/>
   <mat-grid-list class="content-list" cols="2" rowHeight=32>
     <mat-grid-tile class="content" *ngFor="let ingredient of ingredients">
       {{ingredient.quantity}}

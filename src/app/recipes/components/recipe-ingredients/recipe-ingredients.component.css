@@ -4,3 +4,12 @@
 .content-list {
     padding-bottom: 1rem;
 }
+.subheader {
+    margin: 0;
+}
+.subheader-container {
+    padding: 0.5rem;
+}
+hr {
+    border: 1px solid violet;
+}

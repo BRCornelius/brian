@@ -7,3 +7,12 @@
     border-bottom: 1px solid black;
     margin: 0.5rem;
 }
+.subheader {
+    margin: 0;
+}
+.subheader-container {
+    padding: 0.5rem;
+}
+hr {
+    border-top: 1px solid yellow
+}
