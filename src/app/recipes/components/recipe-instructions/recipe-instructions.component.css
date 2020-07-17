@@ -12,7 +12,5 @@
 }
 .subheader-container {
     padding: 0.5rem;
-}
-hr {
-    border-top: 1px solid yellow
+    border-bottom: 1px solid yellow;
 }
