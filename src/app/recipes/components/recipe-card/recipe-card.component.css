@@ -3,4 +3,9 @@
 }
 .image {
     margin-bottom: -0.5rem;
+    max-width: 100%;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
 }
