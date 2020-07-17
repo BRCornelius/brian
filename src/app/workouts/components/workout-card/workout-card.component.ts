@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { OtfUrlPipe } from 'src/app/workouts/pipes/otf-url.pipe';
+import { OtfUrlPipe } from '../../pipes';
 
 @Component({
   selector: 'workout-card',
