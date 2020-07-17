@@ -19,7 +19,7 @@ import { LegoPage } from './lego';
 //   { path: 'lego', loadChildren: () => import('./lego/lego.module').then(m => m.LegoModule)},
 //   { path: '**', component: ErrorPage}
 // ];
-// LL-remove
+// LL-remove refactor to use the commented lazy loading
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: SplashPage },

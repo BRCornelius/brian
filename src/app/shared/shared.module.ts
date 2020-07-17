@@ -5,7 +5,11 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterComponent, RadioComponent } from './components/filter';
 import { AuthComponent, AuthButtonComponent } from './components/auth/auth.component';
-import { ContactComponent, ContactButtonComponent, ContactFormComponent } from './components/contact';
+import {
+  ContactComponent,
+  ContactButtonComponent,
+  ContactFormComponent
+} from './components/contact';
 import { FooterComponent } from './components/footer/footer.component';
 import { ErrorComponent } from './components/error/error.component';
 import {MatGridListModule} from '@angular/material/grid-list';
