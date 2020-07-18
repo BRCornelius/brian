@@ -5,26 +5,17 @@ import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterComponent, RadioComponent } from './components/filter';
 import { AuthComponent, AuthButtonComponent } from './components/auth/auth.component';
-import {
-  ContactComponent,
-  ContactButtonComponent,
-  ContactFormComponent
-} from './components/contact';
-import { FooterComponent } from './components/footer/footer.component';
 import { ErrorComponent } from './components/error/error.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { AuthService } from './services';
 
 @NgModule({
   declarations: [
     AuthButtonComponent,
     AuthComponent,
-    ContactButtonComponent,
-    ContactComponent,
-    ContactFormComponent,
     DropdownComponent,
     ErrorComponent,
     FilterComponent,
-    FooterComponent,
     InterstitialComponent,
     RadioComponent,
     VideoDisplayComponent,
@@ -32,13 +23,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
   exports: [
     AuthButtonComponent,
     AuthComponent,
-    ContactButtonComponent,
-    ContactComponent,
-    ContactFormComponent,
     DropdownComponent,
     ErrorComponent,
     FilterComponent,
-    FooterComponent,
     InterstitialComponent,
     MatGridListModule,
     RadioComponent,
@@ -49,7 +36,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
     FormsModule,
     ReactiveFormsModule
   ],
+  providers: [
+    AuthService
+  ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
-  entryComponents: [AuthComponent, ContactComponent]
+  entryComponents: [AuthComponent]
 })
 export class SharedModule { }

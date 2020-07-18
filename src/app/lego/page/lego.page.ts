@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../core';
+import { AuthService } from 'src/app/shared';
 import { LegoService } from '../services/lego.service';
 import { LegoSetPipe, SafePipe } from '../pipes';
 

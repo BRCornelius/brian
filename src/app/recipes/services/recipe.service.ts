@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 
 import { Subscription } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { AwsService } from '../../core';
 import { IRecipeToTry, IRecipe } from '../models';
+import { AwsService } from 'src/app/shared';
 
 @Injectable({
   providedIn: 'root'

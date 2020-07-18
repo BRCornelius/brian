@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IDropdownOption } from 'src/app/core';
 import { IContactValues } from '../models';
-import { AwsService } from 'src/app/core';
+import { AwsService } from '../../shared/services/aws.service';
 
 @Injectable({
   providedIn: 'root'

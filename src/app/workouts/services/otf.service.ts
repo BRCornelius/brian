@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AwsService, FilterService } from 'src/app/core';
+import { AwsService, FilterService } from 'src/app/shared/services';
 import { HttpClient } from '@angular/common/http';
 import { Subscription } from 'rxjs';
 import { IOptions } from 'src/app/core';

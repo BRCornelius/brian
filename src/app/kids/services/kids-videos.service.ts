@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { IKidsVideo } from '../models';
-import { AwsService } from 'src/app/core';
+import { AwsService } from 'src/app/shared';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({

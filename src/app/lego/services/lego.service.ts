@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subscription } from 'rxjs';
-import { AwsService } from '../../core';
+import { AwsService } from '../../shared';
 import { ILegoSet, ILegoSetNumber, IUrl } from '../models';
 
 @Injectable({

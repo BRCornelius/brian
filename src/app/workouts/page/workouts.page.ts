@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/core';
 
 import { OtfUrlPipe } from '../pipes/otf-url.pipe';
 import { OtfService } from '../services/otf.service';
+import { AuthService } from 'src/app/shared';
 
 @Component({
   selector: 'workout-page',
@@ -26,8 +26,6 @@ export class WorkoutsPage implements OnInit {
   ngOnInit() {
     if (this.auth.authorized) {
       this.otf.getOtfVideos();
-    } else {
-      this.auth.isAuthorized();
     }
   }
 }

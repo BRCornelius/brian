@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/core/services';
+import { AuthService } from 'src/app/shared';
 
 @Component({
   selector: 'splash-page',

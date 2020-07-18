@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { AuthService } from 'src/app/core';
+import { AuthService } from 'src/app/shared';
 
 @Component({
   selector: 'common-auth',

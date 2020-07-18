@@ -26,6 +26,7 @@ import { KidsModule } from './kids/kids.module';
 import { LegoModule } from './lego/lego.module';
 import { RecipesModule } from './recipes/recipes.module';
 import { WorkoutsModule } from './workouts/workouts.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { WorkoutsModule } from './workouts/workouts.module';
     MatTabsModule,
     MatToolbarModule,
     ReactiveFormsModule,
+    CoreModule,
     KidsModule, // LL-remove
     LegoModule, // LL-remove
     RecipesModule, // LL-remove
@@ -56,6 +58,7 @@ import { WorkoutsModule } from './workouts/workouts.module';
     WorkoutsModule // LL-remove
   ],
   providers: [
+    CoreModule,
     KidsModule,
     LegoModule,
     RecipesModule,
