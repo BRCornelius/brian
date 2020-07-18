@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { IDropdownOption } from 'src/app/core';
+import { IDropdownOption } from '../../models';
 
 @Component({
   selector: 'common-dropdown',

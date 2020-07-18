@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { IDropdownOption } from 'src/app/core';
+import { IDropdownOption } from 'src/app/shared';
 import { ILegoSet } from '../models';
 
 @Pipe({
