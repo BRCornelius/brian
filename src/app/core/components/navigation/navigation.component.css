@@ -1,4 +1,5 @@
 nav {
+    background-color: khaki;
     display: flex;
     justify-content: space-evenly;
     width: 100%

@@ -1,7 +1,14 @@
 .app-body {
-    background-color: floralwhite;
+    padding-bottom: 4rem;
 }
 .auth-container {
     display: flexbox;
     align-items: stretch;
+    top: 0;
+    width: 100%;
+}
+common-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
