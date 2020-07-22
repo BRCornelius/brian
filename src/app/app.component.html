@@ -3,8 +3,8 @@
         <common-auth-button *ngIf="!auth.authorized"></common-auth-button>
     </div>
     <common-navigation></common-navigation>
-    <div class="app-body">
-        <router-outlet></router-outlet>
-    </div>
+    <main [@routeAnimation]="prepareRoute(outlet)" class="app-body">
+        <router-outlet #outlet="outlet"></router-outlet>
+    </main>
     <common-footer></common-footer>
 </div>

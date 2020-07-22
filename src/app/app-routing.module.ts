@@ -22,12 +22,12 @@ import { LegoPage } from './lego';
 // LL-remove refactor to use the commented lazy loading
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
-  { path: 'home', component: SplashPage },
-  { path: 'recipes', component: RecipesPage },
-  { path: 'kids', component: KidsPage },
-  { path: 'workouts', component: WorkoutsPage },
-  { path: 'lego', component: LegoPage },
-  { path: '**', component: ErrorPage}
+  { path: 'home', component: SplashPage, data: { animation: 'home'} },
+  { path: 'recipes', component: RecipesPage, data: { animation: 'recipes'} },
+  { path: 'kids', component: KidsPage, data: { animation: 'kids'} },
+  { path: 'workouts', component: WorkoutsPage, data: { animation: 'workouts'} },
+  { path: 'lego', component: LegoPage, data: { animation: 'lego'} },
+  { path: '**', component: ErrorPage, data: { animation: 'error'} }
 ];
 
 @NgModule({
