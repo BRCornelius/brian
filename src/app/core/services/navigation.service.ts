@@ -8,6 +8,7 @@ export class NavigationService {
 
   constructor() { }
 
+  isLoading: boolean = false;
   splitURL: string[] = window.location.href.split('/');
   currentPath: string = this.splitURL[this.splitURL.length - 1];
   // tslint:disable-next-line:max-line-length
@@ -19,4 +20,9 @@ export class NavigationService {
     { label: 'Workouts', path: 'workouts' },
     { label: 'Lego', path: 'lego' },
   ];
+
+  toggleLoading: Function = (): void => {
+    this.isLoading = true;
+    setTimeout(() => this.isLoading = false, 600)
+  };
 }

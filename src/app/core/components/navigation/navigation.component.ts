@@ -14,6 +14,9 @@ export class NavigationComponent {
   activeNavLink = this.nav.currentLabel;
   navLinks: INavLink[] = this.nav.navLinks;
 
-  updateActiveNavLink: Function = (new_label): void => this.activeNavLink = new_label;
+  updateActiveNavLink: Function = (new_label): void => {
+    this.activeNavLink = new_label;
+    this.nav.toggleLoading();
+  }
   checkActiveNavLink: Function = (test): boolean => this.activeNavLink === test;
 }

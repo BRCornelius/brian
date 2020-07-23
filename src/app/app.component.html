@@ -6,7 +6,7 @@
     <main [@routeAnimation]="prepareRoute(outlet)" class="app-body">
         <router-outlet #outlet="outlet"></router-outlet>
     </main>
-    <div class="footer-container">
+    <div [@poof]="nav.isLoading ? 'loading' : 'stable'" class="footer-container">
         <common-footer></common-footer>
     </div>
 </div>
