@@ -12,6 +12,7 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent implements OnInit {
   constructor(public auth: AuthService, public nav: NavigationService) {}
   ngOnInit() {
+    console.log(slider)
     this.auth.isAuthorized();
   }
   prepareRoute(outlet: RouterOutlet) {

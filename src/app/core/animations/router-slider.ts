@@ -1,42 +1,256 @@
 import { trigger, transition, query, style, group, animate } from '@angular/animations';
 
-const slideTo: Function = (direction: string): any[] => {
-  const optional = { optional: true }
-  return [
+export const slider = trigger('routeAnimation', [
+  transition('home => *', [
     query(':enter, :leave', [
       style({
         position: 'absolute',
         top: 0,
-        [direction]: 0,
+        right: 0,
         width: '100%'
       })
-    ], optional),
+    ], { optional: true }),
     query(':enter', [
-      style({ [direction]: '-100%' })
+      style({ right: '-100%' })
     ]),
     group([
       query(':leave', [
-        animate('600ms ease', style({ [direction]: '100%' }))
-      ], optional),
+        animate('600ms ease', style({ right: '100%' }))
+      ], { optional: true }),
       query(':enter', [
-        animate('600ms ease', style({ [direction]: '0%' }))
-      ], optional)
+        animate('600ms ease', style({ right: '0%' }))
+      ], { optional: true })
     ])
-  ]
-}
-
-export const slider =
-  trigger('routeAnimation', [
-    transition('home => *', slideTo('right')),
-    transition('lego => *', slideTo('left')),
-    transition('recipes => home', slideTo('left')),
-    transition('recipes => kids', slideTo('right')),
-    transition('recipes => workouts', slideTo('right')),
-    transition('recipes => lego', slideTo('right')),
-    transition('kids => home', slideTo('left')),
-    transition('kids => recipes', slideTo('left')),
-    transition('kids => workouts', slideTo('right')),
-    transition('kids => lego', slideTo('right')),
-    transition('workouts => lego', slideTo('right')),
-    transition('workouts => *', slideTo('left')),
-  ])
+  ]),
+  transition('recipes => kids', [
+    query(':enter, :leave', [
+      style({
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        width: '100%'
+      })
+    ], { optional: true }),
+    query(':enter', [
+      style({ right: '-100%' })
+    ]),
+    group([
+      query(':leave', [
+        animate('600ms ease', style({ right: '100%' }))
+      ], { optional: true }),
+      query(':enter', [
+        animate('600ms ease', style({ right: '0%' }))
+      ], { optional: true })
+    ])
+  ]),
+  transition('recipes => workouts', [
+    query(':enter, :leave', [
+      style({
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        width: '100%'
+      })
+    ], { optional: true }),
+    query(':enter', [
+      style({ right: '-100%' })
+    ]),
+    group([
+      query(':leave', [
+        animate('600ms ease', style({ right: '100%' }))
+      ], { optional: true }),
+      query(':enter', [
+        animate('600ms ease', style({ right: '0%' }))
+      ], { optional: true })
+    ])
+  ]),
+  transition('recipes => lego', [
+    query(':enter, :leave', [
+      style({
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        width: '100%'
+      })
+    ], { optional: true }),
+    query(':enter', [
+      style({ right: '-100%' })
+    ]),
+    group([
+      query(':leave', [
+        animate('600ms ease', style({ right: '100%' }))
+      ], { optional: true }),
+      query(':enter', [
+        animate('600ms ease', style({ right: '0%' }))
+      ], { optional: true })
+    ])
+  ]),
+  transition('kids => workouts', [
+    query(':enter, :leave', [
+      style({
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        width: '100%'
+      })
+    ], { optional: true }),
+    query(':enter', [
+      style({ right: '-100%' })
+    ]),
+    group([
+      query(':leave', [
+        animate('600ms ease', style({ right: '100%' }))
+      ], { optional: true }),
+      query(':enter', [
+        animate('600ms ease', style({ right: '0%' }))
+      ], { optional: true })
+    ])
+  ]),
+  transition('kids => lego', [
+    query(':enter, :leave', [
+      style({
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        width: '100%'
+      })
+    ], { optional: true }),
+    query(':enter', [
+      style({ right: '-100%' })
+    ]),
+    group([
+      query(':leave', [
+        animate('600ms ease', style({ right: '100%' }))
+      ], { optional: true }),
+      query(':enter', [
+        animate('600ms ease', style({ right: '0%' }))
+      ], { optional: true })
+    ])
+  ]),
+  transition('workouts => lego', [
+    query(':enter, :leave', [
+      style({
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        width: '100%'
+      })
+    ], { optional: true }),
+    query(':enter', [
+      style({ right: '-100%' })
+    ]),
+    group([
+      query(':leave', [
+        animate('600ms ease', style({ right: '100%' }))
+      ], { optional: true }),
+      query(':enter', [
+        animate('600ms ease', style({ right: '0%' }))
+      ], { optional: true })
+    ])
+  ]),
+  transition('lego => *', [
+    query(':enter, :leave', [
+      style({
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%'
+      })
+    ], { optional: true }),
+    query(':enter', [
+      style({ left: '-100%' })
+    ]),
+    group([
+      query(':leave', [
+        animate('600ms ease', style({ left: '100%' }))
+      ], { optional: true }),
+      query(':enter', [
+        animate('600ms ease', style({ left: '0%' }))
+      ], { optional: true })
+    ])
+  ]),
+  transition('recipes => home', [
+    query(':enter, :leave', [
+      style({
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%'
+      })
+    ], { optional: true }),
+    query(':enter', [
+      style({ left: '-100%' })
+    ]),
+    group([
+      query(':leave', [
+        animate('600ms ease', style({ left: '100%' }))
+      ], { optional: true }),
+      query(':enter', [
+        animate('600ms ease', style({ left: '0%' }))
+      ], { optional: true })
+    ])
+  ]),
+  transition('kids => home', [
+    query(':enter, :leave', [
+      style({
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%'
+      })
+    ], { optional: true }),
+    query(':enter', [
+      style({ left: '-100%' })
+    ]),
+    group([
+      query(':leave', [
+        animate('600ms ease', style({ left: '100%' }))
+      ], { optional: true }),
+      query(':enter', [
+        animate('600ms ease', style({ left: '0%' }))
+      ], { optional: true })
+    ])
+  ]),
+  transition('kids => recipes', [
+    query(':enter, :leave', [
+      style({
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%'
+      })
+    ], { optional: true }),
+    query(':enter', [
+      style({ left: '-100%' })
+    ]),
+    group([
+      query(':leave', [
+        animate('600ms ease', style({ left: '100%' }))
+      ], { optional: true }),
+      query(':enter', [
+        animate('600ms ease', style({ left: '0%' }))
+      ], { optional: true })
+    ])
+  ]),
+  transition('workouts => *', [
+    query(':enter, :leave', [
+      style({
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%'
+      })
+    ], { optional: true }),
+    query(':enter', [
+      style({ left: '-100%' })
+    ]),
+    group([
+      query(':leave', [
+        animate('600ms ease', style({ left: '100%' }))
+      ], { optional: true }),
+      query(':enter', [
+        animate('600ms ease', style({ left: '0%' }))
+      ], { optional: true })
+    ])
+  ]),
+])
