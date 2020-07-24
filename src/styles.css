@@ -3,3 +3,9 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 main { text-align: center; position: relative; }
+
+.media-card {
+    height: 100%;
+    width: 100%;
+    background-color: gold;
+}
