@@ -49,7 +49,7 @@ export class LegoService {
     'https://services.corneliuses.com/get-lego-sets',
     this.headers
   ).subscribe((res: any) => {
-    this.mySets = JSON.parse(res.body).sets;
+    this.mySets = res.body;
     // this.mySets = this.mockData;                        // For Testing
   })
 
