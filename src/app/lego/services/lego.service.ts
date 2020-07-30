@@ -33,8 +33,7 @@ export class LegoService {
       options,
       this.headers
     ).subscribe((res: any) => {
-      const body = JSON.parse(res.body);
-      this.instructions = body.instructions.reduce(
+      this.instructions = res.body.reduce(
         (agg: string[], curr: IUrl, index: number) => {
           if (index % 2 === 0) {
             agg.push(curr.URL);
