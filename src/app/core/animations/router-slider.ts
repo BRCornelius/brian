@@ -253,4 +253,4 @@ export const slider = trigger('routeAnimation', [
       ], { optional: true })
     ])
   ]),
-])
+]);

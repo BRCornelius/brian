@@ -1,4 +1,4 @@
-import { trigger, state, style, transition, animate } from "@angular/animations";
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 export const poof = trigger('poof', [
   state('loading', style({
@@ -13,4 +13,4 @@ export const poof = trigger('poof', [
   transition('stable => loading', [
     animate('0s')
   ])
-])
+]);

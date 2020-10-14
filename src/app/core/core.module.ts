@@ -29,6 +29,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     SharedModule
   ],
+  entryComponents: [ContactComponent],
   providers: [ContactService, NavigationService],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

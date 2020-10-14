@@ -8,7 +8,7 @@ export class NavigationService {
 
   constructor() { }
 
-  isLoading: boolean = false;
+  isLoading = false;
   splitURL: string[] = window.location.href.split('/');
   currentPath: string = this.splitURL[this.splitURL.length - 1];
   // tslint:disable-next-line:max-line-length
@@ -23,6 +23,6 @@ export class NavigationService {
 
   toggleLoading: Function = (): void => {
     this.isLoading = true;
-    setTimeout(() => this.isLoading = false, 600)
-  };
+    setTimeout(() => this.isLoading = false, 600);
+  }
 }
