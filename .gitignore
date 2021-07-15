@@ -56,4 +56,4 @@ pdf_*.js
 https_*.js
 
 # Keys
-/environments/example*.ts
+src/environments/example*.ts
