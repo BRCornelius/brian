@@ -54,3 +54,6 @@ ddb_*.js
 sns_*.js
 pdf_*.js
 https_*.js
+
+# Keys
+/environments/example*.ts
